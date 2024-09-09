@@ -68,11 +68,6 @@ class Journal extends Component {
         <h1>
           SLZ Journal
         </h1>
-        <PostList
-          posts={this.state.posts}
-          resetState={this.resetState}
-        ></PostList>
-
         <section>
           <LinkButton 
             linkText={"Create"} 
@@ -81,6 +76,11 @@ class Journal extends Component {
           ></LinkButton>
 
         </section>
+        <PostList
+          posts={this.state.posts}
+          resetState={this.resetState}
+        ></PostList>
+
       </div>
     );
   }
