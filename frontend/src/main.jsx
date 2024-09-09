@@ -16,6 +16,8 @@ import GetInvolved from "./routes/getinvolved";
 import Journal from "./routes/journal";
 import About from "./routes/about";
 import Statements from "./routes/statements";
+import CreatePost from "./routes/createpost";
+import Post from "./routes/post";
 
 const router = createBrowserRouter([
   {
