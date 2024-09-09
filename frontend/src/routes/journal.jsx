@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { API_URL } from "../constants";
 import PostList from "../components/PostListing";
 import axios from 'axios';
-import Editor from '../components/markdowneditor';
+import LinkButton from "../components/linkbutton";
 
 const comment = (
 <div class="py-8">
@@ -68,16 +68,19 @@ class Journal extends Component {
         <h1>
           SLZ Journal
         </h1>
+        <section>
+          <LinkButton 
+            linkText={"Create"} 
+            linkUrl={"journal/create"}
+            target = ""
+          ></LinkButton>
+
+        </section>
         <PostList
           posts={this.state.posts}
           resetState={this.resetState}
         ></PostList>
-        <section>
-          <h2>
-            Create Post
-          </h2>
-            <Editor></Editor>
-        </section>
+
       </div>
     );
   }

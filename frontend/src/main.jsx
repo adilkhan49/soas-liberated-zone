@@ -16,6 +16,9 @@ import GetInvolved from "./routes/getinvolved";
 import Journal from "./routes/journal";
 import About from "./routes/about";
 import Statements from "./routes/statements";
+import CreatePost from "./routes/createpost";
+import Post from "./routes/post";
+import EditPost from "./routes/editpost";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +46,18 @@ const router = createBrowserRouter([
       {
         path: "journal",
         element: <Journal />,
+      },
+      {
+        path: "journal/:id",
+        element: <Post />,
+      },
+      {
+        path: "journal/:id/edit",
+        element: <EditPost />,
+      },
+      {
+        path: "journal/create",
+        element: <CreatePost />
       },
       {
         path: "statements",

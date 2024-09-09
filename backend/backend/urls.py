@@ -22,5 +22,5 @@ from slz import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^api/posts/$', views.post_list),
-    re_path(r'^api/posts/([0-9])$', views.post_detail),    
+    re_path(r'^api/posts/([0-9]+)$', views.post_detail),    
 ]

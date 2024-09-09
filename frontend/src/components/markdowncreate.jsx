@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState, Component} from 'react';
 import '@mdxeditor/editor/style.css'
 import {
     MDXEditor, 
@@ -23,10 +23,14 @@ import axios from "axios";
 import { API_URL } from "../constants";
 
 
-function Editor() {
-    const [markdown, setMarkdown] = useState('# Hello dworld');
-    const [title, setTitle] = useState('');
-    const [username, setUsername] = useState('');
+function Editor(props) {
+
+
+    const [markdown, setMarkdown] = useState('Reflections, Meditations and Revolutionary Ideas');
+    const [title, setTitle] = useState('Journal GENTRY');
+    const [username, setUsername] = useState('Anonymous');
+
+    
     const handleSave = async () => {
         event.preventDefault(); // Prevent form default submission
 
@@ -39,12 +43,13 @@ function Editor() {
             body: JSON.stringify({
               title: title,
               author: username,
-              body: markdown, // Send markdown data
+              body: markdown,
             }),
           });
     
           if (response.ok) {
-            alert('Markdown saved successfully!');
+            alert("Saved Successfully")
+            window.location = '/journal';
           } else {
             alert('Failed to save markdown.');
           }
