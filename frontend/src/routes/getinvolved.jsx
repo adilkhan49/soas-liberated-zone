@@ -1,14 +1,4 @@
-function LinkButton({ linkUrl, linkText }) {
-  return (
-<div class="container py-2 px-10 mx-0 min-w-full flex flex-col items-center">
-    <form action={linkUrl} method="get" target="_blank">
-      <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-full">
-      {linkText}
-            </button>
-    </form>
-  </div>
-  );
-}
+import LinkButton from "../components/linkbutton";
 
 
 const GetInvolved = props => {
@@ -32,8 +22,9 @@ const GetInvolved = props => {
         <p>Write a submission for our journal </p>
 
         <LinkButton 
-          linkText={"SLZ Journal"} 
-          linkUrl={"/journal"}
+          linkText={"Create Journal Entry"} 
+          linkUrl={"/journal/create"}
+          target = ""
         ></LinkButton>
         <br></br>
 
