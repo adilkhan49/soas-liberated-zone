@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import timeAgo from "./timeAgo";
 import ReactMarkdown from 'react-markdown'
-
+import removeHtml from "../components/removeHtml";
 
 class PostList extends Component {
 
@@ -28,10 +28,10 @@ class PostList extends Component {
                                 </div>
                                 
                                 </div>
-                                <p class="text-gray-700 text-lg italic ">{post.title}</p>
-                                <div class="line-clamp-3 text-gray-700 text-lg">
-                                    <ReactMarkdown class=" ">{post.body}</ReactMarkdown>
-                                </div>
+                                <p class="text-gray-700 text-lg italic text-center">{post.title}</p>
+                                <p class="line-clamp-3 text-gray-700 h2">
+                                    <div>{post.body}</div>
+                                </p>
                             </div>
                         </div>
                     </button>
