@@ -70,7 +70,7 @@ class Journal extends Component {
         </h1>
         <section>
           <LinkButton 
-            linkText={"Create"} 
+            linkText={"Contribute"} 
             linkUrl={"journal/create"}
             target = ""
           ></LinkButton>
