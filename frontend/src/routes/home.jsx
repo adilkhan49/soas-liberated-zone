@@ -20,19 +20,23 @@ const Home = props => {
 
         <div class="h-40 grid grid-cols-3 gap-1 gap-y-2 sm:gap-y-4 md:gap-y-6 lg:gap-y-8 xl:gap-y-1 place-items-center flex">
         
-        <div class="block max-w-sm p-6 border border-gray-200 rounded-lg shadow bg-black border-gray-700 hover:bg-gray-700">
+        <div class="block max-w-sm p-6 border border-gray-200 rounded-lg shadow bg-black border-gray-700">
           <h5 class="text-center mb-2 text-xl font-bold tracking-tight text-white">Day {gaza_days} of the Genocide</h5>
         </div>
 
-        <div class="block max-w-sm p-6 border border-gray-200 rounded-lg shadow bg-black border-gray-700 hover:bg-gray-700">
-          <h5 class="text-center mb-2 text-xl font-bold tracking-tight text-white">Day {slz_days} of the Liberated Zone</h5>
-        </div>
+        <a href="about" rel="noopener noreferrer">
+          <div class="block max-w-sm p-6 border border-gray-200 rounded-lg shadow bg-black border-gray-700 hover:bg-gray-700">
+            <h5 class="text-center mb-2 text-xl font-bold tracking-tight text-white">Day {slz_days} of the Liberated Zone</h5>
+          </div>
+        </a>
 
-        <div class="block max-w-sm p-6 border border-gray-200 rounded-lg shadow bg-black border-gray-700 hover:bg-gray-700">
-        <h5 class="text-center mb-2 text-xl font-bold tracking-tight text-white">10 Suspensions</h5>
-          {/* <p class="font-normal text-gray-700 dark:text-gray-400">{slz_days}</p> */}
-          
-        </div>
+        <a href="https://www.middleeasteye.net/live-update/soas-students-suspended-after-attending-pro-palestine-protest" rel="noopener noreferrerb" target="_blank">
+          <div class="block max-w-sm p-6 border border-gray-200 rounded-lg shadow bg-black border-gray-700 hover:bg-gray-700">
+            <h5 class="text-center mb-2 text-xl font-bold tracking-tight text-white">10 Suspensions</h5>
+          </div>
+        </a>
+      
+
 
     </div>
 
