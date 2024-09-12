@@ -17,7 +17,7 @@ class PostList extends Component {
             ) : (
                 posts.map(post => ( 
 
-                <form class="py-3" action={"journal/"+post.pk} method="get" >
+                <form class="py-3" action={"/journal/"+post.pk} method="get" >
                     <button class="container mx-auto px-4 space-y-4" 
                     >
                         <div class="">

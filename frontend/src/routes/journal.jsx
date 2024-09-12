@@ -29,12 +29,15 @@ class Journal extends Component {
           SLZ Journal
         </h1>
         <section>
-          <LinkButton 
-            linkText={"Contribute"} 
-            linkUrl={"journal/create"}
-            target = ""
-          ></LinkButton>
-
+          <div class="relative h-20">
+            <div class="absolute right-10">
+              <LinkButton 
+                linkText={"Contribute"} 
+                linkUrl={"/journal/create"}
+                target = ""
+              ></LinkButton>
+            </div>
+          </div>
         </section>
         <PostList
           posts={this.state.posts}
