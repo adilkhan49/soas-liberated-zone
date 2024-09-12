@@ -1,6 +1,12 @@
 import { Outlet, Link } from "react-router-dom";
+import { useContext } from 'react'
+import AuthContext from "../context/AuthContext";
 
 export default function Root() {
+  
+  let { user, logoutUser } = useContext(AuthContext)
+
+
   return (
 <div class="min-h-screen bg-gradient-to-b from-green-700 to-green-700">
   <nav class="bg-red-800">
@@ -36,7 +42,8 @@ export default function Root() {
             </div>
           </div>
         </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+        {/* <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
             <span class="absolute -inset-1.5"></span>
             <span class="sr-only">View notifications</span>
@@ -52,15 +59,12 @@ export default function Root() {
                 <span class="sr-only">Open user menu</span>
               </button>
             </div>
+            </div>
 
-
-            {/* <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
-            </div> */}
-          </div>
-        </div>
+        </div> */}
+        <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">
+            {user && <p onClick={logoutUser}>LOGOUT {user.username}</p>}
+        </button>
       </div>
   
   </div>
@@ -81,56 +85,3 @@ export default function Root() {
 
   );
 }
-
-// export default function Root() {
-//     return (
-//       <>
-//         <div id="sidebar">
-//           <nav>
-//             <ul>
-//               <li>
-//                 <Link to={``}>Home</Link>
-//               </li>
-//               <li>
-//                 <Link to={`gazaupdate`}>Gaza Update</Link>
-//               </li>
-//               <li>
-//                 <Link to={`getinvolved`}>Get Involved</Link>
-//               </li>
-//               <li>
-//                 <Link to={`statements`}>Statements</Link>
-//               </li>
-//               <li>
-//                 <Link to={`stories`}>LZ Stories</Link>
-//               </li>
-//               <li>
-//                 <Link to={`gallery`}>Gallery</Link>
-//               </li>
-//               {/* <li>
-//                 <Link to={`events`}>Events</Link>
-//               </li> */}
-//               {/* <li>
-//                 <Link to={`resources`}>Resources</Link>
-//                 <ul>
-//                   <li>
-//                     <Link to={`resources`}>Literature</Link>
-//                   </li>
-//                   <li>
-//                     <Link to={`resources`}>Videos</Link>
-//                   </li>
-//                 </ul>
-//               </li> */}
-
-//               <li>
-//                 <Link to={`fundraiser`}>Fundraiser</Link>
-//               </li>              
-//             </ul>
-//             <h1>SOAS Liberated Zone</h1>
-//           </nav>
-//         </div>
-//         <div id="detail">
-//           <Outlet />
-//         </div>
-//       </>
-//     );
-//   }
