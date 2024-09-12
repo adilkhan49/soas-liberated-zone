@@ -15,6 +15,7 @@ import {
     BoldItalicUnderlineToggles,
     BlockTypeSelect,
     CreateLink,
+    ListsToggle,
 } from '@mdxeditor/editor';
 
 import { API_URL } from "../constants";
@@ -117,6 +118,7 @@ class Editor extends Component {
                               quotePlugin(),
                               thematicBreakPlugin(),
                               linkDialogPlugin(),
+                              listsPlugin(),
                               toolbarPlugin({
                                   toolbarContents: () => (
                                       <>
@@ -124,6 +126,7 @@ class Editor extends Component {
                                           <BlockTypeSelect />
                                           <CreateLink />
                                           <UndoRedo />
+                                          <ListsToggle />
                                       </>
                                   ),
                               }),
