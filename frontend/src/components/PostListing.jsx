@@ -24,7 +24,7 @@ class PostList extends Component {
                             <div class="bg-white p-4 rounded-lg shadow text-left">
                                 <div class="flex items-center mb-2">
                                 <div>
-                                    <p class="font-semibold">{post.author} • {timeAgo(post.created_on)}</p>
+                                    <p> <span class="font-semibold">{post.author} </span> <span class="text-smtext-gray-400">• {timeAgo(post.created_on)}</span></p>
                                 </div>
                                 
                                 </div>
