@@ -42,19 +42,12 @@ const Home = props => {
 
 
 
-      <div class="flex justify-center items-center">
+      <div class="flex justify-center items-center border-none">
         <figure>
-          <img class="h-auto max-w-full rounded-lg" src="/src/home-page.jpeg" alt="Intifada to Victory" />
-          <figcaption class="mt-2 text-sm text-center">!انتفاضة شامیے</figcaption>
+          <img class="h-auto max-w-full rounded-lg " src="/src/home-page.jpeg" alt="Intifada to Victory" />
+          <a href="/login"><figcaption class="px-5 py-3 text-center text-lg text-white font-semibold underline ">!انتفاضة شامیے</figcaption></a>
         </figure>
       </div>
-      <p> </p>
-
-      {/* <p>
-        The genocide in gaza has continued for {gaza_days} days.
-        <br></br>
-        Today is day {slz_days} of our encampment
-      </p>  */}
       
       <div class="m-20">
         <InstagramEmbed url="https://www.instagram.com/soasliberatedzone/"  />

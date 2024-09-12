@@ -5,7 +5,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
+import PrivateRoute from "./components/PrivateRoute";
+import {AuthProvider} from "./context/AuthContext";
+
 import Root from "./routes/root";
+import LoginPage from "./routes/LoginPage";
 import ErrorPage from "./error-page";
 import Contact from "./routes/contact";
 import Home from "./routes/home";
@@ -23,13 +27,17 @@ import EditPost from "./routes/editpost";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <AuthProvider><Root /></AuthProvider>,
     errorElement: <ErrorPage />,
     children: [
       {
         index: true,
         path: "/",
-        element: <Home />,
+        element: <PrivateRoute><Home /></PrivateRoute>,
+      },
+      {
+        path: "login",
+        element: <LoginPage />,
       },
       {
         path: "events",
@@ -57,7 +65,7 @@ const router = createBrowserRouter([
       },
       {
         path: "journal/create",
-        element: <CreatePost />
+        element: <PrivateRoute><CreatePost /></PrivateRoute>
       },
       {
         path: "statements",
