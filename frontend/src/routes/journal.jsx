@@ -30,7 +30,7 @@ class Journal extends Component {
         </h1>
         <section>
           <div class="relative h-20">
-            <div class="absolute right-10">
+            <div class="">
               <LinkButton 
                 linkText={"Contribute"} 
                 linkUrl={"/journal/create"}
