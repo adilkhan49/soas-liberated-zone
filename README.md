@@ -49,3 +49,4 @@ https://medium.com/@ronakchitlangya1997/jwt-authentication-with-react-js-and-dja
 
 https://arindam1729.hashnode.dev/setup-vite-reactjs-with-tailwind-css
 
+https://github.com/seankwarren/Django-React-jwt-authentication?tab=readme-ov-file
