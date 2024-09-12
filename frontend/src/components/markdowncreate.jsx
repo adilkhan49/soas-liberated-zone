@@ -27,7 +27,7 @@ function Editor(props) {
 
 
     const [markdown, setMarkdown] = useState('Reflections, Meditations and Revolutionary Ideas');
-    const [title, setTitle] = useState('Journal GENTRY');
+    const [title, setTitle] = useState('Journal Entry');
     const [username, setUsername] = useState('Anonymous');
 
     
