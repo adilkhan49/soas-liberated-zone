@@ -16,11 +16,10 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path, re_path
-from slz import views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^api/posts/$', views.post_list),
-    re_path(r'^api/posts/([0-9]+)$', views.post_detail),    
+    path('api/',include('slz.urls')),
+    path('api/', include('base.urls')),
 ]
