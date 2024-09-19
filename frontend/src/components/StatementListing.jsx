@@ -26,7 +26,7 @@ class StatementList extends Component {
                                 </div>
                                 
                                 </div>
-                                <p class="text-gray-700 text-lg bold text-center">{statement.title}</p>
+                                <p class="text-gray-700 text-lg bold">{statement.title}</p>
                                 <p class="line-clamp-3 text-gray-700 h2">
                                 </p>
                             </div>
