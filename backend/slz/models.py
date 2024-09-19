@@ -15,4 +15,12 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
 
+
+class Statement(models.Model):
+    title = models.CharField(max_length=255)
+    body = models.TextField()
+    release_date = models.DateField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    last_modified = models.DateTimeField(auto_now=True)
+
     # categories = models.ManyToManyField("Category", related_name="posts")

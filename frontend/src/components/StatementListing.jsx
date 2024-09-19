@@ -1,35 +1,33 @@
 import React, { Component } from "react";
-import timeAgo from "./timeAgo";
-import ReactMarkdown from 'react-markdown'
 
-class PostList extends Component {
+class StatementList extends Component {
 
     render() {
-        const posts = this.props.posts;
+        const statements = this.props.statements;
         return (
 
         <div>
-            <div class="grid grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 gap-5">
 
-                {!posts || posts.length <= 0 ? (
-                    <b>Ops, no posts yet</b>
+                {!statements || statements.length <= 0 ? (
+                    <b>Ops, no statements yet</b>
             ) : (
-                posts.map(post => ( 
+                statements.map(statement => ( 
 
-                <form class="py-3" action={"journal/"+post.pk} method="get" >
+              
+                    <form class="py-3" action={"statements/"+statement.pk} method="get" >
                     <button class="container mx-auto px-4 space-y-4" 
                     >
                         <div class="">
                             <div class="bg-white p-4 rounded-lg shadow text-left">
                                 <div class="flex items-center mb-2">
                                 <div>
-                                    <p class="font-semibold">{post.author} • {timeAgo(post.created_on)}</p>
+                                    <p class="font-semibold">{statement.release_date}</p>
                                 </div>
                                 
                                 </div>
-                                <p class="text-gray-700 text-lg italic text-center">{post.title}</p>
+                                <p class="text-gray-700 text-lg bold">{statement.title}</p>
                                 <p class="line-clamp-3 text-gray-700 h2">
-                                    <div>{post.body}</div>
                                 </p>
                             </div>
                         </div>
@@ -45,4 +43,4 @@ class PostList extends Component {
     }
 }
 
-export default PostList;
+export default StatementList;
