@@ -23,6 +23,8 @@ import Statements from "./routes/statements";
 import CreatePost from "./routes/createpost";
 import Post from "./routes/post";
 import EditPost from "./routes/editpost";
+import CreateStatement from "./routes/createStatement";
+import Statement from "./routes/statement";
 
 const router = createBrowserRouter([
   {
@@ -70,6 +72,14 @@ const router = createBrowserRouter([
       {
         path: "statements",
         element: <Statements />,
+      },
+      {
+        path: "statements/:id",
+        element: <Statement />,
+      },
+      {
+        path: "statements/create",
+        element: <PrivateRoute><CreateStatement /></PrivateRoute>
       },
       {
         path: "about",
