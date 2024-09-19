@@ -14,6 +14,7 @@ class Post(models.Model):
     author = models.TextField(max_length=255)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
+    is_approved = models.BooleanField(default=True)
 
 
 class Statement(models.Model):
