@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import timeAgo from "./timeAgo";
 import ReactMarkdown from 'react-markdown'
-import removeHtml from "../components/removeHtml";
+
 
 class PostList extends Component {
 
