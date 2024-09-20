@@ -36,13 +36,13 @@ class StatementDetail extends Component {
                 <div class = "">
                     
  
-                    <div class="py-3 text-right" >
+                    {/* <div class="py-3 text-right" >
                         <button 
                             class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-full"
                             onClick={() => this.onEditClick()}
                             >Edit
                         </button>
-                    </div>
+                    </div> */}
 
 
                     <div class="py-3 text-right" >
