@@ -27,7 +27,7 @@ function Editor(props) {
 
 
     const [markdown, setMarkdown] = useState('Reflections, Meditations and Revolutionary Ideas');
-    const [title, setTitle] = useState('Journal GENTRY');
+    const [title, setTitle] = useState('Journal Entry');
     const [username, setUsername] = useState('Anonymous');
 
     
@@ -48,7 +48,7 @@ function Editor(props) {
           });
     
           if (response.ok) {
-            alert("Saved Successfully")
+            alert("Successully created! Your contribution will be published once approved")
             window.location = '/journal';
           } else {
             alert('Failed to save markdown.');
@@ -106,7 +106,7 @@ function Editor(props) {
 
 
     <button 
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold my-4 py-2 px-4 rounded"
+        class="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
         onClick={handleSave}
                     >Save </button> 
     </div>
