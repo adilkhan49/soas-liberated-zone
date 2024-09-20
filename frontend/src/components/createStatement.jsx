@@ -106,7 +106,7 @@ function Editor(props) {
 
 
     <button 
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold my-4 py-2 px-4 rounded"
+        class="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
         onClick={handleSave}
                     >Save </button> 
     </div>
