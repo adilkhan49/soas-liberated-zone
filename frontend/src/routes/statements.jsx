@@ -3,14 +3,18 @@ import { STATEMENTS_API_URL } from "../constants";
 import StatementList from "../components/StatementListing";
 import LinkButton from "../components/linkbutton";
 import axios from "axios";
+import AuthContext from "../context/AuthContext";
 
 class Statements extends Component {
+  static contextType = AuthContext;
+
   state = {
     statements: []
   };
 
   componentDidMount() {
     this.resetState();
+    const user = this.context;
   }
 
   getStatements = () => {
@@ -28,12 +32,13 @@ class Statements extends Component {
           Statements
         </h1>
         <section>
-          <LinkButton 
-            linkText={"Add Statement"} 
-            linkUrl={"/statements/create"}
-            target = ""
-          ></LinkButton>
-
+          { this.context.user &&
+            <LinkButton 
+              linkText={"Add Statement"} 
+              linkUrl={"/statements/create"}
+              target = ""
+            ></LinkButton>
+          }
         </section>
         <StatementList
           statements={this.state.statements}
