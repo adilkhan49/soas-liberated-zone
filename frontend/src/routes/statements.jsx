@@ -30,7 +30,7 @@ class Statements extends Component {
         <section>
           <LinkButton 
             linkText={"Add Statement"} 
-            linkUrl={"statements/create"}
+            linkUrl={"/statements/create"}
             target = ""
           ></LinkButton>
 
