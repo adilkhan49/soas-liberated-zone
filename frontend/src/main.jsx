@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         index: true,
         path: "/",
-        element: <PrivateRoute><Home /></PrivateRoute>,
+        element: <Home />,
       },
       {
         path: "login",
@@ -63,11 +63,11 @@ const router = createBrowserRouter([
       },
       {
         path: "journal/:id/edit",
-        element: <EditPost />,
+        element: <PrivateRoute><EditPost /></PrivateRoute>,
       },
       {
         path: "journal/create",
-        element: <PrivateRoute><CreatePost /></PrivateRoute>
+        element: <CreatePost />
       },
       {
         path: "statements",
