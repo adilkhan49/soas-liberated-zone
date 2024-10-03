@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { generateDate, months } from "../util/calendar";
 import cn from "../util/cn";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import LinkButton from "./linkbutton";
 
 function getEvents(event_date) {
     const events = [  {
@@ -264,6 +265,12 @@ export default function Calendar() {
 				<p className=" font-semibold">
 					Schedule for {selectDate.toDate().toDateString()}
 				</p >
+                <LinkButton 
+                    linkText={"Add Event"} 
+                    linkUrl={"calendar/create"}
+                    target = ""
+                ></LinkButton>
+
                 <div class="">
 			    	{getEvents(selectDate)}
                 </div>
