@@ -21,7 +21,7 @@ class PostList extends Component {
         return (
 
         <div>
-            <div class="grid grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
 
                 {!posts || posts.length <= 0 ? (
                     <b>Ops, no posts yet</b>
