@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       },
       {
         path: "calendar/create",
-        element: <CreateEvent />,
+        element: <PrivateRoute><CreateEvent /></PrivateRoute>
       },
       {
         path: "fundraiser",
