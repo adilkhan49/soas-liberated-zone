@@ -33,6 +33,12 @@ class Calendar extends Component {
     this.getEvents(this.state.selectDate);
   };
 
+  onDeleteClick = (pk) => {
+    axios.delete(EVENTS_API_URL + pk);
+    window.location = '/calendar/';
+
+}
+
   render() {
     return (
 
@@ -40,7 +46,7 @@ class Calendar extends Component {
         <div>
           <LinkButton 
               linkText={"Add Event"} 
-              linkUrl={"calendar/create"}
+              linkUrl={"/calendar/create"}
               target = ""
           ></LinkButton>
 
@@ -144,6 +150,7 @@ class Calendar extends Component {
                         : (
                             this.state.events.map(event => (
                                 <div key = {event.pk} >
+                                    
                                     {!event.allDay && (
                                         <div>
                                             {event.start_time} - {event.end_time}
@@ -152,7 +159,13 @@ class Calendar extends Component {
                                     <div>
                                         {event.title}
                                     </div>
-                                <hr class="h-px my-1 bg-gray-200 border-0 dark:bg-gray-700"/>
+                                    <div class='text-right'>
+                                      <button 
+                                          class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-full"
+                                          onClick={() => this.onDeleteClick(event.pk)}
+                                          >Delete
+                                      </button>                                    </div>
+                                    <hr class="h-px my-1 bg-gray-200 border-0 dark:bg-gray-700"/>
 
                                 </div>
                             ))
