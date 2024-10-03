@@ -50,7 +50,7 @@ class StatementDetail extends Component {
                     </div> */}
 
                     {
-                    this.user &&
+                    this.context.user &&
                         <div class="py-3 text-right" >
                             <button 
                                 class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-full"
