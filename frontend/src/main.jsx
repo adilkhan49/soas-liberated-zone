@@ -11,7 +11,6 @@ import {AuthProvider} from "./context/AuthContext";
 import Root from "./routes/root";
 import LoginPage from "./routes/LoginPage";
 import ErrorPage from "./error-page";
-import Contact from "./routes/contact";
 import Home from "./routes/home";
 import Events from "./routes/events";
 import Fundraiser from "./routes/fundraiser";
@@ -42,7 +41,7 @@ const router = createBrowserRouter([
         element: <LoginPage />,
       },
       {
-        path: "events",
+        path: "calendar",
         element: <Events />,
       },
       {
