@@ -6,10 +6,13 @@ import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import LinkButton from "./linkbutton";
 import { EVENTS_API_URL } from "../constants";
 import axios from "axios";
+import AuthContext from "../context/AuthContext";
 
 
 
 class Calendar extends Component {
+
+  static contextType = AuthContext;
 
 
 	days = ["S", "M", "T", "W", "T", "F", "S"];
@@ -23,6 +26,8 @@ class Calendar extends Component {
 
   componentDidMount() {
     this.resetState();
+    const user = this.context;
+
   }
 
   getEvents = (selectDate) => {
@@ -44,11 +49,14 @@ class Calendar extends Component {
 
           // <div className="flex gap-10 sm:divide-x justify-center sm:w-1/2 mx-auto  min-h-screen max-h-screen items-center sm:flex-row flex-col">
         <div>
-          <LinkButton 
-              linkText={"Add Event"} 
-              linkUrl={"/calendar/create"}
-              target = ""
-          ></LinkButton>
+          { this.context.user &&
+
+            <LinkButton 
+                linkText={"Add Event"} 
+                linkUrl={"/calendar/create"}
+                target = ""
+            ></LinkButton>
+          }
 
         <div class="flex sm:flex-row flex-col gap-10 min-h-screen max-h-screen sm:divide-x justify-center mx-auto max-sm:items-center space-y-8">
         <div className="flex-1 w-96 h-96 ">
@@ -159,12 +167,15 @@ class Calendar extends Component {
                                     <div>
                                         {event.title}
                                     </div>
-                                    <div class='text-right'>
-                                      <button 
-                                          class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-full"
-                                          onClick={() => this.onDeleteClick(event.pk)}
-                                          >Delete
-                                      </button>                                    </div>
+                                    { this.context.user &&
+                                      <div class='text-right'>
+                                        <button 
+                                            class="text-sm bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-full"
+                                            onClick={() => this.onDeleteClick(event.pk)}
+                                            >Delete
+                                        </button> 
+                                      </div>
+                                    }
                                     <hr class="h-px my-1 bg-gray-200 border-0 dark:bg-gray-700"/>
 
                                 </div>

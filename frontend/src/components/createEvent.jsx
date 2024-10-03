@@ -35,7 +35,6 @@ function Editor(props) {
           });
     
           if (response.ok) {
-            alert("Saved Successfully")
             window.location = '/calendar';
           } else {
             alert('Failed to save event.');
@@ -50,20 +49,20 @@ function Editor(props) {
 
         <form>
             <div>
-              <label class="block">Title</label>
-              <input
-                  type="text"
-                  value={title}
-                  onChange={(e) => set_title(e.target.value)}
-                  required
-              />
-            </div>
-            <div>
               <label class="block">Date</label>
               <input
                   type="date"
                   value={start_date}
                   onChange={(e) => set_start_date(e.target.value)}
+                  required
+              />
+            </div>
+            <div>
+              <label class="block">Title</label>
+              <input
+                  type="text"
+                  value={title}
+                  onChange={(e) => set_title(e.target.value)}
                   required
               />
             </div>
