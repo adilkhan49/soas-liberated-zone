@@ -198,6 +198,7 @@ export default function Calendar() {
 							className="text-lg cursor-pointer hover:scale-105 transition-all"
 							onClick={() => {
 								setToday(currentDate);
+                                setSelectDate(currentDate);
 							}}
 						>
 							Today
