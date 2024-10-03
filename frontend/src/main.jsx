@@ -11,7 +11,6 @@ import {AuthProvider} from "./context/AuthContext";
 import Root from "./routes/root";
 import LoginPage from "./routes/LoginPage";
 import ErrorPage from "./error-page";
-import Contact from "./routes/contact";
 import Home from "./routes/home";
 import Events from "./routes/events";
 import Fundraiser from "./routes/fundraiser";
@@ -25,6 +24,7 @@ import Post from "./routes/post";
 import EditPost from "./routes/editpost";
 import CreateStatement from "./routes/createStatement";
 import Statement from "./routes/statement";
+import CreateEvent from "./routes/createEvent";
 
 const router = createBrowserRouter([
   {
@@ -42,8 +42,12 @@ const router = createBrowserRouter([
         element: <LoginPage />,
       },
       {
-        path: "events",
+        path: "calendar",
         element: <Events />,
+      },
+      {
+        path: "calendar/create",
+        element: <PrivateRoute><CreateEvent /></PrivateRoute>
       },
       {
         path: "fundraiser",

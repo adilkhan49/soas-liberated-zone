@@ -34,6 +34,7 @@ export default function Root() {
             <div class="flex space-x-4">
               <Link to={``} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Home</Link>
               <Link to={`getinvolved`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Get Involved</Link>
+              <Link to={`calendar`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Calendar</Link>
               <Link to={`statements`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Statements</Link>
               <Link to={`journal`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">SLZ Journal</Link>
               <Link to={`fundraiser`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Fundraiser</Link>
