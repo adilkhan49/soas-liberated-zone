@@ -4,7 +4,7 @@ function CreateEvent () {
     return (
         <div>
             <h1>
-                Create Event
+                Add Event
             </h1>
             <Editor />
         </div>

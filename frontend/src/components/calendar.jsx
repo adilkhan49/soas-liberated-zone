@@ -37,7 +37,14 @@ class Calendar extends Component {
     return (
 
           // <div className="flex gap-10 sm:divide-x justify-center sm:w-1/2 mx-auto  min-h-screen max-h-screen items-center sm:flex-row flex-col">
-          <div class="flex sm:flex-row flex-col gap-10 min-h-screen max-h-screen sm:divide-x justify-center mx-auto max-sm:items-center space-y-8">
+        <div>
+          <LinkButton 
+              linkText={"Add Event"} 
+              linkUrl={"calendar/create"}
+              target = ""
+          ></LinkButton>
+
+        <div class="flex sm:flex-row flex-col gap-10 min-h-screen max-h-screen sm:divide-x justify-center mx-auto max-sm:items-center space-y-8">
         <div className="flex-1 w-96 h-96 ">
           <div className="flex justify-between items-center">
             <p className="select-none font-semibold">
@@ -130,11 +137,7 @@ class Calendar extends Component {
           <p className=" font-semibold">
             Schedule for {this.state.selectDate.toDate().toDateString()}
           </p >
-                  <LinkButton 
-                      linkText={"Add Event"} 
-                      linkUrl={"calendar/create"}
-                      target = ""
-                  ></LinkButton>
+
                   <div class="flex flex-col">
                     {!this.state.events || this.state.events.length <= 0 ? (
                         <div className="text-black">Nothing in the diary!</div>)
@@ -164,6 +167,8 @@ class Calendar extends Component {
 
 
           </div>
+          </div>  
+
     )
   }
   };
