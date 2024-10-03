@@ -24,4 +24,12 @@ class Statement(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
 
-    # categories = models.ManyToManyField("Category", related_name="posts")
+class Event(models.Model):
+    title = models.TextField()
+    allDay = models.BooleanField()
+    start_date = models.DateField()
+    start_time = models.TimeField()
+    end_date = models.DateField()
+    end_time = models.TimeField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    last_modified = models.DateTimeField(auto_now=True)
