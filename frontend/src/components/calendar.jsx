@@ -7,7 +7,7 @@ import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 function getEvents(event_date) {
     const events = [  {
         id: 0,
-        title: "All Day Event very long title",
+        title: "All Day Event very long titleAll Day Event very long titleAll Day Event very long titleAll Day Event very long titleAll Day Event very long title",
         allDay: true,
         start: new Date(2024, 3, 0,),
         end: new Date(2024, 3, 1)
@@ -182,7 +182,7 @@ export default function Calendar() {
 
         // <div className="flex gap-10 sm:divide-x justify-center sm:w-1/2 mx-auto  min-h-screen max-h-screen items-center sm:flex-row flex-col">
         <div class="flex sm:flex-row flex-col gap-10 min-h-screen max-h-screen sm:divide-x justify-center mx-auto max-sm:items-center space-y-8">
-			<div className="w-96 h-96 ">
+			<div className="flex-1 w-96 h-96 ">
 				<div className="flex justify-between items-center">
 					<p className="select-none font-semibold">
 						{months[today.month()]}, {today.year()}
@@ -259,7 +259,7 @@ export default function Calendar() {
 			</div>
 
 
-			<div className="flex flex-col  px-8 overflow-x-hidden overflow-y-auto whitespace-nowrap sm:px-5 ">
+			<div className="flex flex-col flex-1 px-8 overflow-x-auto overflow-y-auto sm:px-5 ">
 				<p className=" font-semibold">
 					Schedule for {selectDate.toDate().toDateString()}
 				</p >
