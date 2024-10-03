@@ -2,8 +2,12 @@ import { Component } from "react";
 import { STATEMENTS_API_URL } from "../constants";
 import axios from "axios";
 import ReactMarkdown from 'react-markdown'
+import AuthContext from "../context/AuthContext";
 
 class StatementDetail extends Component {
+
+    static contextType = AuthContext;
+
     state = {
         statement: {}
       };
@@ -14,6 +18,7 @@ class StatementDetail extends Component {
 
     componentDidMount() {
         this.resetState();
+        const user = this.context;
     }
 
     resetState = () => {
@@ -44,14 +49,16 @@ class StatementDetail extends Component {
                         </button>
                     </div> */}
 
-
-                    <div class="py-3 text-right" >
-                        <button 
-                            class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-full"
-                            onClick={() => this.onDeleteClick()}
-                            >Delete
-                        </button>
-                    </div>
+                    {
+                    this.user &&
+                        <div class="py-3 text-right" >
+                            <button 
+                                class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-full"
+                                onClick={() => this.onDeleteClick()}
+                                >Delete
+                            </button>
+                        </div>
+                    }
                 </div>
             </div>
             <h1>
