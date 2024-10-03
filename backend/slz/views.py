@@ -92,7 +92,7 @@ def statement_detail(request, pk):
 def event_list(request):
     if request.method == 'GET':
         
-        data = Event.objects.all().order_by('-created_on')
+        data = Event.objects.all().order_by('start_date','start_time')
         filtered_data = EventFilter(request.GET, queryset=data)
         filtered_qs = filtered_data.qs
         print(request.GET.dict())
