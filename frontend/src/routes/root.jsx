@@ -42,8 +42,9 @@ export default function Root() {
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
-            <img src="/src/slz-logo.jpg" class="h-8 w-auto rounded-full" ></img>
-
+            <a href="/">
+             <img src="/src/slz-logo.jpg" class="h-8 w-auto rounded-full" ></img>
+            </a>
             {/* <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"> </img> */}
           </div>
           <div class="hidden sm:ml-6 sm:block">
