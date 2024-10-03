@@ -137,7 +137,7 @@ class Calendar extends Component {
                   ></LinkButton>
                   <div class="flex flex-col">
                     {!this.state.events || this.state.events.length <= 0 ? (
-                        <div className="text-gray-400">No meetings for today.</div>)
+                        <div className="text-black">Nothing in the diary!</div>)
                         : (
                             this.state.events.map(event => (
                                 <div key = {event.pk} >
@@ -147,7 +147,7 @@ class Calendar extends Component {
                                         </div>
                                     )}
                                     <div>
-                                        {event.title} on {event.start_date}
+                                        {event.title}
                                     </div>
                                 <hr class="h-px my-1 bg-gray-200 border-0 dark:bg-gray-700"/>
 

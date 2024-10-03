@@ -24,6 +24,7 @@ import Post from "./routes/post";
 import EditPost from "./routes/editpost";
 import CreateStatement from "./routes/createStatement";
 import Statement from "./routes/statement";
+import CreateEvent from "./routes/createEvent";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "calendar",
         element: <Events />,
+      },
+      {
+        path: "calendar/create",
+        element: <CreateEvent />,
       },
       {
         path: "fundraiser",
