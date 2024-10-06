@@ -1,7 +1,7 @@
 import React from 'react';
 import { InstagramEmbed } from 'react-social-media-embed';
 import days_between from '../components/days_between';
-
+import homepageimg from '/src/home-page.jpeg'
 
 var slzStartDate = new Date(2024, 4, 5);
 var gazaStartDate = new Date(2023, 9, 7);
@@ -43,7 +43,7 @@ const Home = props => {
 
       <div class="flex justify-center items-center border-none">
         <figure>
-          <img class="h-auto max-w-full rounded-lg " src="/src/home-page.jpeg" alt="Intifada to Victory" />
+          <img class="h-auto max-w-full rounded-lg " src={homepageimg} alt="Intifada to Victory" />
           <a href="/login"><figcaption class="px-5 py-3 text-center text-lg text-white font-semibold underline ">!انتفاضة شامیے</figcaption></a>
         </figure>
       </div>
