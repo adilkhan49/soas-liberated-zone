@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { API_URL } from "../constants";
 import axios from "axios";
+// import ReactMarkdown from 'react-markdown'
+import Markdown from 'markdown-to-jsx'
 import AuthContext from "../context/AuthContext";
 
 class PostDetail extends Component {
@@ -61,7 +63,7 @@ class PostDetail extends Component {
             </h1>
 
             <div>
-                <ReactMarkdown class=" ">{this.state.post.body}</ReactMarkdown>
+                <Markdown class=" ">{this.state.post.body}</Markdown>
             </div>
 
         </div>
