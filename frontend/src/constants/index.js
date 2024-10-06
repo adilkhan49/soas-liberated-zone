@@ -5,11 +5,7 @@ if (window.location.origin === "http://localhost:5173") {
   } else {
     API_URL = API_URL + window.location.origin;
   }
-  API_URL = API_URL + '/api/'
-  console.log('hello origin')
-console.log(window.location.origin);
-console.log(API_URL)
-  
+  API_URL = API_URL + '/api/'  
 export const POSTS_API_URL = API_URL + "posts/";
 export const STATEMENTS_API_URL =  API_URL + "statements/";
 export const EVENTS_API_URL =  API_URL + "events/";
