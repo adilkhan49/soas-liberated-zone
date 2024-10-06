@@ -1,9 +1,14 @@
 import { Component } from "react";
 import { API_URL } from "../constants";
 import axios from "axios";
-import ReactMarkdown from 'react-markdown'
+// import ReactMarkdown from 'react-markdown'
+import Markdown from 'markdown-to-jsx'
+import AuthContext from "../context/AuthContext";
 
 class PostDetail extends Component {
+
+    static contextType = AuthContext;
+
     state = {
         post: {}
       };
@@ -14,6 +19,7 @@ class PostDetail extends Component {
 
     componentDidMount() {
         this.resetState();
+        const user = this.context;
     }
 
     resetState = () => {
@@ -32,34 +38,32 @@ class PostDetail extends Component {
 
         return (
         <div>
-            <div class="container flex-row">
-                <div class = "">
-                    
- 
-                    <div class="py-3 text-right" >
-                        <button 
-                            class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-full"
-                            onClick={() => this.onEditClick()}
-                            >Edit
-                        </button>
-                    </div>
+            { this.context.user &&
+                <div class="flex flex-row gap-5 justify-end">
 
+                        <div class="py-3 text-right" >
+                            <button 
+                                class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-full"
+                                onClick={() => this.onEditClick()}
+                                >Edit
+                            </button>
+                        </div>
 
-                    <div class="py-3 text-right" >
-                        <button 
-                            class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-full"
-                            onClick={() => this.onDeleteClick()}
-                            >Delete
-                        </button>
-                    </div>
+                        <div class="py-3 text-right" >
+                            <button 
+                                class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-full"
+                                onClick={() => this.onDeleteClick()}
+                                >Delete
+                            </button>
+                        </div>
                 </div>
-            </div>
+            }
             <h1>
                 {this.state.post.title}
             </h1>
 
             <div>
-                <ReactMarkdown class=" ">{this.state.post.body}</ReactMarkdown>
+                <Markdown class=" ">{this.state.post.body}</Markdown>
             </div>
 
         </div>

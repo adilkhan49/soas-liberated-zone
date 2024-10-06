@@ -62,6 +62,10 @@ function Editor(props) {
     return <div class="m-4 pb-20">
 
         <form>
+            <button 
+              class="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
+              onClick={handleSave}>Save 
+            </button> 
             <div>
             <label class="block">Title</label>
             <input
@@ -91,6 +95,7 @@ function Editor(props) {
             quotePlugin(), 
             thematicBreakPlugin(), 
             linkDialogPlugin(),
+            imagePlugin(),
             toolbarPlugin({         
                 toolbarContents: () => (
                 <>
@@ -99,16 +104,17 @@ function Editor(props) {
                 <BlockTypeSelect />
                 <CreateLink />
                 <UndoRedo />
+                <InsertImage />
                 </>
             )})]} />
         </div>
 
 
 
-    <button 
+      <button 
         class="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
-        onClick={handleSave}
-                    >Save </button> 
+        onClick={handleSave}>Save 
+      </button> 
     </div>
     
 }

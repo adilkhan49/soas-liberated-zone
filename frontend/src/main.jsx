@@ -24,6 +24,7 @@ import Post from "./routes/post";
 import EditPost from "./routes/editpost";
 import CreateStatement from "./routes/createStatement";
 import Statement from "./routes/statement";
+import EditStatement from "./routes/editStatement";
 import CreateEvent from "./routes/createEvent";
 
 const router = createBrowserRouter([
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
       {
         path: "statements/:id",
         element: <Statement />,
+      },
+      {
+        path: "statements/:id/edit",
+        element: <PrivateRoute><EditStatement /></PrivateRoute>,
       },
       {
         path: "statements/create",

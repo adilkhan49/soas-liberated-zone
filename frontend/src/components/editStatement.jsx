@@ -16,10 +16,10 @@ import {
     BoldItalicUnderlineToggles,
     BlockTypeSelect,
     CreateLink,
-    InsertImage
+    InsertImage,
 } from '@mdxeditor/editor';
 
-import { API_URL } from "../constants";
+import { STATEMENTS_API_URL } from "../constants";
 
 class Editor extends Component {
     constructor(props) {
@@ -27,7 +27,7 @@ class Editor extends Component {
         this.state = {
             markdown: '',
             title: '',
-            username: '',
+            release_date: '',
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -38,13 +38,13 @@ class Editor extends Component {
     async componentDidMount() {
 
         try {
-            const response = await fetch(API_URL + this.props.id); // Use postId in API request
+            const response = await fetch(STATEMENTS_API_URL + this.props.id); // Use postId in API request
             const data = await response.json();
 
             // Assuming the API response contains the initial title and markdown
             this.setState({
                 title: data.title,
-                username: data.author,
+                release_date: data.release_date,
                 markdown: data.body,
             });
         } catch (error) {
@@ -62,52 +62,63 @@ class Editor extends Component {
     async handleSave(event) {
         event.preventDefault();
 
-        const { title, username, markdown } = this.state;
-        const { postId } = this.props; // Access postId from props
+        const { title, release_date, markdown } = this.state;
+        // const { postId: statement_id } = this.props; // Access postId from props
 
         try {
-            const response = await fetch(API_URL+this.props.id, { // Use postId in the request
+            const response = await fetch(STATEMENTS_API_URL+this.props.id, { // Use postId in the request
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
                     id: this.props.id,
-                    title: title,
-                    author: username,
-                    body: markdown,
+                    title: this.state.title,
+                    release_date: this.state.release_date,
+                    body: this.state.markdown,
                 }),
             });
 
             if (response.ok) {
                 alert('Saved Successfully');
-                window.location = '/journal/'+this.props.id;
+                window.location = '/statements/'+this.props.id;
             } else {
-                alert('Failed to save markdown.');
+                alert('Failed to edit statement.');
             }
         } catch (error) {
-            console.error('Error saving markdown:', error);
+            console.error('Error saving statement:', error);
             alert('An error occurred while saving.');
         }
     }
 
     render() {
-      const { title, username, markdown } = this.state;
+      const { title, release_date, markdown } = this.state;
   
       return (
           <div className="m-4 pb-20">
               <form onSubmit={this.handleSave}>
-                <button 
+                  <button 
                     className="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
                     onClick={this.handleSave}>
                     Save
-                </button>
+                  </button>
                   <div>
                       <label className="block">Title</label>
                       <input
                           type="text"
                           name="title"
                           value={title}
+                          onChange={this.handleChange}
+                          required
+                      />
+                  </div>
+
+                  <div>
+                      <label className="block">Release Date</label>
+                      <input
+                          type="date"
+                          name="release_date"
+                          value={release_date}
                           onChange={this.handleChange}
                           required
                       />

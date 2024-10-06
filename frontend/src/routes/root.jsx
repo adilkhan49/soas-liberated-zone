@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { useContext } from 'react'
 import AuthContext from "../context/AuthContext";
-
+import logo from "/src/slz-logo.jpg";
 
 
 
@@ -43,7 +43,7 @@ export default function Root() {
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
             <a href="/">
-             <img src="/src/slz-logo.jpg" class="h-8 w-auto rounded-full" ></img>
+             <img src={logo} class="h-8 w-auto rounded-full" ></img>
             </a>
             {/* <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"> </img> */}
           </div>
