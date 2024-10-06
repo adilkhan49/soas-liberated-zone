@@ -95,6 +95,7 @@ function Editor(props) {
             quotePlugin(), 
             thematicBreakPlugin(), 
             linkDialogPlugin(),
+            imagePlugin(),
             toolbarPlugin({         
                 toolbarContents: () => (
                 <>
@@ -103,6 +104,7 @@ function Editor(props) {
                 <BlockTypeSelect />
                 <CreateLink />
                 <UndoRedo />
+                <InsertImage />
                 </>
             )})]} />
         </div>
