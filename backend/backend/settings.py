@@ -34,8 +34,7 @@ if os.environ["DEBUG"].lower() in ['true','1']:
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
-
+ALLOWED_HOSTS = ['localhost','35.176.139.123','127.0.0.1','0.0.0.0']
 
 # Application definition
 
