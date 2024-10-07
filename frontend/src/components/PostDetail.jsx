@@ -1,7 +1,6 @@
 import { Component } from "react";
-import { API_URL } from "../constants";
+import { POSTS_API_URL } from "../constants";
 import axios from "axios";
-// import ReactMarkdown from 'react-markdown'
 import Markdown from 'markdown-to-jsx'
 import AuthContext from "../context/AuthContext";
 
@@ -14,7 +13,7 @@ class PostDetail extends Component {
       };
 
     getPost = () => {
-        axios.get(API_URL + this.props.id).then(res => this.setState({ post: res.data }));
+        axios.get(POSTS_API_URL + this.props.id).then(res => this.setState({ post: res.data }));
       };
 
     componentDidMount() {
@@ -27,7 +26,7 @@ class PostDetail extends Component {
       };
 
     onDeleteClick = () => {
-        axios.delete(API_URL + this.props.id);
+        axios.delete(POSTS_API_URL + this.props.id);
         window.location = '/journal/';
     }
 

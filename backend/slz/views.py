@@ -95,7 +95,6 @@ def event_list(request):
         data = Event.objects.all().order_by('start_date','start_time')
         filtered_data = EventFilter(request.GET, queryset=data)
         filtered_qs = filtered_data.qs
-        print(request.GET.dict())
         serializer = EventSerializer(filtered_qs, context={'request': request}, many=True)
 
         return Response(serializer.data)
