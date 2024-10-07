@@ -27,7 +27,14 @@ class PostDetail extends Component {
       };
 
     onDeleteClick = () => {
-        axios.delete(API_URL + this.props.id);
+        axios.delete(
+            API_URL + this.props.id,
+            {
+                headers: {
+                  Authorization: 'Bearer ' + this.context.authTokens.access,
+                }
+               }
+        );
         window.location = '/journal/';
     }
 
