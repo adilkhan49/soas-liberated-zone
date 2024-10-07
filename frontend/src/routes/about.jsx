@@ -1,5 +1,4 @@
-const TimelineText = `X October|suspensions (?)
-6 May 2024|The Soas liberated zone begins an encampment at the Walter Rodney freedom square, alongside a global wave of student encampments for Gaza
+const TimelineText = `6 May 2024|The Soas liberated zone begins an encampment at the Walter Rodney freedom square, alongside a global wave of student encampments for Gaza
 10 May 2024|700+ people join a protest in support of the SLZ, the largest protest ever recorded on campus. 
 15 May 2024|SLZ builds a disability ramp into the Walter Rodney freedom square which SOAS has historically failed to do. They have since removed the ramp, making the green once again inaccessible. 
 16 May 2024|Commemoration of 76 years since the Nakba, students block Tottenham Court Road
@@ -20,11 +19,11 @@ X July 2024|SU officers dismissed (?)
 
 const TimelineArray = TimelineText.split('\n').map(i => i.split('|'));
 const TimelineListItems = TimelineArray.map(([date,desc]) => (
-  <li class="mb-6 ms-4">
+  <div class="mb-6 ms-4">
     <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-black"></div>
     <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-red-800">{date}</time>
     <p class="text-lg text-gray-900 dark:text-white">{desc}</p>
-  </li>));
+  </div>));
 const TimelineDiv = (
     <div>
       <ol class="relative border-s border-gray-200 dark:border-gray-700">
