@@ -18,7 +18,7 @@ const Home = props => {
 
 
 
-        <div class="flex h-40 grid grid-cols-3 gap-x-2 gap-y-2 sm:gap-y-4 md:gap-y-6 lg:gap-y-8 xl:gap-y-1 place-items-center flex">
+        <div class="flex sm:h-40 grid grid-cols-1 sm:grid-cols-3 gap-x-2 gap-y-2 sm:gap-y-4 md:gap-y-6 lg:gap-y-8 xl:gap-y-1 place-items-center m-10 sm:m-2 ">
         
           <div class="block max-w-sm p-6 border border-gray-200 rounded-lg shadow bg-black border-gray-700">
             <h5 class="text-center mb-2 text-sm sm:text-xl font-bold tracking-tight text-white">Day {gaza_days} of the Genocide</h5>
