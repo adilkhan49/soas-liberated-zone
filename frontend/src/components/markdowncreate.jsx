@@ -17,10 +17,11 @@ import {
     BlockTypeSelect,
     CreateLink,
     InsertImage,
+    ListsToggle,
 } from '@mdxeditor/editor'
 
 import axios from "axios";
-import { API_URL } from "../constants";
+import { POSTS_API_URL } from "../constants";
 
 
 function Editor(props) {
@@ -35,7 +36,7 @@ function Editor(props) {
         event.preventDefault(); // Prevent form default submission
 
         try {
-          const response = await fetch(API_URL, {
+          const response = await fetch(POSTS_API_URL, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -97,6 +98,7 @@ function Editor(props) {
             thematicBreakPlugin(), 
             linkDialogPlugin(),
             imagePlugin(),
+            listsPlugin(),
             toolbarPlugin({         
                 toolbarContents: () => (
                 <>
@@ -105,6 +107,7 @@ function Editor(props) {
                 <BlockTypeSelect />
                 <CreateLink />
                 <UndoRedo />
+                <ListsToggle />
                 <InsertImage />
                 </>
             )})]} />

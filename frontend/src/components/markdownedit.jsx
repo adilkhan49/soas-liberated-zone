@@ -18,10 +18,11 @@ import {
     BoldItalicUnderlineToggles,
     BlockTypeSelect,
     CreateLink,
-    InsertImage
+    InsertImage,
+    ListsToggle
 } from '@mdxeditor/editor';
 
-import { API_URL } from "../constants";
+import { POSTS_API_URL } from "../constants";
 
 class Editor extends Component {
 
@@ -43,7 +44,7 @@ class Editor extends Component {
     async componentDidMount() {
 
         try {
-            const response = await fetch(API_URL + this.props.id); // Use postId in API request
+            const response = await fetch(POSTS_API_URL + this.props.id); // Use postId in API request
             const data = await response.json();
 
             // Assuming the API response contains the initial title and markdown
@@ -71,7 +72,7 @@ class Editor extends Component {
         const { postId } = this.props; // Access postId from props
 
         try {
-            const response = await fetch(API_URL+this.props.id, { // Use postId in the request
+            const response = await fetch(POSTS_API_URL+this.props.id, { // Use postId in the request
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -132,6 +133,7 @@ class Editor extends Component {
                               thematicBreakPlugin(),
                               linkDialogPlugin(),
                               imagePlugin(),
+                              listsPlugin(),
                               toolbarPlugin({
                                   toolbarContents: () => (
                                       <>
@@ -139,6 +141,7 @@ class Editor extends Component {
                                           <BlockTypeSelect />
                                           <CreateLink />
                                           <UndoRedo />
+                                          <ListsToggle />
                                           <InsertImage />
                                       </>
                                   ),

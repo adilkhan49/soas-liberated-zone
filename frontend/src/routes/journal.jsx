@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { API_URL } from "../constants";
+import { POSTS_API_URL } from "../constants";
 import PostList from "../components/PostListing";
 import axios from 'axios';
 import LinkButton from "../components/linkbutton";
@@ -55,7 +55,7 @@ class Journal extends Component {
   }
 
   getPosts = () => {
-    axios.get(API_URL).then(res => this.setState({ posts: res.data }));
+    axios.get(POSTS_API_URL).then(res => this.setState({ posts: res.data }));
   };
 
   resetState = () => {

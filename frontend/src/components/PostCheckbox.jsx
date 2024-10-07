@@ -1,6 +1,6 @@
 import {useState, useContext} from 'react';
-import { API_URL } from '../constants';
 import AuthContext from '../context/AuthContext';
+import { POSTS_API_URL } from '../constants';
 
 function Checkbox({pk, title, author, body, is_approved }) {
     // state
@@ -11,7 +11,7 @@ function Checkbox({pk, title, author, body, is_approved }) {
     const changeApproval = async () => {
 
       try {
-        const response = await fetch(API_URL+pk, {
+        const response = await fetch(POSTS_API_URL+pk, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
