@@ -17,6 +17,7 @@ import {
     BlockTypeSelect,
     CreateLink,
     InsertImage,
+    ListsToggle,
 } from '@mdxeditor/editor'
 
 import axios from "axios";
@@ -96,6 +97,7 @@ function Editor(props) {
             thematicBreakPlugin(), 
             linkDialogPlugin(),
             imagePlugin(),
+            listsPlugin(),
             toolbarPlugin({         
                 toolbarContents: () => (
                 <>
@@ -105,6 +107,7 @@ function Editor(props) {
                 <CreateLink />
                 <UndoRedo />
                 <InsertImage />
+                <ListsToggle />
                 </>
             )})]} />
         </div>

@@ -16,7 +16,8 @@ import {
     BoldItalicUnderlineToggles,
     BlockTypeSelect,
     CreateLink,
-    InsertImage
+    InsertImage,
+    ListsToggle
 } from '@mdxeditor/editor';
 
 import { POSTS_API_URL } from "../constants";
@@ -125,6 +126,7 @@ class Editor extends Component {
                               thematicBreakPlugin(),
                               linkDialogPlugin(),
                               imagePlugin(),
+                              listsPlugin(),
                               toolbarPlugin({
                                   toolbarContents: () => (
                                       <>
@@ -132,6 +134,7 @@ class Editor extends Component {
                                           <BlockTypeSelect />
                                           <CreateLink />
                                           <UndoRedo />
+                                          <ListsToggle />
                                           <InsertImage />
                                       </>
                                   ),
