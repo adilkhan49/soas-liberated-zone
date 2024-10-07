@@ -1,4 +1,4 @@
-import React, {useState, Component} from 'react';
+import React, {useState, Component, useContext} from 'react';
 import '@mdxeditor/editor/style.css'
 import {
     MDXEditor, 
@@ -22,7 +22,7 @@ import {
 
 import axios from "axios";
 import { STATEMENTS_API_URL } from "../constants";
-
+import AuthContext from '../context/AuthContext';
 
 function Editor(props) {
 
@@ -30,7 +30,7 @@ function Editor(props) {
     const [markdown, setMarkdown] = useState('Statement Content');
     const [title, setTitle] = useState('Statement Title');
     const [releaseDate, setReleaseDate] = useState('');
-
+    let {authTokens}  = useContext(AuthContext)
     
     const handleSave = async () => {
         event.preventDefault(); // Prevent form default submission
@@ -40,6 +40,7 @@ function Editor(props) {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + authTokens.access,
             },
             body: JSON.stringify({
               title: title,
