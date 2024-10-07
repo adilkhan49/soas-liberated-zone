@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import AuthContext from '../context/AuthContext';
+
 import '@mdxeditor/editor/style.css';
 import {
     MDXEditor,
@@ -22,6 +24,9 @@ import {
 import { API_URL } from "../constants";
 
 class Editor extends Component {
+
+    static contextType = AuthContext
+
     constructor(props) {
         super(props);
         this.state = {
@@ -70,6 +75,8 @@ class Editor extends Component {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + this.context.authTokens.access,
+
                 },
                 body: JSON.stringify({
                     id: this.props.id,
