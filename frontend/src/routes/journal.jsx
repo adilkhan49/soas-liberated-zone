@@ -71,7 +71,7 @@ class Journal extends Component {
         <section>
           <LinkButton 
             linkText={"Contribute"} 
-            linkUrl={"journal/create"}
+            linkUrl={"/journal/create"}
             target = ""
           ></LinkButton>
 
