@@ -1,10 +1,17 @@
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 
 from .models import Post, Statement #, Event
 from .serializers import *
 from .filters import EventFilter
+
+# class IsAuthenticatedOrPOST(IsAuthenticated):
+#     def has_permission(self, request, view):
+#         if request.method == 'POST':
+#             return True
+#         return super().has_permission(request, view)
 
 @api_view(['GET', 'POST'])
 def post_list(request):
@@ -24,6 +31,7 @@ def post_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET','PUT', 'DELETE'])
+@permission_classes([IsAuthenticatedOrReadOnly])
 def post_detail(request, pk):
     try:
         post = Post.objects.get(pk=pk)
@@ -44,12 +52,15 @@ def post_detail(request, pk):
     elif request.method == 'DELETE':
         post.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-    
-###
 
 
 @api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticatedOrReadOnly])
 def statement_list(request):
+    print('Hello user are you authenticated?')
+    print(request.user.is_authenticated)
+    print(request.user)
+
     if request.method == 'GET':
         
         data = Statement.objects.all().order_by('-release_date')
@@ -67,6 +78,7 @@ def statement_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET','PUT', 'DELETE'])
+@permission_classes([IsAuthenticatedOrReadOnly])
 def statement_detail(request, pk):
     try:
         statement = Statement.objects.get(pk=pk)
@@ -89,13 +101,13 @@ def statement_detail(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
     
 @api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticatedOrReadOnly])
 def event_list(request):
     if request.method == 'GET':
         
         data = Event.objects.all().order_by('start_date','start_time')
         filtered_data = EventFilter(request.GET, queryset=data)
         filtered_qs = filtered_data.qs
-        print(request.GET.dict())
         serializer = EventSerializer(filtered_qs, context={'request': request}, many=True)
 
         return Response(serializer.data)
@@ -109,6 +121,7 @@ def event_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 @api_view(['GET','PUT', 'DELETE'])
+@permission_classes([IsAuthenticatedOrReadOnly])
 def event_detail(request, pk):
     try:
         event = Event.objects.get(pk=pk)
