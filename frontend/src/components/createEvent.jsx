@@ -1,8 +1,8 @@
-import React, {useState, Component} from 'react';
+import React, {useState, Component, useContext} from 'react';
 
 import axios from "axios";
 import { EVENTS_API_URL } from "../constants";
-
+import AuthContext from '../context/AuthContext';
 
 function Editor(props) {
 
@@ -14,7 +14,7 @@ function Editor(props) {
     const [end_time, set_end_time] = useState(null);
     const [allDay, set_allDay] = useState(false);
     
-
+    let { authTokens } = useContext(AuthContext)
     
     const handleSave = async () => {
         event.preventDefault(); // Prevent form default submission
@@ -24,6 +24,7 @@ function Editor(props) {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + authTokens.access,
             },
             body: JSON.stringify({
               title: title,
