@@ -39,7 +39,15 @@ class Calendar extends Component {
   };
 
   onDeleteClick = (pk) => {
-    axios.delete(EVENTS_API_URL + pk);
+
+    axios.delete(
+      EVENTS_API_URL + pk,
+      {
+          headers: {
+            Authorization: 'Bearer ' + this.context.authTokens.access,
+          }
+      }
+    );
     window.location = '/calendar/';
 
 }
