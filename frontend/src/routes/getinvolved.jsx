@@ -1,4 +1,6 @@
 import LinkButton from "../components/linkbutton";
+import Subscribe from "../components/SubscribeForm";
+
 
 
 const GetInvolved = props => {
@@ -10,7 +12,7 @@ const GetInvolved = props => {
         <p>
           Come down to the SLZ, come talk to us, there are many ways to get involved on the ground 
         </p>
-        <br></br>
+          <Subscribe />
         <p>Join these group chats</p>
 
         <LinkButton 

@@ -11,3 +11,4 @@ export const TOKEN_API_URL = API_URL + "token/";
 export const POSTS_API_URL = API_URL + "posts/";
 export const STATEMENTS_API_URL =  API_URL + "statements/";
 export const EVENTS_API_URL =  API_URL + "events/";
+export const SUBSCRIBE_API_URL =  API_URL + "subscribe/";

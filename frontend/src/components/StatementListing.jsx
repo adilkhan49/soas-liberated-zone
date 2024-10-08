@@ -10,7 +10,7 @@ class StatementList extends Component {
             <div class="grid grid-cols-1 gap-5">
 
                 {!statements || statements.length <= 0 ? (
-                    <b>Ops, no statements yet</b>
+                    <b>Oops, no statements yet</b>
             ) : (
                 statements.map(statement => ( 
 
