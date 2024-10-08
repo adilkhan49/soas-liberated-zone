@@ -33,3 +33,8 @@ class Event(models.Model):
     end_time = models.TimeField(null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
+
+class Subscriber(models.Model):
+    email = models.TextField(unique=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+
