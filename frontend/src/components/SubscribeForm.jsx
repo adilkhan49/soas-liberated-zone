@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import ReCAPTCHA from "react-google-recaptcha";
+import { SUBSCRIBE_API_URL } from '../constants';
 
 function Subscribe() {
     const [email, setEmail] = useState("");
     const [isValidEmail, setisValidEmail] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
 
 
   const handleEmailInput = (e) => {
@@ -17,36 +17,26 @@ function Subscribe() {
     setErrorMessage("");
     setSuccessMessage("");
 
-        try {
-        const response = await fetch(
-            "https://connect.mailerlite.com/api/subscribers",
-            {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-                Authorization: `Bearer YOUR_API_TOKEN`
-            },
-            body: JSON.stringify({
-                email: email,
-                groups: ["117872522076096341"]
-            })
-            }
-        )
-
-        const data = await response.json();
-        console.log(data);
-
-        if(data.errors) {
-            setErrorMessage(data?.message);
-            return;
+    try {
+        const response = await fetch(SUBSCRIBE_API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: email,
+          }),
+        });
+  
+        if (response.ok) {
+            setSuccessMessage("Thank you for joining our newsletter!");
+        } else {
+            setErrorMessage("Failed to subscribe. Please try again later.")
         }
-
-        setSuccessMessage("Thank you for joining our newsletter!");
-        } catch (error) {
-        console.error(error);
+      } catch (error) {
+        console.error('Error subscribing:', error);
         setErrorMessage("Failed to subscribe. Please try again later.")
-        }
+      }
 
     
 
@@ -73,8 +63,8 @@ function Subscribe() {
                     <button class="bg-black hover:bg-gray-700 block w-full py-3 mt-3 font-bold tracking-wide rounded shadow sm:ml-3 md:w-52 text-white focus"
                     type='submit'>Subscribe</button>
                 </div>
-                {errorMessage && <p className='error'>{errorMessage}</p>}
-                {successMessage && <p className='success'>{successMessage}</p>}
+                {errorMessage && <p>{errorMessage}</p>}
+                {successMessage && <p>{successMessage}</p>}
             </div>
         </div>
       </form>
