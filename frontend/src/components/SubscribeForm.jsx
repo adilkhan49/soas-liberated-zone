@@ -47,7 +47,7 @@ function Subscribe() {
 
       <form onSubmit={handleSubmit}>
 
-        <div class="flex justify-center px-20">
+        <div class="flex justify-center">
             <div class="max-w-2xl px-3 py-5 rounded-2xl md:px-8 md:py-7">
                 <p class="max-w-xl mt-2 leading-relaxed lg:text-lg">
                         Subscribe to our newsletter
