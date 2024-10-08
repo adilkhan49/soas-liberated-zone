@@ -24,7 +24,7 @@ class PostList extends Component {
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
 
                 {!posts || posts.length <= 0 ? (
-                    <b>Ops, no posts yet</b>
+                    <b>Oops, no posts yet</b>
             ) : (
                 posts.map(post => ( 
                          
