@@ -117,3 +117,5 @@ dist
 stats.html
 
 .eslintcache
+
+staticfiles
