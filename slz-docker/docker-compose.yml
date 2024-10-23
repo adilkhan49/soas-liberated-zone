@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+
+  frontend:
+    build: 
+      context: ../
+      dockerfile: ./slz-docker/frontend/Dockerfile
+    ports: 
+      - 80:80
+  
+  backend:
+    build: 
+      context: ../
+      dockerfile: ./slz-docker/backend/Dockerfile
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  
+  db:
+    image: mariadb
+    volumes:
+      - mariavol:/var/lib/mysql
+      - ./db:/mnt
+    ports:
+      - "3306:3306"
+    env_file:
+      - ./db/.env
+
+volumes:
+  mariavol:
