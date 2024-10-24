@@ -9,7 +9,8 @@ def get_timestamp():
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    list_display = ['title']
+    list_display = ['start_date','title',]
+    ordering = ['start_date',]
 
 @admin.register(Statement)
 class StatementAdmin(admin.ModelAdmin):
