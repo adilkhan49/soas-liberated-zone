@@ -22,7 +22,7 @@ export default function Root() {
   // }
 
   return (
-<div class="min-h-screen bg-gradient-to-b from-green-700 to-green-700">
+<div class="min-h-screen bg-amber-50">
   <nav class="bg-red-800">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
