@@ -48,7 +48,7 @@ function Checkbox({pk, title, author, body, is_approved }) {
     
 
     return (
-      <div class="w-4 h-4">
+      <div class="w-4 h-4 accent-black">
         <input type="checkbox" checked={checked} onChange={handleOnChange} />
       </div>
     );
