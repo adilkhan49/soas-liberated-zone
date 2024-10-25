@@ -12,7 +12,7 @@ var gaza_days = days_between(gazaStartDate,today)
 const Home = props => {
   return (
     <div
-    class = "w-full bg-repeat border-2e bg-[url('/src/hariya-tile-lg.svg')] sm:bg-[url('/src/hariya-tile.svg')]"
+    // class = "w-full bg-repeat border-2e bg-[url('/src/hariya-tile-lg.svg')] sm:bg-[url('/src/hariya-tile.svg')]"
     >
       <h1>SOAS Liberated Zone for Gaza</h1>
 
