@@ -27,7 +27,7 @@ class Statements extends Component {
 
   render() {
     return (
-      <div>
+      <div class='h-screen'>
         <h1>
           Statements
         </h1>

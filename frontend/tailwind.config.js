@@ -5,6 +5,8 @@ export default {
     extend: {
       fontFamily: {
         ubuntu: ["Ubuntu", "sans-serif"],
+        tourney: ["Tourney", "sans-serif"],
+        kanit: ["Kanit", "sans-serif"],
       }
     },
   },
