@@ -16,7 +16,7 @@ const Home = props => {
     >
       <h1>SOAS Liberated Zone for Gaza</h1>
 
-      <h2 class='italic'>Educative online room making school cool</h2>
+      <p class='text-3xl font-kanit text-center'>The SOAS liberated zone is a student led site of anti colonial struggle for Gaza against SOAS university’s complicity in the ongoing genocide. We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education.</p>
 
 
 
