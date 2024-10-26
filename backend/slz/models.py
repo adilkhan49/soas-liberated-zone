@@ -38,3 +38,8 @@ class Subscriber(models.Model):
     email = models.TextField(unique=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
+class TimelineEvent(models.Model):
+    title = models.TextField()
+    timeline_date = models.DateField()
+    created_on = models.DateTimeField(auto_now_add=True)
+

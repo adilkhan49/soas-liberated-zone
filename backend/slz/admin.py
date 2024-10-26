@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Event, Statement, Subscriber
+from .models import Event, Statement, Subscriber, TimelineEvent
 import csv
 from django.http import HttpResponse
 from datetime import datetime
@@ -36,3 +36,8 @@ class SubscriberAdmin(admin.ModelAdmin):
         return response
     
     export_as_csv.short_description = "Export Selected"
+
+@admin.register(TimelineEvent)
+class TimelineEventAdmin(admin.ModelAdmin):
+    list_display = ['timeline_date','title']
+    ordering = ['timeline_date','title']
