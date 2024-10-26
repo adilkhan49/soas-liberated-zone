@@ -3,8 +3,8 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 
-from .models import Post, Statement, Event, Subscriber
-from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer
+from .models import Post, Statement, Event, Subscriber, TimelineEvent
+from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer, TimelineEventSerializer
 from .filters import EventFilter
 
 
@@ -154,3 +154,20 @@ def subscribe_list(request):
         data = Subscriber.objects.all().order_by('-created_on')
         serializer = SubscriberSerializer(data, context={'request': request}, many=True)
         return Response(serializer.data)
+
+@api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticatedOrReadOnly])
+def timeline_event_list(request):
+
+    if request.method == 'GET':
+        data = TimelineEvent.objects.all().order_by('timeline_date')
+        serializer = TimelineEventSerializer(data, context={'request': request}, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = TimelineEvent(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

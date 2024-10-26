@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Post, Statement, Event, Subscriber
+from .models import Post, Statement, Event, Subscriber, TimelineEvent
 
 class PostSerializer(serializers.ModelSerializer):
 
@@ -23,3 +23,8 @@ class SubscriberSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subscriber
         fields = ('pk','email')
+
+class TimelineEventSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TimelineEvent
+        fields = ('pk','timeline_date','title',)
