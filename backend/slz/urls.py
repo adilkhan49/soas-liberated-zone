@@ -11,4 +11,5 @@ urlpatterns = [
     re_path(r'subscribe/$', views.subscribe),
     re_path(r'subscribers/$', views.subscribe_list),
     re_path(r'timeline/$', views.timeline_event_list),
+    re_path(r'carouselimages/$', views.carousel_image_list),
 ]
