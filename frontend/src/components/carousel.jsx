@@ -22,13 +22,7 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
     // relative w-full max-w-xl mx-auto
     // overflow-hidden relative h-64
   return (
-    <div
-    className="
-    
-    relative object-scale-down w-full min-h-screen
- overflow-hidden
-    "
-    >
+    <div className=" relative object-scale-down w-full min-h-screen overflow-hidden">
       <div className="">
         {images.map((image, index) => (
           <div
@@ -37,7 +31,7 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
               index === currentIndex ? 'translate-x-0' : 'translate-x-full'
             }`}
           >
-            <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
+            <img src={image.url} alt={`Slide ${index}`} className="w-full h-full object-cover" />
           </div>
         ))}
       </div>

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Event, Statement, Subscriber, TimelineEvent
+from .models import Event, Statement, Subscriber, TimelineEvent, CarouselImage
 import csv
 from django.http import HttpResponse
 from datetime import datetime
@@ -41,3 +41,8 @@ class SubscriberAdmin(admin.ModelAdmin):
 class TimelineEventAdmin(admin.ModelAdmin):
     list_display = ['timeline_date','title']
     ordering = ['timeline_date','title']
+
+@admin.register(CarouselImage)
+class CarouselImageAdmin(admin.ModelAdmin):
+    list_display = ['sequence','title']
+    ordering = ['sequence']

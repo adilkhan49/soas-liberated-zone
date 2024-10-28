@@ -43,3 +43,9 @@ class TimelineEvent(models.Model):
     timeline_date = models.DateField()
     created_on = models.DateTimeField(auto_now_add=True)
 
+class CarouselImage(models.Model):
+    title = models.TextField()
+    url = models.TextField()
+    sequence = models.IntegerField(unique=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+
