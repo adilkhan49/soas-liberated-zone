@@ -22,10 +22,18 @@ export default function Root() {
   // }
 
   return (
-<div class="min-h-screen bg-amber-50">
+<div class="min-h-screen relative w-full bg-amber-50">
   <nav class="bg-red-800">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between">
+    <div class="flex flex-row-reverse sm:flex-col mx-auto max-w-7xl text-lg sm:px-2 py-2 px-2 sm:px-6 lg:px-8 justify-between">
+      <div class="flex">
+           <div class="flex flex-shrink-0 items-center px-10">
+            <a href="/">
+             <img src={logo} class="h-9 w-auto rounded-full" ></img>
+            </a>
+          </div>
+          <div class="font-tourney sm:text-3xl md:text-4xl font-bold text-white"> SOAS Liberated Zone for Gaza</div>
+      </div>
+      <div class="relative flex h-12 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
           onClick={() => setIsNavOpen((prev) => !prev)}
@@ -41,21 +49,15 @@ export default function Root() {
           </button>
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex flex-shrink-0 items-center">
-            <a href="/">
-             <img src={logo} class="h-8 w-auto rounded-full" ></img>
-            </a>
-            {/* <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"> </img> */}
-          </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <Link to={``} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Home</Link>
-              <Link to={`getinvolved`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Get Involved</Link>
-              <Link to={`calendar`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Calendar</Link>
-              <Link to={`statements`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Statements</Link>
-              <Link to={`journal`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">SLZ Journal</Link>
-              <Link to={`fundraiser`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Fundraiser</Link>
-              <Link to={`about`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">About</Link>
+              <Link to={``} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Home</Link>
+              <Link to={`getinvolved`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline active:bg-black">Get Involved</Link>
+              <Link to={`calendar`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Calendar</Link>
+              <Link to={`statements`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Statements</Link>
+              <Link to={`journal`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">SLZ Journal</Link>
+              <Link to={`fundraiser`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Fundraiser</Link>
+              <Link to={`about`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">About</Link>
 
             </div>
           </div>
@@ -90,7 +92,6 @@ export default function Root() {
   <div class={!isNavOpen && "hidden"}>
     <div class="sm:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-2">
-        {/* <a href="calendar" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Calendar</a> */}
         <a href="/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Home</a>
         <a href="/getinvolved" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Get Involved</a>
         <a href="/calendar" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Calendar</a>
@@ -102,11 +103,9 @@ export default function Root() {
     </div>
   </div>
 </nav>
-         <div class="mx-10 my-5
-         w-full bg-repeat border-2e bg-[url('/src/hariya-tile-lg.svg')] sm:bg-[url('/src/hariya-tile.svg')]
-         ">
-           <Outlet />
-</div>
+  <div class="bg-repeat border-2e bg-[url('/src/hariya-tile-lg.svg')] sm:bg-[url('/src/hariya-tile.svg')]">
+      <Outlet />
+  </div>
 
 </div>
 

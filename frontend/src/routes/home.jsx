@@ -19,7 +19,6 @@ var gaza_days = days_between(gazaStartDate,today)
 
 class Home extends Component {
 
-
   state = {
     carousel_images: []
   };
@@ -42,12 +41,10 @@ class Home extends Component {
       <div
       // class = "w-full bg-repeat border-2e bg-[url('/src/hariya-tile-lg.svg')] sm:bg-[url('/src/hariya-tile.svg')]"
       >
-        <h1>SOAS Liberated Zone for Gaza</h1>
-
-        <p class='text-3xl font-kanit text-center'>The SOAS liberated zone is a student led site of anti colonial struggle for Gaza against SOAS university’s complicity in the ongoing genocide. We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education.</p>
-        <div class="flex justify-center h-auto max-w-full my-10 mx-20">
+        <div class="flex justify-center  h-[80vh] ">
           <Carousel images={this.state.carousel_images} />
         </div>
+        <p class='container bg-amber-50 p-5 bg-green-700 sm:bg-transparent text-gray-50 sm:text-black mx-auto  text-lg sm:text-3xl font-kanit text-center'>The SOAS liberated zone is a student led site of anti colonial struggle for Gaza against SOAS university’s complicity in the ongoing genocide. We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education.</p>
 
           <div class="flex sm:h-40 grid grid-cols-1 sm:grid-cols-3 gap-x-2 gap-y-2 sm:gap-y-4 md:gap-y-6 lg:gap-y-8 xl:gap-y-1 place-items-center m-10 sm:m-2 ">
           
@@ -78,10 +75,10 @@ class Home extends Component {
             <a href="/login"><figcaption class="px-5 py-3 text-center text-lg text-white font-semibold underline ">!انتفاضة شامیے</figcaption></a>
           </figure>
         </div>
-        
+        */}
         <div class="">
           <InstagramEmbed url="https://www.instagram.com/soasliberatedzone/"  />
-        </div> */}
+        </div> 
 
       </div>
 
