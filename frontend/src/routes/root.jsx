@@ -31,7 +31,7 @@ export default function Root() {
              <img src={logo} class="h-9 w-auto rounded-full" ></img>
             </a>
           </div>
-          <div class="font-tourney sm:text-3xl md:text-5xl font-bold text-white"> SOAS Liberated Zone for Gaza</div>
+          <div class="font-tourney sm:text-3xl md:text-4xl font-bold text-white"> SOAS Liberated Zone for Gaza</div>
       </div>
       <div class="relative flex h-12 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
