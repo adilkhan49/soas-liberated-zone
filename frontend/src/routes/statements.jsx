@@ -28,9 +28,6 @@ class Statements extends Component {
   render() {
     return (
       <div class='h-screen'>
-        <h1>
-          Statements
-        </h1>
         <section>
           { this.context.user &&
             <LinkButton 
