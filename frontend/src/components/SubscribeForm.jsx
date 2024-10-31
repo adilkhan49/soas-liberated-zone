@@ -49,9 +49,6 @@ function Subscribe() {
 
         <div class="flex justify-center">
             <div class="max-w-2xl px-3 py-5 rounded-2xl md:px-8 md:py-7">
-                <p class="max-w-xl mt-2 leading-relaxed lg:text-lg">
-                        Subscribe to our newsletter
-                </p>
                 <div class="my-4 sm:flex sm:flex-row sm:justify-evenly">
                     <input class=" block w-full px-4 py-3 mt-3 text-gray-800 placeholder-gray-500 bg-white border border-gray-300 rounded-md appearance-none sm:max-w-xs focus:outline-none focus:ring focus:ring-blue-50 focus:border-blue-300" 
                     type='email'

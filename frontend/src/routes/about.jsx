@@ -24,7 +24,6 @@ class About extends Component {
     render() {
       return (
         <div class="m-5">
-          <h1>About</h1>
           <h2 class='font-tourney text-5xl'>Demands</h2>
 
           <p class= "flex container min-w-screen bg-amber-50 text-black mx-auto sm:text-2xl p-10 border-2 border-red-700  ">
