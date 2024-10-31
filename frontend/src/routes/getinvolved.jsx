@@ -2,21 +2,24 @@ import LinkButton from "../components/linkbutton";
 import Subscribe from "../components/SubscribeForm";
 
 const GetInvolvedLinks =
- <div class='text-center'>
+ <div class='text-center text-green-800 text-lg'>
   <p>
     Come down to the SLZ, come talk to us, there are many ways to get involved on the ground 
   </p>
-    <Subscribe />
+  <p class="mt-10">
+    ⏹ Subscribe to our newsletter
+  </p>
+  <Subscribe />
 
-    <p>Donate to our fundraisers</p>
+  <p>⏹ Donate to our fundraisers</p>
 
-    <LinkButton 
-      linkText={"Fundraisers"} 
-      linkUrl={"/fundraiser"}
-      target = ""
-    ></LinkButton>
+  <LinkButton 
+    linkText={"Fundraisers"} 
+    linkUrl={"/fundraiser"}
+    target = ""
+  ></LinkButton>
 
-  <p>Join these group chats</p>
+  <p>⏹ Join these group chats</p>
 
   <LinkButton 
     linkText={"Link missing"} 
@@ -24,7 +27,7 @@ const GetInvolvedLinks =
   ></LinkButton>
   <br></br>
 
-  <p>Write a submission for our journal </p>
+  <p>⏹ Write a submission for our journal </p>
 
   <LinkButton 
     linkText={"Create Journal Entry"} 
@@ -33,7 +36,7 @@ const GetInvolvedLinks =
   ></LinkButton>
   <br></br>
 
-  <p>Sign petition </p>
+  <p>⏹ Sign petition </p>
 
     <LinkButton 
       linkText={"Demand SOAS reinstate democracitally elected sabbatical officers"} 
@@ -41,7 +44,7 @@ const GetInvolvedLinks =
     ></LinkButton>
   <br></br>
 
-  <p>Email templates </p>
+  <p>⏹ Email templates </p>
 
     <LinkButton 
       linkText={"Email Template to SOAS to end its repression of Pro Palestinian activists"} 
@@ -65,17 +68,14 @@ const GetInvolvedLinks =
 const GetInvolved = props => {
     return (
       <div>
-        <h1>
-          Get Involved
-        </h1>
-      <div class = "flex flex-grid grid-cols-2">
-        <div class="">
+      <div class = "flex flex-grid grid-cols-2 ">
+        <div class="hidden lg:block">
           <figure>
-            <img class="h-auto max-w-full rounded-lg object-fill " src="https://c1.staticflickr.com/9/8348/8243750175_61fb8a7779_z.jpg" alt="Intifada to Victory" />
+            <img class="h-auto max-w-full  object-fill " src="https://c1.staticflickr.com/9/8348/8243750175_61fb8a7779_z.jpg" alt="Intifada to Victory" />
             <a href="/login"><figcaption class="px-5 py-3 text-center text-lg text-white font-semibold underline ">!انتفاضة شامیے</figcaption></a>
           </figure>
         </div>
-        <div class = "flex-1">
+        <div class = "flex-1 container bg-amber-50 mx-auto p-10 ">
           {GetInvolvedLinks}
         </div>
       </div>
