@@ -41,6 +41,8 @@ class Subscriber(models.Model):
 class TimelineEvent(models.Model):
     title = models.TextField()
     timeline_date = models.DateField()
+    exclude_date = models.BooleanField(default=False)
+    exclude_month = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
 class CarouselImage(models.Model):
