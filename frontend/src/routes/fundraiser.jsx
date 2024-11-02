@@ -46,7 +46,7 @@ const Fundraiser = () => {
   }, []);
 
   return (
-    <div>
+    <div class="min-h-screen">
       <div class="flex grid grid-cols-1 sm:grid-cols-2 center">
         <div className="gfm-embed" data-url="https://www.gofundme.com/f/help-haitham-and-his-family-to-get-to-a-safe-place/widget/large?sharesheet=CAMPAIGN_PAGE&attribution_id=undefined"></div>
         <div className="gfm-embed" data-url="https://www.gofundme.com/f/support-soas-student-encampment/widget/large?sharesheet=CAMPAIGN_PAGE&attribution_id=undefined"></div>
