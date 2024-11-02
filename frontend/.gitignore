@@ -24,3 +24,5 @@ dist
 *.njsproj
 *.sln
 *.sw?
+slz.sql
+.env.production
