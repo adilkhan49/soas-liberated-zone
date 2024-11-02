@@ -23,7 +23,7 @@ export default function Root() {
 
   return (
 <div class="min-h-screen relative w-full bg-amber-50">
-  <nav class="bg-red-800">
+  <nav class="bg-red-800 sticky top-0 z-10">
     <div class="flex flex-row-reverse sm:flex-col mx-auto max-w-7xl text-lg sm:px-2 py-2 px-2 sm:px-6 lg:px-8 justify-between">
       <div class="flex">
            <div class="flex flex-shrink-0 items-center px-10">
