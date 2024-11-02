@@ -4,7 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 import { useContext } from 'react'
 import AuthContext from "../context/AuthContext";
 import logo from "/src/slz-logo.jpg";
-
+import Subscribe from "../components/SubscribeForm";
 
 
 
@@ -102,9 +102,15 @@ export default function Root() {
       </div>
     </div>
   </nav>
-  
+
   <div class="bg-repeat border-2e bg-[url('/src/hariya-tile-lg.svg')] sm:bg-[url('/src/hariya-tile.svg')]">
       <Outlet />
+  </div>
+
+  <div class="flex flex-row h-16 bg-red-800 z-10 bottom-0 ">
+    <div class="max-w-7xl pl-4 sm:pl-20">
+      <Subscribe />
+    </div>
   </div>
 
 </div>
