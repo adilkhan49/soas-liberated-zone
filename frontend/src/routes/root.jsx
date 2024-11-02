@@ -4,7 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 import { useContext } from 'react'
 import AuthContext from "../context/AuthContext";
 import logo from "/src/slz-logo.jpg";
-
+import Subscribe from "../components/SubscribeForm";
 
 
 
@@ -23,7 +23,7 @@ export default function Root() {
 
   return (
 <div class="min-h-screen relative w-full bg-amber-50">
-  <nav class="bg-red-800">
+  <nav class="bg-red-800 sticky top-0 z-10">
     <div class="flex flex-row-reverse sm:flex-col mx-auto max-w-7xl text-lg sm:px-2 py-2 px-2 sm:px-6 lg:px-8 justify-between">
       <div class="flex">
            <div class="flex flex-shrink-0 items-center px-10">
@@ -31,7 +31,7 @@ export default function Root() {
              <img src={logo} class="h-9 w-auto rounded-full" ></img>
             </a>
           </div>
-          <div class="font-tourney sm:text-3xl md:text-4xl font-bold text-white"> SOAS Liberated Zone for Gaza</div>
+        <div class="font-tourney sm:text-3xl md:text-4xl font-bold text-white"> SOAS Liberated Zone for Gaza</div>
       </div>
       <div class="relative flex h-12 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -86,25 +86,31 @@ export default function Root() {
             {user && <p onClick={logoutUser}>LOGOUT {user.username}</p>}
         </button>
       </div>
+    </div>
   
-  </div>
-  
-  <div class={!isNavOpen && "hidden"}>
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="space-y-1 px-2 pb-3 pt-2">
-        <a href="/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Home</a>
-        <a href="/getinvolved" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Get Involved</a>
-        <a href="/calendar" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Calendar</a>
-        <a href="/statements" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Statements</a>
-        <a href="/journal" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Journal</a>
-        <a href="/fundraiser" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Fundraiser</a>
-        <a href="/about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">About</a>
+    <div class={!isNavOpen && "hidden"}>
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <a href="/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Home</a>
+          <a href="/getinvolved" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Get Involved</a>
+          <a href="/calendar" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Calendar</a>
+          <a href="/statements" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Statements</a>
+          <a href="/journal" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Journal</a>
+          <a href="/fundraiser" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Fundraiser</a>
+          <a href="/about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">About</a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
   <div class="bg-repeat border-2e bg-[url('/src/hariya-tile-lg.svg')] sm:bg-[url('/src/hariya-tile.svg')]">
       <Outlet />
+  </div>
+
+  <div class="flex flex-row h-16 bg-red-800 z-10 bottom-0 ">
+    <div class="max-w-7xl pl-4 sm:pl-20">
+      <Subscribe />
+    </div>
   </div>
 
 </div>

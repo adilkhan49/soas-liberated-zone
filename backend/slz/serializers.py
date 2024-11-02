@@ -27,7 +27,7 @@ class SubscriberSerializer(serializers.ModelSerializer):
 class TimelineEventSerializer(serializers.ModelSerializer):
     class Meta:
         model = TimelineEvent
-        fields = ('pk','timeline_date','title',)
+        fields = ('pk','timeline_date','title','exclude_date','exclude_month',)
 
 class CarouselImageSerializer(serializers.ModelSerializer):
     class Meta:
