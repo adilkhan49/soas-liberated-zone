@@ -82,13 +82,12 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
           />
         ))}
       </div>
-      <form action={'/about'} method="get" target={'target'}>
+      <form action={'/about'} method="get" target={''}>
         <button
           // className="absolute bottom-0 left-0 transform -translate-y-1/2  translate-x-1/2 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] text-white hover:bg-white/10 active:bg-white/30 grid place-items-center "
-          className="bg-black text-5xl border-gray-700 hover:bg-gray-700 text-white px-4 rounded-full absolute bottom-0 left-0 transform -translate-y-20 text-2xl  translate-x-1/2 rounded-full select-none transition-all   text-white grid place-items-center "
-          onClick={prevSlide}
+          className="bg-black font-tourney text-bold p-1 text-xl sm:text-5xl border-gray-700 hover:bg-gray-700 text-white px-4 rounded-full absolute bottom-0 left-0 transform -translate-y-20 translate-x-1/4 sm:-translate-y-20 sm:translate-x-1/2 rounded-full select-none transition-all text-white grid place-items-center "
         >
-          Our Demands
+          Our Demands >
         </button>
       </form>
     </div>
