@@ -11,7 +11,7 @@ const GetInvolvedLinks =
 
   <LinkButton 
     linkText={"Join the LZ community broadcast"} 
-    linkUrl={"bar"}
+    linkUrl={"https://signal.group/#CjQKIM5LoPsS4lKVkHR08Nr686ZxJRWhm_hImbG3bNpJbJglEhCuU5LbAmsdAiz-oQgKH6lp"}
   ></LinkButton>
   <br></br>
 

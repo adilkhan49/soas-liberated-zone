@@ -10,8 +10,8 @@ export default function Events() {
   Don't miss out on events. Join our broadcast!
 
       <LinkButton 
-        linkText={"Whatsapp broadcast"} 
-        linkUrl={"bar"}
+        linkText={"Broadcast C"} 
+        linkUrl={"https://signal.group/#CjQKIM5LoPsS4lKVkHR08Nr686ZxJRWhm_hImbG3bNpJbJglEhCuU5LbAmsdAiz-oQgKH6lp"}
       ></LinkButton>
   
     </div>
