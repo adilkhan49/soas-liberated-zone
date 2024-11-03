@@ -3,8 +3,8 @@ import Subscribe from "../components/SubscribeForm";
 
 const GetInvolvedLinks =
  <div class='text-center text-green-800 text-lg'>
-  <p class='container bg-amber-50 text-center min-w-full text-green-800 text-xl text-bold border-2 border-black p-3'>
-    Come down to the SLZ, come talk to us, there are many ways to get involved on the ground 
+  <p class='container bg-amber-50 p-5 bg-green-700 sm:bg-transparent text-gray-50 sm:text-black mx-auto  text-lg sm:text-3xl font-kanit text-center'>
+  Come down to the SLZ, come talk to us, there are many ways to get involved on the ground 
   </p>
 
   <Subscribe />
@@ -36,9 +36,9 @@ const GetInvolvedLinks =
 
   <br></br>
 
-    {/* <p>
-    Contact us at <a href="mailto:soasliberatedzone@gmail.com">soasliberatedzone@gmail.com</a>
-    </p> */}
+  <p class='container bg-amber-50 p-5 bg-green-700 md:bg-transparent text-gray-50 md:text-black mx-auto  text-lg md:text-3xl font-kanit text-center'>
+    Contact us to share your skills or how you want to help at <a class= "text-white md:text-blue-700" href="mailto:soasliberatedzone@gmail.com">soasliberatedzone@gmail.com</a>
+  </p>
 
 </div>;
 
@@ -52,7 +52,7 @@ const GetInvolved = props => {
             <a href="/login"></a>
           </figure>
         </div>
-        <div class = "flex-1 container mx-auto p-10 ">
+        <div class = "flex-1 container mx-auto ">
           {GetInvolvedLinks}
         </div>
       </div>
