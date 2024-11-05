@@ -4,12 +4,6 @@ import Carousel from '../components/carousel';
 import axios from "axios";
 import { CAROUSEL_IMAGES_API_URL } from "../constants";
 
-// const images = [
-//   {'url': 'https://i.postimg.cc/cJ72zVC4/soas-lib-zone-4-gaza.jpg'},
-//   {'url': 'https://i.postimg.cc/N0NSYR6W/soas-camp.jpg'},
-//   {'url': 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.washingtonpost.com%2Fresizer%2Fly2vKeOrSRj3m7VcJuyM2WyaTRs%3D%2F1484x0%2Farc-anglerfish-washpost-prod-washpost.s3.amazonaws.com%2Fpublic%2FZXEQYUC27YI6RBMPCK7MWTLAM4.jpg&f=1&nofb=1&ipt=11d2c6567034101f3f04776b679f6d4508dc1fa8783eeec7c25b8eed0a7b622e&ipo=images'},
-// ];
-
 class Home extends Component {
 
   state = {
