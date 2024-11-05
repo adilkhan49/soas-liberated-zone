@@ -1,4 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import days_between from '../components/days_between';
+
+var slzStartDate = new Date(2024, 4, 5);
+var gazaStartDate = new Date(2023, 9, 7);
+var today = new Date();
+var slz_days = days_between(slzStartDate,today)
+var gaza_days = days_between(gazaStartDate,today)
 
 const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -82,14 +89,28 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
           />
         ))}
       </div>
-      <form action={'/about'} method="get" target={''}>
-        <button
-          // className="absolute bottom-0 left-0 transform -translate-y-1/2  translate-x-1/2 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] text-white hover:bg-white/10 active:bg-white/30 grid place-items-center "
-          className="bg-black font-tourney text-bold p-1 text-xl sm:text-5xl border-gray-700 hover:bg-gray-700 text-white px-4 rounded-full absolute bottom-0 left-0 transform -translate-y-20 translate-x-1/4 sm:-translate-y-20 sm:translate-x-1/2 rounded-full select-none transition-all text-white grid place-items-center "
-        >
-          {'Our Demands >'}
-        </button>
-      </form>
+
+      <div class="flex grid grid-cols-1 gap-y-1 absolute bottom-10 sm:bottom-10 left-5 transform translate-x-0 sm:translate-x-10">
+          
+          <div class="block max-w-sm p-2 border border-gray-200 rounded-lg shadow bg-black border-gray-700 justify-self-start">
+            <h5 class="text-center mb-2 text-sm sm:text-xl font-bold tracking-tight text-white">Day {gaza_days} of the Genocide</h5>
+          </div>
+
+          <div class="block max-w-sm p-2 border border-gray-200 rounded-lg shadow bg-black border-gray-700 justify-self-start">
+            <h5 class="text-center mb-2 text-sm sm:text-xl font-bold tracking-tight text-white">Day {slz_days} of the SLZ</h5>
+          </div>
+
+          <form action={'/about'} method="get" target={''}>
+            <button
+              className="bg-black font-tourney text-bold p-1 text-xl sm:text-5xl border-gray-700 hover:bg-gray-700 text-white px-4 rounded-full  rounded-full select-none transition-all text-white ">
+              {'Our Demands >'}
+            </button>
+          </form>
+
+      </div>
+
+
+
     </div>
   );
 };
