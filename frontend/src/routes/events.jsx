@@ -10,7 +10,7 @@ export default function Events() {
   Don't miss out on events. Join our broadcast!
 
       <LinkButton 
-        linkText={"Broadcast C"} 
+        linkText={"Broadcast Channel"} 
         linkUrl={"https://signal.group/#CjQKIM5LoPsS4lKVkHR08Nr686ZxJRWhm_hImbG3bNpJbJglEhCuU5LbAmsdAiz-oQgKH6lp"}
       ></LinkButton>
   
