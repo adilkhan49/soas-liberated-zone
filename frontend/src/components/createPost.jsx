@@ -30,6 +30,7 @@ function Editor(props) {
     const [markdown, setMarkdown] = useState('Reflections, Meditations and Revolutionary Ideas');
     const [title, setTitle] = useState('Journal Entry');
     const [username, setUsername] = useState('Anonymous');
+    const [release_date, setRealeseDate] = useState('');
 
     
     const handleSave = async () => {
@@ -45,6 +46,7 @@ function Editor(props) {
               title: title,
               author: username,
               body: markdown,
+              release_date: release_date,
             }),
           });
     
@@ -83,6 +85,15 @@ function Editor(props) {
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
+                required
+            />
+            </div>
+            <div>
+            <label class="block">Release Date</label>
+            <input
+                type="date"
+                value={release_date}
+                onChange={(e) => setRealeseDate(e.target.value)}
                 required
             />
             </div>
