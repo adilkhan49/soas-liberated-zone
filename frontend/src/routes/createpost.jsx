@@ -1,4 +1,4 @@
-import Editor from '../components/markdowncreate';
+import Editor from '../components/createPost';
 
 
 function CreatePost () {

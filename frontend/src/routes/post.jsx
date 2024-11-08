@@ -1,5 +1,5 @@
 import {useParams} from 'react-router-dom';
-import Editor from '../components/markdowncreate';
+import Editor from '../components/createPost';
 import PostDetail from '../components/PostDetail';
 function Post () {
 
