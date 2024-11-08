@@ -11,7 +11,7 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
-    author = models.TextField(max_length=255)
+    author = models.TextField(max_length=255,blank=True,null=True)
     is_approved = models.BooleanField(default=False)
     is_anonymous = models.BooleanField(default=False)
     sequence = models.IntegerField(unique=True,blank=True,null=True)
