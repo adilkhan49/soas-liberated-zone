@@ -103,7 +103,7 @@ export default function Root() {
     </div>
   </nav>
 
-  <div class="bg-repeat border-2e bg-[url('/src/hariya-tile-lg.svg')] sm:bg-[url('/src/hariya-tile.svg')]">
+  <div class="bg-repeat border-2e bg-[url('/src/hariya-tile-lg-light.svg')] sm:bg-[url('/src/hariya-tile-lg-light.svg')]">
       <Outlet />
   </div>
 
