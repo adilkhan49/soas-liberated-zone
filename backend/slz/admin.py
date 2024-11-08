@@ -3,6 +3,7 @@ from .models import Event, Statement, Subscriber, TimelineEvent, CarouselImage, 
 import csv
 from django.http import HttpResponse
 from datetime import datetime
+from django.db.models import F
 
 def get_timestamp():
     return datetime.strftime(datetime.now(),'%Y%m%d%H%M%S')
@@ -51,4 +52,4 @@ class CarouselImageAdmin(admin.ModelAdmin):
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = ['title','release_date','sequence','is_approved','cover_picture_url']
-    ordering = ['sequence','-release_date']
+    ordering = [F('sequence').asc(nulls_last=True),'-release_date']

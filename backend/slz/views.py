@@ -3,6 +3,8 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 
+from django.db.models import Value
+from django.db.models.functions import Coalesce
 from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage
 from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer, TimelineEventSerializer, CarouselImageSerializer
 from .filters import EventFilter
@@ -12,7 +14,8 @@ from .filters import EventFilter
 def post_list(request):
 
     if request.method == 'GET':
-        data = Post.objects.all().order_by('-created_on')
+        data = Post.objects.all().annotate(sequence_null=
+    Coalesce('sequence', Value(999999))).order_by('sequence_null','-release_date')
         serializer = PostSerializer(data, context={'request': request}, many=True)
         return Response(serializer.data)
 
