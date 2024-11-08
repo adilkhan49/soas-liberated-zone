@@ -54,7 +54,7 @@ class About extends Component {
             </ol>
           </p>
           <div class="h-10"></div>
-          <div class = "container bg-amber-50 p-10 border-2 border-black">
+          <div class = "container bg-amber-50 p-10 border-2 border-red-700 mx-auto">
             <Timeline
               events={this.state.timeline_events}
           />
