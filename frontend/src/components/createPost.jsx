@@ -27,10 +27,11 @@ import { POSTS_API_URL } from "../constants";
 function Editor(props) {
 
 
-    const [markdown, setMarkdown] = useState('Reflections, Meditations and Revolutionary Ideas');
-    const [title, setTitle] = useState('Journal Entry');
-    const [author, setAuthor] = useState('Anonymous');
-    const [release_date, setRealeseDate] = useState('');
+    const [markdown, setMarkdown] = useState('');
+    const [title, setTitle] = useState('');
+    const [author, setAuthor] = useState('');
+    const [release_date, setRealeseDate] = useState(null);
+    const [is_anonymous, set_IsAnonymous] = useState(false);
 
     
     const handleSave = async () => {
@@ -46,6 +47,7 @@ function Editor(props) {
               title: title,
               author: author,
               body: markdown,
+              is_anonymous: is_anonymous,
               release_date: release_date,
             }),
           });
@@ -75,19 +77,34 @@ function Editor(props) {
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
+                placeholder='Title of post'
+
                 required
             />
             </div>
+            {!is_anonymous &&
+              <div>
+              <label class="block">Author</label>
+              <input
+                  type="text"
+                  value={author}
+                  onChange={(e) => setAuthor(e.target.value)}
+                  placeholder='Enter your name'
+                  required
+              />
+              </div>
+            }
             <div>
-            <label class="block">Author</label>
+            <div>
+            <label class="block">Post Anonymously</label>
             <input
-                type="text"
-                value={author}
-                onChange={(e) => setAuthor(e.target.value)}
+                type="checkbox"
+                value={is_anonymous}
+                onChange={(e) => set_IsAnonymous(!is_anonymous)}
                 required
             />
             </div>
-            <div>
+            <div></div>
             <label class="block">Release Date</label>
             <input
                 type="date"
