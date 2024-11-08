@@ -1,5 +1,5 @@
 import {useParams} from 'react-router-dom';
-import Editor from '../components/markdownedit';
+import Editor from '../components/editPost';
 
 function EditPost () {
 
