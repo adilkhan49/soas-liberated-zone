@@ -33,7 +33,7 @@ class Editor extends Component {
         this.state = {
             markdown: '',
             title: '',
-            username: '',
+            author: '',
             release_date: '',
         };
 
@@ -51,7 +51,7 @@ class Editor extends Component {
             // Assuming the API response contains the initial title and markdown
             this.setState({
                 title: data.title,
-                username: data.author,
+                author: data.author,
                 markdown: data.body,
                 release_date: data.release_date,
             });
@@ -70,7 +70,7 @@ class Editor extends Component {
     async handleSave(event) {
         event.preventDefault();
 
-        const { title, username, markdown, release_date } = this.state;
+        const { title, author, markdown, release_date } = this.state;
         const { postId } = this.props; // Access postId from props
 
         try {
@@ -84,7 +84,7 @@ class Editor extends Component {
                 body: JSON.stringify({
                     id: this.props.id,
                     title: title,
-                    author: username,
+                    author: author,
                     body: markdown,
                     release_date: release_date,
                 }),
@@ -103,7 +103,7 @@ class Editor extends Component {
     }
 
     render() {
-      const { title, username, markdown, release_date } = this.state;
+      const { title, author, markdown, release_date } = this.state;
   
       return (
           <div className="m-4 pb-20">

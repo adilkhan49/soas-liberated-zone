@@ -29,7 +29,7 @@ function Editor(props) {
 
     const [markdown, setMarkdown] = useState('Reflections, Meditations and Revolutionary Ideas');
     const [title, setTitle] = useState('Journal Entry');
-    const [username, setUsername] = useState('Anonymous');
+    const [author, setAuthor] = useState('Anonymous');
     const [release_date, setRealeseDate] = useState('');
 
     
@@ -44,7 +44,7 @@ function Editor(props) {
             },
             body: JSON.stringify({
               title: title,
-              author: username,
+              author: author,
               body: markdown,
               release_date: release_date,
             }),
@@ -79,11 +79,11 @@ function Editor(props) {
             />
             </div>
             <div>
-            <label class="block">Username</label>
+            <label class="block">Author</label>
             <input
                 type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={author}
+                onChange={(e) => setAuthor(e.target.value)}
                 required
             />
             </div>
