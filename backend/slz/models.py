@@ -12,10 +12,13 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
     author = models.TextField(max_length=255)
+    is_approved = models.BooleanField(default=False)
+    is_anonymous = models.BooleanField(default=False)
+    sequence = models.IntegerField(unique=True, null=True)
+    release_date = models.DateField()
+    cover_picture_url = models.TextField(null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
-    is_approved = models.BooleanField(default=False)
-
 
 class Statement(models.Model):
     title = models.CharField(max_length=255)
