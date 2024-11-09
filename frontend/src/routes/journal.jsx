@@ -64,7 +64,7 @@ class Journal extends Component {
 
   render() {
     return (
-      <div class='h-screen'>
+      <div class='mx-10 mb-10 mt-2'>
         <h1>
           SLZ Journal
         </h1>
