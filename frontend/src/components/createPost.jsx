@@ -67,11 +67,6 @@ function Editor(props) {
       };
 
     return <div class="m-4 pb-20">
-        <button 
-          class="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
-          onClick={handleSave}
-          >Save 
-        </button> 
         <form class = "bg-amber-50">
             <div>
             <label class="block">Title</label>
