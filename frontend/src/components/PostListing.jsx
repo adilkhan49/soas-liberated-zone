@@ -36,7 +36,12 @@ class PostList extends Component {
                                 <div class="bg-white p-4 rounded-lg shadow text-left">
                                     <div class="flex items-center mb-2">
                                     <div>
-                                        <p class="font-semibold text-black">{post.author} • {timeAgo(post.created_on)}</p>
+                                        <p class="font-semibold text-black">
+                                            {!post.is_anonymous &&
+                                                <span>{post.author} • </span>}
+                                            <span>{timeAgo(post.release_date)}</span>
+                                            
+                                        </p>
                                     </div>
                                     <span class="w-10"></span>
                                     <span class="w-10"></span>
