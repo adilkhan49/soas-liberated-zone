@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+from datetime import datetime
 # Create your models here.
 
 class Category(models.Model):
@@ -15,7 +16,7 @@ class Post(models.Model):
     is_approved = models.BooleanField(default=False)
     is_anonymous = models.BooleanField(default=False)
     sequence = models.IntegerField(unique=True,blank=True,null=True)
-    release_date = models.DateField(auto_now_add=True)
+    release_date = models.DateField(default=datetime.now, blank=True)
     cover_picture_url = models.TextField(blank=True,null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
