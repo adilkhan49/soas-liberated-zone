@@ -101,14 +101,6 @@ function Editor(props) {
             />
             </div>
 
-            <label class="block">Release Date</label>
-            <input
-                type="date"
-                value={release_date}
-                onChange={(e) => setRealeseDate(e.target.value)}
-                required
-            />
-
             <label class="block">Cover Picture</label>
             <input
                 type="text"

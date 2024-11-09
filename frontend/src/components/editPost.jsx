@@ -53,7 +53,6 @@ class Editor extends Component {
                 title: data.title,
                 author: data.author,
                 markdown: data.body,
-                release_date: data.release_date,
             });
         } catch (error) {
             console.error('Error fetching initial data:', error);
@@ -86,7 +85,6 @@ class Editor extends Component {
                     title: title,
                     author: author,
                     body: markdown,
-                    release_date: release_date,
                 }),
             });
 
@@ -119,16 +117,6 @@ class Editor extends Component {
                           type="text"
                           name="title"
                           value={title}
-                          onChange={this.handleChange}
-                          required
-                      />
-                  </div>
-                  <div>
-                      <label className="block">Release Date</label>
-                      <input
-                          type="date"
-                          name="release_date"
-                          value={release_date}
                           onChange={this.handleChange}
                           required
                       />
