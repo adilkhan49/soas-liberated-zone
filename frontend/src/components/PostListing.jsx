@@ -45,11 +45,12 @@ class PostList extends Component {
                                     <div class='justify-end'>
                                         {this.context.user && 
                                             <Checkbox
-                                                pk={post.pk}
-                                                title={post.title}
-                                                body={post.body}
-                                                author={post.author}
-                                                is_approved={post.is_approved}    
+                                                post={post}
+                                                // pk={post.pk}
+                                                // title={post.title}
+                                                // body={post.body}
+                                                // author={post.author}
+                                                // is_approved={post.is_approved}    
                                             />
                                         }
                                     </div>
