@@ -31,7 +31,8 @@ function Editor(props) {
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
     const [release_date, setRealeseDate] = useState(null);
-    const [is_anonymous, set_IsAnonymous] = useState(false);
+    const [is_anonymous, setIsAnonymous] = useState(false);
+    const [cover_picture_url, setCoverPictureURL] = useState('');
 
     
     const handleSave = async () => {
@@ -49,6 +50,7 @@ function Editor(props) {
               body: markdown,
               is_anonymous: is_anonymous,
               release_date: release_date,
+              cover_picture_url: cover_picture_url
             }),
           });
     
@@ -78,7 +80,6 @@ function Editor(props) {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder='Title of post'
-
                 required
             />
             </div>
@@ -100,11 +101,11 @@ function Editor(props) {
             <input
                 type="checkbox"
                 value={is_anonymous}
-                onChange={(e) => set_IsAnonymous(!is_anonymous)}
+                onChange={(e) => setIsAnonymous(!is_anonymous)}
                 required
             />
             </div>
-            <div></div>
+
             <label class="block">Release Date</label>
             <input
                 type="date"
@@ -112,6 +113,16 @@ function Editor(props) {
                 onChange={(e) => setRealeseDate(e.target.value)}
                 required
             />
+
+            <label class="block">Cover Picture</label>
+            <input
+                type="text"
+                value={release_date}
+                onChange={(e) => setRealeseDate(e.target.value)}
+                placeholder='Enter URL of Cover Picture'
+                required
+            />
+
             </div>
         </form>
         <div class="bg-white container my-4 ">
