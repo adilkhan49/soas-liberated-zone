@@ -110,7 +110,7 @@ class Editor extends Component {
   
       return (
           <div className="m-4 pb-20">
-              <form onSubmit={this.handleSave}>
+              <form class="bg-amber-50" onSubmit={this.handleSave}>
                  <div class="flex flex-row gap gap-10 my-2">
                     <label className="w-36">Title</label>
                       <input
