@@ -64,10 +64,15 @@ class Journal extends Component {
 
   render() {
     return (
-      <div class='mx-10 mb-10 mt-2'>
-        <h1>
-          SLZ Journal
-        </h1>
+      <div class=''>
+
+        <div class='flex justify-center h-[50vh] object-scale-down min-w-full '>
+          <img
+              class = "w-full  h-full"
+              src={"https://i.postimg.cc/vTsH9NkQ/slz-cover.jpg"}
+          />
+        </div>
+
         <section>
           <LinkButton 
             linkText={"Contribute"} 
@@ -76,6 +81,7 @@ class Journal extends Component {
           ></LinkButton>
 
         </section>
+
         <PostList
           posts={this.state.posts}
           resetState={this.resetState}
