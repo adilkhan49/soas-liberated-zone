@@ -43,9 +43,17 @@ class PostDetail extends Component {
     render() {
 
         return (
-        <div>
+        <div class="min-w-screen">
+        
+        { this.state.post.cover_picture_url &&
+        <div class='flex justify-center h-[60vh] min-w-full '>
+            <img
+                class = " w-full  h-full object-cover "
+                src={this.state.post.cover_picture_url}
+            />
+            
             { this.context.user &&
-                <div class="flex flex-row gap-5 justify-end">
+                <div class="absolute flex flex-row gap-5 right-5">
 
                         <div class="py-3 text-right" >
                             <button 
@@ -64,6 +72,10 @@ class PostDetail extends Component {
                         </div>
                 </div>
             }
+
+        </div>
+        }
+
             <h1>
                 {this.state.post.title}
             </h1>
