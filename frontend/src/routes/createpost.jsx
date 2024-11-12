@@ -3,7 +3,7 @@ import Editor from '../components/createPost';
 
 function CreatePost () {
     return (
-        <div>
+        <div class='h-screen'>
             <Editor />
         </div>
     )

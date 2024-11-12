@@ -68,74 +68,80 @@ function Editor(props) {
 
     return <div class="m-4 pb-20">
         <form class = "bg-amber-50">
-            <div>
-            <label class="block">Title</label>
-            <input
-                type="text"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                placeholder='Title of post'
-                required
-            />
-            </div>
-            {!is_anonymous &&
-              <div>
-              <label class="block">Author</label>
+            <div class="flex flex-row gap gap-10 my-2">
+              <label class="w-36">Title</label>
               <input
                   type="text"
-                  value={author}
-                  onChange={(e) => setAuthor(e.target.value)}
-                  placeholder='Enter your name'
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  placeholder='Title of post'
                   required
               />
+              <hr></hr>
+            </div>
+            {!is_anonymous &&
+              <div class="flex flex-row gap gap-10 my-2">
+                <label class="w-36">Author</label>
+                <input
+                    type="text"
+                    value={author}
+                    onChange={(e) => setAuthor(e.target.value)}
+                    placeholder='Enter your name'
+                    required
+                />
+                <hr></hr>
               </div>
+            
             }
-            <div>
-            <div>
-            <label class="block">Post Anonymously</label>
-            <input
-                type="checkbox"
-                value={is_anonymous}
-                onChange={(e) => setIsAnonymous(!is_anonymous)}
-                required
-            />
+            <div class="flex flex-row gap gap-10 my-2">
+            <label class="w-36">Post Anonymously</label>
+              <input
+                  type="checkbox"
+                  value={is_anonymous}
+                  onChange={(e) => setIsAnonymous(!is_anonymous)}
+                  required
+              />
+            </div>
+            
+            <div class="flex flex-row gap gap-10 my-2 ">
+              <label class="w-36">Cover Picture</label>
+              <input
+                  class="w-52"
+                  type="text"
+                  value={release_date}
+                  onChange={(e) => setRealeseDate(e.target.value)}
+                  placeholder='Enter URL of Cover Picture'
+                  required
+              />
+              <hr ></hr>
             </div>
 
-            <label class="block">Cover Picture</label>
-            <input
-                type="text"
-                value={release_date}
-                onChange={(e) => setRealeseDate(e.target.value)}
-                placeholder='Enter URL of Cover Picture'
-                required
-            />
-
-            </div>
         </form>
-        <div class="bg-white container my-4 ">
-        <MDXEditor 
-        markdown={markdown}
-        onChange={(newMarkdown) => setMarkdown(newMarkdown)}
-        plugins={[
-            headingsPlugin(), 
-            listsPlugin(), 
-            quotePlugin(), 
-            thematicBreakPlugin(), 
-            linkDialogPlugin(),
-            imagePlugin(),
-            listsPlugin(),
-            toolbarPlugin({         
-                toolbarContents: () => (
-                <>
-                {' '}
-                <BoldItalicUnderlineToggles />
-                <BlockTypeSelect />
-                <CreateLink />
-                <UndoRedo />
-                <ListsToggle />
-                <InsertImage />
-                </>
-            )})]} />
+      
+        <div class="bg-white container my-4 min-h-48">
+          <MDXEditor 
+            markdown={markdown}
+            onChange={(newMarkdown) => setMarkdown(newMarkdown)}
+            plugins={[
+                headingsPlugin(), 
+                listsPlugin(), 
+                quotePlugin(), 
+                thematicBreakPlugin(), 
+                linkDialogPlugin(),
+                imagePlugin(),
+                listsPlugin(),
+                toolbarPlugin({         
+                    toolbarContents: () => (
+                    <>
+                    {' '}
+                    <BoldItalicUnderlineToggles />
+                    <BlockTypeSelect />
+                    <CreateLink />
+                    <UndoRedo />
+                    <ListsToggle />
+                    <InsertImage />
+                    </>
+                )})]} />
         </div>
 
 
