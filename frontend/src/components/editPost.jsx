@@ -54,6 +54,7 @@ class Editor extends Component {
                 author: data.author,
                 markdown: data.body,
                 release_date: data.release_date,
+                cover_picture_url: data.cover_picture_url
 
             });
         } catch (error) {
@@ -71,7 +72,7 @@ class Editor extends Component {
     async handleSave(event) {
         event.preventDefault();
 
-        const { title, author, markdown, release_date } = this.state;
+        const { title, author, markdown, release_date, cover_picture_url } = this.state;
         const { postId } = this.props; // Access postId from props
 
         try {
@@ -88,6 +89,7 @@ class Editor extends Component {
                     author: author,
                     body: markdown,
                     release_date: release_date,
+                    cover_picture_url: cover_picture_url,
                 }),
             });
 
@@ -104,13 +106,13 @@ class Editor extends Component {
     }
 
     render() {
-      const { title, author, markdown, release_date } = this.state;
+      const { title, author, markdown, release_date, cover_picture_url } = this.state;
   
       return (
           <div className="m-4 pb-20">
               <form onSubmit={this.handleSave}>
-                  <div>
-                      <label className="block">Title</label>
+                 <div class="flex flex-row gap gap-10 my-2">
+                    <label className="w-36">Title</label>
                       <input
                           type="text"
                           name="title"
@@ -119,8 +121,9 @@ class Editor extends Component {
                           required
                       />
                   </div>
-                  <div>
-                      <label className="block">Release Date</label>
+
+                  <div class="flex flex-row gap gap-10 my-2">
+                     <label className="w-36">Release Date</label>
                       <input
                           type="date"
                           name="release_date"
@@ -128,6 +131,17 @@ class Editor extends Component {
                           onChange={this.handleChange}
                       />
                   </div>
+
+                  <div class="flex flex-row gap gap-10 my-2">
+                      <label className="w-36">Cover Picture URL</label>
+                      <input
+                          type="text"
+                          name="cover_picture_url"
+                          value={cover_picture_url}
+                          onChange={this.handleChange}
+                      />
+                  </div>
+
               </form>
               <div className="bg-white container my-4">
                   {markdown ? ( // Render MDXEditor only when markdown is available
