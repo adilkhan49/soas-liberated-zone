@@ -143,7 +143,7 @@ class Editor extends Component {
                   </div>
 
               </form>
-              <div className="bg-white container my-4">
+              <div className="bg-white container my-4 min-h-48">
                   {markdown ? ( // Render MDXEditor only when markdown is available
                       <MDXEditor
                           markdown={markdown}
