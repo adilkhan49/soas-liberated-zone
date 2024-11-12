@@ -77,7 +77,6 @@ function Editor(props) {
                   placeholder='Title of post'
                   required
               />
-              <hr></hr>
             </div>
             {!is_anonymous &&
               <div class="flex flex-row gap gap-10 my-2">
@@ -89,7 +88,6 @@ function Editor(props) {
                     placeholder='Enter your name'
                     required
                 />
-                <hr></hr>
               </div>
             
             }
@@ -113,7 +111,6 @@ function Editor(props) {
                   placeholder='Enter URL of Cover Picture'
                   required
               />
-              <hr ></hr>
             </div>
 
         </form>
