@@ -33,8 +33,8 @@ class Editor extends Component {
         this.state = {
             markdown: '',
             title: '',
-            author: '',
             release_date: '',
+            cover_picture_url: '',
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -109,11 +109,6 @@ class Editor extends Component {
       return (
           <div className="m-4 pb-20">
               <form onSubmit={this.handleSave}>
-                <button 
-                    className="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
-                    onClick={this.handleSave}>
-                    Save
-                </button>
                   <div>
                       <label className="block">Title</label>
                       <input
