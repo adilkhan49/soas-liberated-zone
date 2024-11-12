@@ -115,7 +115,7 @@ class PostDetail extends Component {
                       }
                  </div>
 
-                <div>
+                <div class="text-3xl sm:mx-48 ">
                     <Markdown>{this.state.post.body}</Markdown>
                 </div>
             
