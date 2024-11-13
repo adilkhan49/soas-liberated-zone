@@ -20,50 +20,51 @@ class PostList extends Component {
 
         return (
 
-        <div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div class = 'pb-10 px-12'>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 items-stretch">
 
                 {!posts || posts.length <= 0 ? (
                     <b>Oops, no posts yet</b>
             ) : (
                 posts.map(post => ( 
                          
-                <div key={post.pk}>
+                <div
+                    class = 'h-88'
+                    key={post.pk}>
                     <a class="py-3" href={"/journal/"+post.pk} >
-                        <button class="container mx-auto px-4 space-y-4" 
+                        <button class="container h-full mx-auto px-2 space-y-4 py-2" 
                         >
-                            <div class="">
-                                <div class="bg-white p-4 rounded-lg shadow text-left">
-                                    <div class="flex items-center mb-2">
-                                    <div>
-                                        <p class="font-semibold text-black">
-                                            {!post.is_anonymous &&
-                                                <span>{post.author} • </span>}
-                                            <span>{timeAgo(post.release_date)}</span>
-                                            
-                                        </p>
-                                    </div>
-                                    <span class="w-10"></span>
-                                    <span class="w-10"></span>
-                                    <span class="w-10"></span>
+                            <div class="h-full">
+                                <div class="bg-white p-4 h-full rounded-lg shadow text-left">
+                                    
+                                    {post.cover_picture_url ? 
+                                    
+                                        <img
+                                            class = "object-cover object-center h-56 w-full"
+                                            src={post.cover_picture_url}
+                                        />
+                                    :
+                                        <img
+                                        class = "object-cover h-56 w-full"
+                                        src="https://i.postimg.cc/vTsH9NkQ/slz-cover.jpg"
+                                        />
 
-                                    <div class='justify-end'>
-                                        {this.context.user && 
-                                            <Checkbox
-                                                post={post}
-                                                // pk={post.pk}
-                                                // title={post.title}
-                                                // body={post.body}
-                                                // author={post.author}
-                                                // is_approved={post.is_approved}    
-                                            />
+                                    }
+                                    <div class="mb-2 hover:underline">
+
+                                        <div class="text-gray-700 text-2xl font-bold line-clamp-2">{post.title}</div>
+                                        
+                                        {!post.is_anonymous &&
+                                            <div class=" text-black line-clamp-1">
+                                                {post.author}
+                                            </div>
                                         }
+
+                                        <div class=''>
+                                            {this.context.user && <Checkbox post={post} />}
+                                        </div>
+
                                     </div>
-                                    </div>
-                                    <p class="text-gray-700 text-lg italic text-center">{post.title}</p>
-                                    <p class="line-clamp-3 text-gray-700 h2">
-                                        <div>{post.body}</div>
-                                    </p>
                                 </div>
                             </div>
                         </button>
