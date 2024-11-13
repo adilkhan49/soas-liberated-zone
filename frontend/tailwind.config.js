@@ -7,6 +7,7 @@ export default {
         ubuntu: ["Ubuntu", "sans-serif"],
         tourney: ["Tourney", "sans-serif"],
         kanit: ["Kanit", "sans-serif"],
+        anton: ["Anton", "sans-serif"],
       }
     },
     fontWeight: {

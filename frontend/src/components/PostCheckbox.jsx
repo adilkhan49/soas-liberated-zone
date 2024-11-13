@@ -2,26 +2,26 @@ import {useState, useContext} from 'react';
 import AuthContext from '../context/AuthContext';
 import { POSTS_API_URL } from '../constants';
 
-function Checkbox({pk, title, author, body, is_approved }) {
+function Checkbox({post}) {
     // state
-    const [checked, setChecked] = useState(is_approved);
+    const [checked, setChecked] = useState(post.is_approved);
     let { authTokens } = useContext(AuthContext)
 
-    console.log(pk,checked);
     const changeApproval = async () => {
 
       try {
-        const response = await fetch(POSTS_API_URL+pk, {
+        const response = await fetch(POSTS_API_URL+post.pk, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + authTokens.access,
           },
           body: JSON.stringify({
-            title: title,
-            author: author,
-            body: body,
-            is_approved: !checked
+            title: post.title,
+            author: post.author,
+            body: post.body,
+            release_date: post.release_date,
+            is_approved: !post.checked
           }),
         });
   
@@ -41,7 +41,6 @@ function Checkbox({pk, title, author, body, is_approved }) {
       }
     };
     const handleOnChange = () => {
-        console.log(pk)
         changeApproval();
         setChecked(!checked);
       };

@@ -1,12 +1,9 @@
-import Editor from '../components/markdowncreate';
+import Editor from '../components/createPost';
 
 
 function CreatePost () {
     return (
-        <div>
-            <h1>
-                Create Post
-            </h1>
+        <div class='h-screen'>
             <Editor />
         </div>
     )

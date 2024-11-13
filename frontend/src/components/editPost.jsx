@@ -33,7 +33,8 @@ class Editor extends Component {
         this.state = {
             markdown: '',
             title: '',
-            username: '',
+            release_date: '',
+            cover_picture_url: '',
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -50,8 +51,11 @@ class Editor extends Component {
             // Assuming the API response contains the initial title and markdown
             this.setState({
                 title: data.title,
-                username: data.author,
+                author: data.author,
                 markdown: data.body,
+                release_date: data.release_date,
+                cover_picture_url: data.cover_picture_url
+
             });
         } catch (error) {
             console.error('Error fetching initial data:', error);
@@ -68,7 +72,7 @@ class Editor extends Component {
     async handleSave(event) {
         event.preventDefault();
 
-        const { title, username, markdown } = this.state;
+        const { title, author, markdown, release_date, cover_picture_url } = this.state;
         const { postId } = this.props; // Access postId from props
 
         try {
@@ -82,8 +86,10 @@ class Editor extends Component {
                 body: JSON.stringify({
                     id: this.props.id,
                     title: title,
-                    author: username,
+                    author: author,
                     body: markdown,
+                    release_date: release_date,
+                    cover_picture_url: cover_picture_url,
                 }),
             });
 
@@ -100,18 +106,13 @@ class Editor extends Component {
     }
 
     render() {
-      const { title, username, markdown } = this.state;
+      const { title, author, markdown, release_date, cover_picture_url } = this.state;
   
       return (
           <div className="m-4 pb-20">
-              <form onSubmit={this.handleSave}>
-                <button 
-                    className="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
-                    onClick={this.handleSave}>
-                    Save
-                </button>
-                  <div>
-                      <label className="block">Title</label>
+              <form class="bg-amber-50" onSubmit={this.handleSave}>
+                 <div class="flex flex-row gap gap-10 my-2">
+                    <label className="w-36">Title</label>
                       <input
                           type="text"
                           name="title"
@@ -120,8 +121,29 @@ class Editor extends Component {
                           required
                       />
                   </div>
+
+                  <div class="flex flex-row gap gap-10 my-2">
+                     <label className="w-36">Release Date</label>
+                      <input
+                          type="date"
+                          name="release_date"
+                          value={release_date}
+                          onChange={this.handleChange}
+                      />
+                  </div>
+
+                  <div class="flex flex-row gap gap-10 my-2">
+                      <label className="w-36">Cover Picture URL</label>
+                      <input
+                          type="text"
+                          name="cover_picture_url"
+                          value={cover_picture_url}
+                          onChange={this.handleChange}
+                      />
+                  </div>
+
               </form>
-              <div className="bg-white container my-4">
+              <div className="bg-white container my-4 min-h-48">
                   {markdown ? ( // Render MDXEditor only when markdown is available
                       <MDXEditor
                           markdown={markdown}

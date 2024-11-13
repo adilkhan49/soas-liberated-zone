@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+from datetime import datetime
 # Create your models here.
 
 class Category(models.Model):
@@ -11,11 +12,14 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
-    author = models.TextField(max_length=255)
+    author = models.TextField(max_length=255,blank=True,null=True)
+    is_approved = models.BooleanField(default=False)
+    is_anonymous = models.BooleanField(default=False)
+    sequence = models.IntegerField(unique=True,blank=True,null=True)
+    release_date = models.DateField(default=datetime.now, blank=True,null=True)
+    cover_picture_url = models.TextField(blank=True,null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
-    is_approved = models.BooleanField(default=False)
-
 
 class Statement(models.Model):
     title = models.CharField(max_length=255)
