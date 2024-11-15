@@ -11,7 +11,7 @@ function Timeline({events}) {
 
     return (
     <div>
-      <p class='font-tourney text-5xl text-green-700 font-bold text-center'>Timeline</p>
+      {/* <p class='font-tourney text-5xl text-green-700 font-bold text-center'>Timeline</p> */}
 
       <ol class="relative border-s border-green-700">
         {listing}

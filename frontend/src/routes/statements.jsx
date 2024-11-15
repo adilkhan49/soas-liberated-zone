@@ -27,7 +27,7 @@ class Statements extends Component {
 
   render() {
     return (
-      <div class='h-screen'>
+      <div class=''>
         <section>
           { this.context.user &&
             <LinkButton 
