@@ -43,7 +43,7 @@ class StatementDetail extends Component {
     render() {
 
         return (
-        <div>
+        <div class="bg-amber-50">
             { this.context.user &&
                 <div class="flex flex-row gap-5 justify-end">
 
@@ -64,12 +64,16 @@ class StatementDetail extends Component {
                         </div>
                 </div>
             }
-            <h1>
+            <h1 class="text-6xl font-anton m-14 text-left">
                 {this.state.statement.title}
             </h1>
 
-            <div>
-                <Markdown class=" ">{this.state.statement.body}</Markdown>
+            <p class="text-3xl sm:mx-48 text-bold">
+                {this.state.statement.release_date}
+            </p>
+
+            <div class="text-3xl sm:mx-48 ">
+                <Markdown class="">{this.state.statement.body}</Markdown>
             </div>
 
         </div>
