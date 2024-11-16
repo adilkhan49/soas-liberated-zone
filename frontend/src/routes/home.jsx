@@ -3,6 +3,7 @@ import { InstagramEmbed } from 'react-social-media-embed';
 import Carousel from '../components/carousel';
 import axios from "axios";
 import { CAROUSEL_IMAGES_API_URL } from "../constants";
+import FlipCountdown from "../components/flipcountdown";
 
 class Home extends Component {
 
@@ -26,9 +27,14 @@ class Home extends Component {
   render() {
     return (
       <div>
+
         <div class="flex justify-center  h-[80vh] ">
           <Carousel images={this.state.carousel_images} />
         </div>
+        <div class='font-anton bg-black opacity-75 text-white text-center text-2xl sm:text-4xl p-3 sm:p-7'>
+          End the complicity. end the repression. soas must become an institution in service of its community>>>
+        </div>
+
 
         <p class='container text-white font-kanit font-bold italic bg-amber-50 p-10 bg-green-700 sm:bg-transparent text-gray-50 sm:text-black mx-auto  text-lg sm:text-3xl text-center text-italic'>The SOAS liberated zone is a student led site of anti colonial struggle for Gaza against SOAS university’s complicity in the ongoing genocide. We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education.</p>
 
