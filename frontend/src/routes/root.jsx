@@ -23,7 +23,7 @@ export default function Root() {
 
   return (
 <div class="min-h-screen relative w-full bg-amber-50">
-  <nav class="bg-red-800 sticky top-0 z-10">
+  <nav class="bg-red-800 sticky top-0 z-50">
     <div class="flex flex-row-reverse sm:flex-col mx-auto text-lg sm:px-2 py-2 px-2 sm:px-6 lg:px-8 justify-between">
       <div class="flex">
            <div class="flex flex-shrink-0 items-center px-10">
@@ -103,11 +103,11 @@ export default function Root() {
     </div>
   </nav>
 
-  <div class="bg-repeat border-2e bg-[url('/src/hariya-tile-lg-light.svg')] sm:bg-[url('/src/hariya-tile-lg-light.svg')]">
+  <div class="z-45 bg-repeat border-2e bg-[url('/src/hariya-tile-lg-light.svg')] sm:bg-[url('/src/hariya-tile-lg-light.svg')]">
       <Outlet />
   </div>
 
-  <div class="flex flex-row h-16 bg-red-800 z-10 bottom-0 ">
+  <div class="flex flex-row h-16 bg-red-800 z-50 bottom-0 ">
     <div class="max-w-7xl pl-4 sm:pl-20">
       <Subscribe />
     </div>

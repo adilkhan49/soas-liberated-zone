@@ -6,11 +6,11 @@ function FlipCountdown({number=0,caption='',top_color='bg-black',bottom_color='b
     <div class='flex flex-col justify-center items-center z-20 '>
         <div class="flex flex-row gap-1">
             {string_array.map(digit => (
-                <div class={`relative w-16 sm:w-20 font-mono font-extrabold items-center text-5xl sm:text-7xl text-white shadow-2xl gap-x-px border-6 ${border_color} ${opacity} rounded-3xl`}>
-                    <div class="relative py-2 sm:py-4 rounded-2xl ">
+                <div class={`relative w-16 sm:w-20 font-mono font-extrabold items-center text-5xl sm:text-7xl text-white shadow-2xl gap-x-px border-0 ${border_color} ${opacity} rounded-3xl`}>
+                    <div class="relative py-2 sm:py-4 rounded-xl ">
                         <div class="absolute inset-0 w-full h-full grid grid-rows-2 ">
-                        <div class={`${top_color} ${opacity} rounded-t-2xl`}></div>
-                        <div class={`${bottom_color} ${opacity} rounded-b-2xl`}></div>
+                        <div class={`${top_color} ${opacity} rounded-t-md`}></div>
+                        <div class={`${bottom_color} ${opacity} rounded-b-md`}></div>
                     </div>
                     <div class="relative text-center">{digit}</div>
                         <div class="absolute inset-0 w-full h-full flex items-center justify-center">
