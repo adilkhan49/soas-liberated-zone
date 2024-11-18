@@ -100,7 +100,7 @@ class About extends Component {
                   Timeline of the struggle at SOAS
                 </summary>
                 <div class="min-w-full text-amber-50 bg-black bg-opacity-70">
-                    <div class="mx-20">
+                    <div class="mx-6 sm:mx-20">
                       <Timeline
                           events={this.state.timeline_events}
                       />
