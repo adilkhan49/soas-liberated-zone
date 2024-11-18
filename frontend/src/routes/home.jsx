@@ -45,16 +45,16 @@ class Home extends Component {
             </div>
           </div>
 
-          <div class=' grid grid-cols-1 gap-y-3  p-6 font-kanit font-bold italic  text-green-800  text-lg sm:text-4xl text-center items-center'>
-              <div class="w-60 sm:w-96 p-4 border border-green-800 bg-white shadow-2xl rounded-3xl m-auto hover:bg-amber-50 hover:underline -translate-x-10">
+          <div class=' grid grid-cols-1 gap-y-3  p-6 font-kanit font-bold italic   text-lg sm:text-4xl text-center items-center'>
+              <a href='/about' class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline -translate-x-10">
                 {"Our Demands >>>"}
-              </div>
-              <div class="w-60 sm:w-96 p-4 border border-green-800 bg-white shadow-2xl rounded-3xl m-auto hover:bg-amber-50 hover:underline sm:translate-x-40 ">
+              </a>
+              <a href='/about' class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline sm:translate-x-40 ">
                 {"Our Statements >>>"}
-              </div>
-              <div class="w-60 sm:w-96 p-4 border border-green-800 bg-white shadow-2xl rounded-3xl m-auto hover:bg-amber-50 hover:underline translate-x-10 sm:translate-x-80">
-                {"Our Story >>>"}
-              </div>
+              </a>
+              <a href='/about'class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline translate-x-10 sm:translate-x-80">
+              {"Our Story >>>"}
+              </a>
             </div>
 
         </div>
