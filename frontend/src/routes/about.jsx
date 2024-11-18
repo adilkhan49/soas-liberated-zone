@@ -1,5 +1,6 @@
 import { Component } from "react";
-import Timeline from "../components/Timeline";
+import { useLocation } from 'react-router-dom'
+import Timeline from "/src/components/Timeline";
 import { TIMELINE_EVENTS_API_URL } from "../constants";
 import axios from "axios";
 import logo from "/src/slz-logo.png";
@@ -8,9 +9,10 @@ import Statements from "./statements";
 class About extends Component {
 
     state = {
-      openDemands: false,
+      openDemands: true,
+      openStatements: false,
+      openTimeline: false,
       timeline_events: [],
-
     };
 
     componentDidMount() {
@@ -67,7 +69,7 @@ class About extends Component {
 
           <hr class="border-black border-1"/>
 
-            <details open class="min-w-full bg-none border-none text-black duration-300">
+            <details open={this.state.openDemands} class="min-w-full bg-none border-none text-black duration-300">
                 <summary class="bg-inherit min-w-full py-2 mx-5 sm:px-20 text-3xl font-kanit italic font-bold cursor-pointer open:bg-lime-800 open:text-amber-50">
                  Our Demands
                 </summary>
@@ -80,7 +82,7 @@ class About extends Component {
 
             <hr class="border-black border-1"/>
 
-            <details open class="min-w-full bg-none border-none text-black duration-300">
+            <details open={this.state.openStatements}  class="min-w-full bg-none border-none text-black duration-300">
                 <summary class="bg-inherit min-w-full py-2 mx-5 sm:px-20 text-3xl font-kanit italic font-bold cursor-pointer open:bg-lime-800 open:text-amber-50">
                   Read our statements
                 </summary>
@@ -93,11 +95,11 @@ class About extends Component {
 
             <hr class="border-black border-1"/>
 
-            <details open class="min-w-full bg-none border-none text-black duration-300">
+            <details open={this.state.openTimeline}  class="min-w-full bg-none border-none text-black duration-300">
                 <summary class="bg-inherit min-w-full py-2 mx-5 sm:px-20 text-3xl font-kanit italic font-bold cursor-pointer open:bg-lime-800 open:text-amber-50">
                   Timeline of the struggle at SOAS
                 </summary>
-                <div class="min-w-full text-black">
+                <div class="min-w-full text-amber-50 bg-black bg-opacity-70">
                     <div class="mx-20">
                       <Timeline
                           events={this.state.timeline_events}
