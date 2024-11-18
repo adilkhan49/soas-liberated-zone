@@ -23,7 +23,7 @@ export default function Root() {
 
   return (
 <div class="min-h-screen relative w-full bg-amber-50">
-  <nav class="bg-red-800 sticky top-0 z-10">
+  <nav class="bg-red-800 sticky top-0 z-50">
     <div class="flex flex-row-reverse sm:flex-col mx-auto text-lg sm:px-2 py-2 px-2 sm:px-6 lg:px-8 justify-between">
       <div class="flex">
            <div class="flex flex-shrink-0 items-center px-10">
@@ -52,12 +52,12 @@ export default function Root() {
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
               <Link to={``} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Home</Link>
+              <Link to={`about`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">About</Link>
               <Link to={`getinvolved`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline active:bg-black">Get Involved</Link>
               <Link to={`calendar`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Calendar</Link>
-              <Link to={`statements`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Statements</Link>
+              {/* <Link to={`statements`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Statements</Link> */}
               <Link to={`journal`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">SLZ Journal</Link>
               <Link to={`fundraiser`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Fundraiser</Link>
-              <Link to={`about`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">About</Link>
 
             </div>
           </div>
@@ -92,22 +92,22 @@ export default function Root() {
       <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
           <a href="/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Home</a>
+          <a href="/about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">About</a>
           <a href="/getinvolved" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Get Involved</a>
           <a href="/calendar" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Calendar</a>
-          <a href="/statements" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Statements</a>
+          {/* <a href="/statements" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Statements</a> */}
           <a href="/journal" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Journal</a>
           <a href="/fundraiser" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Fundraiser</a>
-          <a href="/about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">About</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <div class="bg-repeat border-2e bg-[url('/src/hariya-tile-lg-light.svg')] sm:bg-[url('/src/hariya-tile-lg-light.svg')]">
+  <div class="z-45 bg-repeat border-2e bg-[url('/src/hariya-tile-lg-light.svg')] sm:bg-[url('/src/hariya-tile-lg-light.svg')]">
       <Outlet />
   </div>
 
-  <div class="flex flex-row h-16 bg-red-800 z-10 bottom-0 ">
+  <div class="flex flex-row h-16 bg-red-800 z-50 bottom-0 ">
     <div class="max-w-7xl pl-4 sm:pl-20">
       <Subscribe />
     </div>

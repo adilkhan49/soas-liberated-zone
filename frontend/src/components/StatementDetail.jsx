@@ -3,6 +3,7 @@ import { STATEMENTS_API_URL } from "../constants";
 import axios from "axios";
 import Markdown from 'markdown-to-jsx'
 import AuthContext from "../context/AuthContext";
+import formatDate from "../util/formatDate";
 
 class StatementDetail extends Component {
 
@@ -43,7 +44,7 @@ class StatementDetail extends Component {
     render() {
 
         return (
-        <div>
+        <div class="bg-amber-50 px-5 sm:px-10 my-10">
             { this.context.user &&
                 <div class="flex flex-row gap-5 justify-end">
 
@@ -64,12 +65,16 @@ class StatementDetail extends Component {
                         </div>
                 </div>
             }
-            <h1>
+            <h1 class="text-6xl font-anton text-left m-5 ">
                 {this.state.statement.title}
             </h1>
 
-            <div>
-                <Markdown class=" ">{this.state.statement.body}</Markdown>
+            <p class="text-2xl sm:mx-48 text-bold italic">
+                Statement released on {formatDate(this.state.statement.release_date)}
+            </p>
+
+            <div class="text-3xl sm:mx-48 ">
+                <Markdown class="">{this.state.statement.body}</Markdown>
             </div>
 
         </div>
