@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, useRef } from "react";
 import { useLocation } from 'react-router-dom'
 import Timeline from "/src/components/Timeline";
 import { TIMELINE_EVENTS_API_URL } from "/src/constants";
@@ -74,7 +74,7 @@ class AboutComponent extends Component {
 
           <hr class="border-black border-1"/>
 
-            <details open={this.state.openDemands} class="min-w-full bg-none border-none text-black duration-300">
+            <details id='demands' open={this.state.openDemands} class="min-w-full bg-none border-none text-black duration-300">
                 <summary class="bg-inherit min-w-full py-2 mx-5 sm:px-20 text-3xl font-kanit italic font-bold cursor-pointer open:bg-lime-800 open:text-amber-50">
                  Our Demands
                 </summary>
@@ -87,7 +87,7 @@ class AboutComponent extends Component {
 
             <hr class="border-black border-1"/>
 
-            <details open={this.state.openStatements}  class="min-w-full bg-none border-none text-black duration-300">
+            <details id='statements' open={this.state.openStatements}  class="min-w-full bg-none border-none text-black duration-300">
                 <summary class="bg-inherit min-w-full py-2 mx-5 sm:px-20 text-3xl font-kanit italic font-bold cursor-pointer open:bg-lime-800 open:text-amber-50">
                   Read our statements
                 </summary>
@@ -100,7 +100,7 @@ class AboutComponent extends Component {
 
             <hr class="border-black border-1"/>
 
-            <details open={this.state.openTimeline}  class="min-w-full bg-none border-none text-black duration-300">
+            <details id='timeline' open={this.state.openTimeline}  class="min-w-full bg-none border-none text-black duration-300">
                 <summary class="bg-inherit min-w-full py-2 mx-5 sm:px-20 text-3xl font-kanit italic font-bold cursor-pointer open:bg-lime-800 open:text-amber-50">
                   Timeline of the struggle at SOAS
                 </summary>
