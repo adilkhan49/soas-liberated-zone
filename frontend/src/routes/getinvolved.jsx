@@ -154,10 +154,10 @@ const GetInvolved = props => {
                 Everyone from our community is needed to end the complicity that puts blood on all of our hands.
               </p>
               <p class='sm:text-4xl  sm:leading-loose sm:pb-10'>
-                Everyone at SOAS and beyond is needed in the process of transforming our instution.  
+                Everyone at SOAS and beyond is needed in the process of transforming our institution.  
               </p>
               <p class='sm:text-4xl  sm:leading-loose'>
-              Together can create a university of dignified working and learning conditions, which serves the anticolonial purpose it claims to support.
+              Together we can create a university of dignified working and learning conditions, which serves the anticolonial purpose it claims to support.
               </p>
             </div>
           </div>
