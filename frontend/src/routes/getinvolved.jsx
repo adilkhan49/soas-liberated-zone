@@ -46,12 +46,6 @@ const GetInvolvedLinks =
     ></LinkButton>
     <Subscribe />
 
-    {/* <LinkButton 
-      linkText={"Contact us to get involved"} 
-      linkUrl={"bar"}
-    ></LinkButton>
-    <br></br> */}
-
     <div class="flex flex-col sm:flex-row sm:ml-10 justify-center items-center ">
       <div class="w-10 h-10 rounded-full inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-green-900 text-white text-xl font-bold">
         5
@@ -82,27 +76,99 @@ const GetInvolvedLinks =
       target = ""
     ></LinkButton>
 
-    {/*   <p class='container bg-amber-50 p-5 bg-green-700 sm:bg-transparent text-gray-50 sm:text-black mx-auto  text-lg sm:text-2xl font-kanit text-center'>
-      7. Contact us to share your skills or how you want to help at <a class= "text-white md:text-blue-700" href="mailto:soasliberatedzone@gmail.com">soasliberatedzone@gmail.com</a>
-    </p> */}
-
   </div>;
 
 const GetInvolved = props => {
     return (
-      <div>
-      <div class = "flex flex-grid grid-cols-2 ">
-        <div class="hidden lg:block">
+      <div class = "flex min-w-full min-h-screen">
+        <div class="w-full">
+
           <figure>
-            <img class="h-auto max-w-full  object-fill " src="https://i.postimg.cc/Zn1GPY9P/get-involved.jpg" alt="Get Involved" />
-            <a href="/login"></a>
+            <img
+              class="h-[50vh] sm:h-[80vh] w-full   object-fill " src="https://i.postimg.cc/sXJKyYn8/slz-call-to-action.jpg" 
+              alt="Get Involved" />
           </figure>
-        </div>
-        <div class = "flex-1 container mx-auto ">
-          {GetInvolvedLinks}
+
+          <div class='font-anton bg-amber-50 text-red-800 text-left text-2xl sm:text-6xl p-3 sm:p-7 m-6 sm:m-12 border-4 border-red-800 shadow-lg'>
+            Only together can we make SOAS an institution for its members by its members, in service of a truly decolonial education. 
+          </div>
+
+          <div class='bg-black opacity-75 text-opacity-100 py-6 sm:py-24 text-3xl sm:text-5xl p-3 sm:m-8 rounded-3xl mx-4 sm:mx-64'>
+            
+            <div class='font-rubikvinyl text-red-800 italic text-5xl sm:text-9xl text-center pb-4 sm:pb-20'>JOIN THE MOVEMENT</div>
+            
+            <div class="font-kanit text-white text-2xl sm:text-4xl sm:px-4 sm:mx-24 ">
+              <ol class="list-none list-inside text-justify space-y-5">
+                <li>
+                  <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
+                </li>
+                <li>
+                  <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
+                </li>   
+                <li>
+                  <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
+                </li>
+                <li>
+                  <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
+                </li>   
+                <li>
+                  <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
+                </li>
+                <li>
+                  <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
+                </li> 
+                <li>
+                  <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
+                </li>
+                <li>
+                  <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
+                </li>   
+                <li>
+                  <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
+                </li>
+                <li>
+                  <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
+                </li>   
+                <li>
+                  <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
+                </li>
+                <li>
+                  <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
+                </li>   
+                 
+              </ol>
+
+
+            </div>
+          </div>
+
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 bg-black text-center items-stretch
+          ">
+            <img class="order-first sm:order-last w-full object-cover" src={"https://i.postimg.cc/pdzq7FmB/kidz-1.jpg"} />
+
+            <div class="text-amber-50 bg-black text-center py-4 sm:py-10 px-4 sm:px-16 m-auto align-middle p-0
+              bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')]
+            ">
+              <p class='sm:text-4xl sm:leading-loose sm:pb-10 '>
+                Everyone from our community is needed to end the complicity that puts blood on all of our hands.
+              </p>
+              <p class='sm:text-4xl  sm:leading-loose sm:pb-10'>
+                Everyone at SOAS and beyond is needed in the process of transforming our instution.  
+              </p>
+              <p class='sm:text-4xl  sm:leading-loose'>
+              Together can create a university of dignified working and learning conditions, which serves the anticolonial purpose it claims to support.
+              </p>
+            </div>
+          </div>
+
+
+          
+
+
+          
         </div>
       </div>
-    </div>
     );
 };
 
