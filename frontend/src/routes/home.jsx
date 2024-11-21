@@ -5,6 +5,7 @@ import axios from "axios";
 import { CAROUSEL_IMAGES_API_URL } from "../constants";
 import FlipCountdown from "../components/flipcountdown";
 import logo from "/src/slz-logo.png";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
 
@@ -32,29 +33,30 @@ class Home extends Component {
         <div class="flex justify-center  h-[80vh] ">
           <Carousel images={this.state.carousel_images} />
         </div>
-        <div class='font-anton bg-black opacity-75 hover:opacity-50 text-opacity-100 text-amber-50 text-right text-2xl sm:text-5xl p-3 sm:p-7'>
-          {"End the complicity. End the repression. SOAS must become an institution in service of its community >>>"}
+        <div class=' font-anton bg-black opacity-85 hover:opacity-50 text-opacity-100 text-amber-50 text-left text-2xl sm:text-6xl p-3 sm:px-14'>
+          <Link to='/getinvolved' class="no-underline text-amber-50">
+            {"End the complicity. End the repression. SOAS must become an institution in service of its community >>>"}
+          </Link>
         </div>
-
 
         <div class='relative flex flex-col justify-center min-w-full container py-10 px-4 sm:p-14 pb-0 text-red-800  text-lg sm:text-4xl text-center  text-italic justify-center '>
           <div class='z-10 relative flex justify-center min-w-full container font-kanit font-bold italic p-2 sm:py-5 sm:px-32  bg-amber-50 text-red-800  text-lg sm:text-4xl text-center text-italic justify-center shadow-2xl border-4 border-red-800 leading-normal'>
-            The SOAS liberated zone is a student led site of anti colonial struggle for Gaza against SOAS university’s complicity in the ongoing genocide. We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education.
-            <div class= "hidden sm:block absolute w-96  pt-5 sm:p-10 sm:h-96 container justify-center left-0 translate-y-28 z-20">
+            The SOAS liberated zone is a student led site of anti colonial struggle for Gaza against SOAS university’s complicity in the ongoing genocide.  We cannot accept forced complicity in crimes against humanity and antidemocratic repression in our community. That is why we work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education. 
+            <div class= "sm:h-96 hidden sm:block absolute w-1/4 pt-5 sm:p-10 sm:h-96 container justify-center left-0 translate-y-32 z-20">
               <img src = {logo}/>
             </div>
           </div>
 
           <div class=' grid grid-cols-1 gap-y-3  p-6 font-kanit font-bold italic   text-lg sm:text-4xl text-center items-center'>
-              <a href='/about' class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline -translate-x-10">
+              <Link to='/about#demands' state={{ demands: true, statements: false, timeline: false }}class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline -translate-x-10">
                 {"Our Demands >>>"}
-              </a>
-              <a href='/about' class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline sm:translate-x-40 ">
+              </Link>
+              <Link to='/about#statements' state={{ demands: false, statements: true, timeline: false }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline sm:translate-x-40 ">
                 {"Our Statements >>>"}
-              </a>
-              <a href='/about'class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline translate-x-10 sm:translate-x-80">
+              </Link>
+              <Link to='/about#timeline' state={{ demands: false, statements: false, timeline: true }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline translate-x-10 sm:translate-x-80">
               {"Our Story >>>"}
-              </a>
+              </Link>
             </div>
 
         </div>

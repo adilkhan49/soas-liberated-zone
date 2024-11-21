@@ -8,6 +8,7 @@ export default {
         tourney: ["Tourney", "sans-serif"],
         kanit: ["Kanit", "sans-serif"],
         anton: ["Anton", "sans-serif"],
+        rubikvinyl: ["Rubik Vinyl", "sans-serif"],
       }
     },
     fontWeight: {
@@ -35,7 +36,8 @@ export default {
       '20': '20px',
       '35': '35px',
       '40': '40px',
-      '50': '50px',
+      '45': '45px',
+      '60': '60px',
     },
   },
   plugins: [],
