@@ -46,7 +46,7 @@ const Fundraiser = () => {
   }, []);
 
   return (
-    <div class="flex justify-center py-10">
+    <div class="min-h-screen flex justify-center py-10">
       <div class="flex gap-40 grid grid-cols-1 sm:grid-cols-3 ">
         <div className=" gfm-embed " data-url="https://www.gofundme.com/f/help-haitham-and-his-family-to-get-to-a-safe-place/widget/large?sharesheet=CAMPAIGN_PAGE&attribution_id=undefined"></div>
         <div className=" gfm-embed " data-url="https://www.gofundme.com/f/support-soas-student-encampment/widget/large?sharesheet=CAMPAIGN_PAGE&attribution_id=undefined"></div>
