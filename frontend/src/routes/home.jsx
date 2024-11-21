@@ -39,8 +39,8 @@ class Home extends Component {
 
         <div class='relative flex flex-col justify-center min-w-full container py-10 px-4 sm:p-14 pb-0 text-red-800  text-lg sm:text-4xl text-center  text-italic justify-center '>
           <div class='z-10 relative flex justify-center min-w-full container font-kanit font-bold italic p-2 sm:py-5 sm:px-32  bg-amber-50 text-red-800  text-lg sm:text-4xl text-center text-italic justify-center shadow-2xl border-4 border-red-800 leading-normal'>
-            The SOAS liberated zone is a student led site of anti colonial struggle for Gaza against SOAS university’s complicity in the ongoing genocide. We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education.
-            <div class= "hidden sm:block absolute w-96  pt-5 sm:p-10 sm:h-96 container justify-center left-0 translate-y-28 z-20">
+            The SOAS liberated zone is a student led site of anti colonial struggle for Gaza against SOAS university’s complicity in the ongoing genocide.  We cannot accept forced complicity in crimes against humanity and antidemocratic repression in our community. That is why we work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education. 
+            <div class= "hidden sm:block absolute w-96  pt-5 sm:p-10 sm:h-96 container justify-center left-0 translate-y-48 z-20">
               <img src = {logo}/>
             </div>
           </div>
