@@ -33,7 +33,7 @@ class Home extends Component {
         <div class="flex justify-center  h-[80vh] ">
           <Carousel images={this.state.carousel_images} />
         </div>
-        <div class='font-anton bg-black opacity-75 hover:opacity-50 text-opacity-100 text-amber-50 text-right text-2xl sm:text-5xl p-3 sm:p-7'>
+        <div class='font-anton bg-black opacity-85 hover:opacity-50 text-opacity-100 text-amber-50 text-left text-2xl sm:text-6xl p-3 sm:p-7'>
           {"End the complicity. End the repression. SOAS must become an institution in service of its community >>>"}
         </div>
 
@@ -47,13 +47,13 @@ class Home extends Component {
           </div>
 
           <div class=' grid grid-cols-1 gap-y-3  p-6 font-kanit font-bold italic   text-lg sm:text-4xl text-center items-center'>
-              <Link to='/about' state={{ demands: true, statements: false, timeline: false }}class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline -translate-x-10">
+              <Link to='/about#demands' state={{ demands: true, statements: false, timeline: false }}class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline -translate-x-10">
                 {"Our Demands >>>"}
               </Link>
-              <Link to='/about' state={{ demands: false, statements: true, timeline: false }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline sm:translate-x-40 ">
+              <Link to='/about#statements' state={{ demands: false, statements: true, timeline: false }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline sm:translate-x-40 ">
                 {"Our Statements >>>"}
               </Link>
-              <Link to='/about' state={{ demands: false, statements: false, timeline: true }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline translate-x-10 sm:translate-x-80">
+              <Link to='/about#timeline' state={{ demands: false, statements: false, timeline: true }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline translate-x-10 sm:translate-x-80">
               {"Our Story >>>"}
               </Link>
             </div>
