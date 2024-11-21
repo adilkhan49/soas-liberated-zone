@@ -5,6 +5,7 @@ import axios from "axios";
 import { CAROUSEL_IMAGES_API_URL } from "../constants";
 import FlipCountdown from "../components/flipcountdown";
 import logo from "/src/slz-logo.png";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
 
@@ -46,15 +47,15 @@ class Home extends Component {
           </div>
 
           <div class=' grid grid-cols-1 gap-y-3  p-6 font-kanit font-bold italic   text-lg sm:text-4xl text-center items-center'>
-              <a href='/about' class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline -translate-x-10">
+              <Link to='/about' state={{ demands: true, statements: false, timeline: false }}class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline -translate-x-10">
                 {"Our Demands >>>"}
-              </a>
-              <a href='/about' class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline sm:translate-x-40 ">
+              </Link>
+              <Link to='/about' state={{ demands: false, statements: true, timeline: false }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline sm:translate-x-40 ">
                 {"Our Statements >>>"}
-              </a>
-              <a href='/about'class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline translate-x-10 sm:translate-x-80">
+              </Link>
+              <Link to='/about' state={{ demands: false, statements: false, timeline: true }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline translate-x-10 sm:translate-x-80">
               {"Our Story >>>"}
-              </a>
+              </Link>
             </div>
 
         </div>
