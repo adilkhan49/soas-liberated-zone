@@ -93,7 +93,7 @@ const GetInvolved = props => {
             Only together can we make SOAS an institution for its members by its members, in service of a truly decolonial education. 
           </div>
 
-          <div class='bg-black opacity-75 text-opacity-100 py-6 sm:py-24 text-3xl sm:text-5xl p-3 sm:m-8 rounded-3xl mx-4 sm:mx-64'>
+          <div class='bg-black opacity-75 text-opacity-100 py-6 sm:py-24 text-3xl sm:text-5xl p-3 sm:m-8 rounded-3xl m-4 sm:mx-64'>
             
             <div class='font-rubikvinyl text-red-800 italic text-5xl sm:text-9xl text-center pb-4 sm:pb-20'>JOIN THE MOVEMENT</div>
             
