@@ -33,10 +33,11 @@ class Home extends Component {
         <div class="flex justify-center  h-[80vh] ">
           <Carousel images={this.state.carousel_images} />
         </div>
-        <div class='font-anton bg-black opacity-85 hover:opacity-50 text-opacity-100 text-amber-50 text-left text-2xl sm:text-6xl p-3 sm:p-7'>
-          {"End the complicity. End the repression. SOAS must become an institution in service of its community >>>"}
+        <div class=' font-anton bg-black opacity-85 hover:opacity-50 text-opacity-100 text-amber-50 text-left text-2xl sm:text-6xl p-3 sm:px-14'>
+          <Link to='/getinvolved' class="no-underline text-amber-50">
+            {"End the complicity. End the repression. SOAS must become an institution in service of its community >>>"}
+          </Link>
         </div>
-
 
         <div class='relative flex flex-col justify-center min-w-full container py-10 px-4 sm:p-14 pb-0 text-red-800  text-lg sm:text-4xl text-center  text-italic justify-center '>
           <div class='z-10 relative flex justify-center min-w-full container font-kanit font-bold italic p-2 sm:py-5 sm:px-32  bg-amber-50 text-red-800  text-lg sm:text-4xl text-center text-italic justify-center shadow-2xl border-4 border-red-800 leading-normal'>
