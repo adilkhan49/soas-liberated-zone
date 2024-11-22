@@ -58,6 +58,7 @@ export default function Root() {
               {/* <Link to={`statements`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Statements</Link> */}
               <Link to={`journal`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">SLZ Journal</Link>
               <Link to={`fundraiser`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Fundraiser</Link>
+              <Link to={`democratiseeducation`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Democratise Education</Link>
 
             </div>
           </div>
@@ -98,12 +99,13 @@ export default function Root() {
           {/* <a href="/statements" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Statements</a> */}
           <a href="/journal" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Journal</a>
           <a href="/fundraiser" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Fundraiser</a>
+          <a href="/democratiseeducation" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Democratise Education</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <div class="z-45 bg-repeat border-2e bg-[url('/src/hariya-tile-lg-light.svg')] sm:bg-[url('/src/hariya-tile-lg-light.svg')]">
+  <div class="z-45 bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')] sm:bg-[url('/src/hariya-tile-lg-light.svg')]">
       <Outlet />
   </div>
 

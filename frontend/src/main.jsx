@@ -26,6 +26,7 @@ import CreateStatement from "./routes/createStatement";
 import Statement from "./routes/statement";
 import EditStatement from "./routes/editStatement";
 import CreateEvent from "./routes/createEvent";
+import DemocratiseEducation from "./routes/democratiseeducation";
 
 const router = createBrowserRouter([
   {
@@ -93,6 +94,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "democratiseeducation",
+        element: <DemocratiseEducation />,
       },
       {
         path: "resources",
