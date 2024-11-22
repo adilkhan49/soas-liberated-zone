@@ -121,6 +121,6 @@ stats.html
 
 staticfiles
 
-.sql
+*.sql
 
 .DS_Store
