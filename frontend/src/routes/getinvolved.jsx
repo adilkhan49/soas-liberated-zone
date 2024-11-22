@@ -85,19 +85,21 @@ const GetInvolved = props => {
 
           <figure>
             <img
-              class="h-[50vh] sm:h-[80vh] w-full   object-fill " src="https://i.postimg.cc/sXJKyYn8/slz-call-to-action.jpg" 
+              class="h-[50vh] sm:h-[80vh] w-full object-fill " src="https://i.postimg.cc/sXJKyYn8/slz-call-to-action.jpg" 
               alt="Get Involved" />
           </figure>
 
-          <div class='font-anton bg-amber-50 text-red-800 text-left text-2xl sm:text-6xl p-3 sm:p-7 m-6 sm:m-12 border-4 border-red-800 shadow-lg'>
+          <div class='font-anton bg-amber-50 text-red-800 text-left text-2xl sm:text-4xl p-3 sm:p-7 m-6 sm:m-12 border-4 border-red-800 shadow-lg'>
             Only together can we make SOAS an institution for its members by its members, in service of a truly decolonial education. 
           </div>
 
           <div class='bg-black opacity-75 text-opacity-100 py-6 sm:py-24 text-3xl sm:text-5xl p-3 sm:m-8 rounded-3xl m-4 sm:mx-64'>
             
-            <div class='font-rubikvinyl text-red-800 italic text-5xl sm:text-9xl text-center pb-4 sm:pb-20'>JOIN THE MOVEMENT</div>
+            <div class='font-rubikvinyl text-red-800 italic text-5xl sm:text-7xl text-center pb-4 sm:pb-20'>
+              JOIN THE MOVEMENT
+            </div>
             
-            <div class="font-kanit text-white text-2xl sm:text-4xl sm:px-4 sm:mx-24 ">
+            <div class="font-kanit text-white text-2xl sm:text-3xl sm:px-4 sm:mx-24 ">
               <ol class="list-none list-inside text-justify space-y-5">
                 <li>
                   <span class="text-3xl sm:text-5xl font-bold text-red-600">⧨</span> Get yourself involved, think about it theres so much more of us than them.
@@ -150,13 +152,13 @@ const GetInvolved = props => {
             <div class="text-amber-50 bg-black text-center py-4 sm:py-10 px-4 sm:px-16 m-auto align-middle p-0
               bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')]
             ">
-              <p class='sm:text-4xl sm:leading-loose sm:pb-10 '>
+              <p class='sm:text-3xl sm:leading-loose sm:pb-8 '>
                 Everyone from our community is needed to end the complicity that puts blood on all of our hands.
               </p>
-              <p class='sm:text-4xl  sm:leading-loose sm:pb-10'>
+              <p class='sm:text-3xl  sm:leading-loose sm:pb-8'>
                 Everyone at SOAS and beyond is needed in the process of transforming our institution.  
               </p>
-              <p class='sm:text-4xl  sm:leading-loose'>
+              <p class='sm:text-3xl  sm:leading-loose'>
               Together we can create a university of dignified working and learning conditions, which serves the anticolonial purpose it claims to support.
               </p>
             </div>
