@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
-import AboutComponent from '/src/components/about';
+import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import AboutComponent from '/src/components/about';
 
 function About () {
 
