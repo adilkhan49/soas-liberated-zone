@@ -34,14 +34,14 @@ function DemocratiseEducation () {
       </div>
 
 
-      <div class='flex gap-20 font-anton bg-black opacity-75  text-opacity-100 text-white text-left text-2xl sm:text-6xl p-3 sm:px-14'>
-          <img class="hidden sm:block object-fit h-96 pt-20 pb-20 " src="https://i.postimg.cc/q7knXKWT/megaphone-red.png"/>
+      <div class='flex gap-20 font-anton bg-black opacity-75  text-opacity-100 text-white text-left text-2xl sm:text-4xl p-3 sm:px-14'>
+          <img class="hidden sm:block object-fit h-72 pt-10 pb-10 " src="https://i.postimg.cc/q7knXKWT/megaphone-red.png"/>
           <div class = "m-auto text-opacity-100 text-center">
             We are launching the Democratise Education: End SOAS Repression campaign. To bring together students, staff, and our communities, as we defend our university’s democracy against increasingly repressive attacks. Will you join us? 
           </div>
       </div>
 
-      <div class="flex flex-col gap-4 sm:gap-20 font-anton text-white text-xl sm:text-5xl p-8 sm:p-20 sm:px-64">
+      <div class="flex flex-col gap-4 sm:gap-10 font-anton text-white text-xl sm:text-3xl p-8 sm:p-20 sm:px-64">
         <a href='#state-of-repression' class="text-white no-underline sm:indent-0"><span class=" text-3xl sm:text-7xl text-green-800">⧨ </span>The state of repression at SOAS</a>
         <a href='#initial-demands' class="text-white no-underline indent-8 sm:indent-40"><span class="text-3xl sm:text-7xl text-green-800">⧨ </span>Initial demands of the campaign</a>
         <a href='#work-to-democratise-education' class="text-white no-underline indent-16 sm:indent-80"><span class="text-3xl sm:text-7xl text-green-800">⧨ </span>Work to Democratise Education</a>
