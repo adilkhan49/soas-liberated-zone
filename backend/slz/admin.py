@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Event, Statement, Subscriber, TimelineEvent, CarouselImage, Post
+from .models import Event, Statement, Subscriber, TimelineEvent, CarouselImage, Post, GalleryImage
 import csv
 from django.http import HttpResponse
 from datetime import datetime
@@ -53,3 +53,8 @@ class CarouselImageAdmin(admin.ModelAdmin):
 class PostAdmin(admin.ModelAdmin):
     list_display = ['title','release_date','author','sequence','is_approved','is_anonymous','cover_picture_url']
     ordering = [F('sequence').asc(nulls_last=True),'-release_date']
+
+@admin.register(GalleryImage)
+class GalleryImageAdmin(admin.ModelAdmin):
+    list_display = ['title','sequence']
+    ordering = ['sequence']

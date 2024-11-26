@@ -55,3 +55,11 @@ class CarouselImage(models.Model):
     sequence = models.IntegerField(unique=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
+class GalleryImage(models.Model):
+    title = models.TextField()
+    url = models.TextField()
+    sequence = models.IntegerField(unique=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    last_modified = models.DateTimeField(auto_now=True)
+
+

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage
+from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage
 
 class PostSerializer(serializers.ModelSerializer):
 
@@ -32,4 +32,9 @@ class TimelineEventSerializer(serializers.ModelSerializer):
 class CarouselImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = CarouselImage
+        fields = ('pk','title','url','sequence')
+
+class GalleryImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GalleryImage
         fields = ('pk','title','url','sequence')
