@@ -5,8 +5,8 @@ from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnl
 
 from django.db.models import Value
 from django.db.models.functions import Coalesce
-from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage
-from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer, TimelineEventSerializer, CarouselImageSerializer
+from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage
+from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer, TimelineEventSerializer, CarouselImageSerializer, GalleryImageSerializer
 from .filters import EventFilter
 
 
@@ -186,6 +186,23 @@ def carousel_image_list(request):
 
     elif request.method == 'POST':
         serializer = CarouselImage(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticatedOrReadOnly])
+def gallery_image_list(request):
+
+    if request.method == 'GET':
+        data = GalleryImage.objects.all().order_by('sequence')
+        serializer = GalleryImageSerializer(data, context={'request': request}, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = GalleryImage(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(status=status.HTTP_201_CREATED)
