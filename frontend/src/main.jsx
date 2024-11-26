@@ -27,6 +27,7 @@ import Statement from "./routes/statement";
 import EditStatement from "./routes/editStatement";
 import CreateEvent from "./routes/createEvent";
 import DemocratiseEducation from "./routes/democratiseeducation";
+import Gallery from "./routes/gallery";
 
 const router = createBrowserRouter([
   {
@@ -98,6 +99,10 @@ const router = createBrowserRouter([
       {
         path: "democratiseeducation",
         element: <DemocratiseEducation />,
+      },
+      {
+        path: "gallery",
+        element: <Gallery />,
       },
       {
         path: "resources",

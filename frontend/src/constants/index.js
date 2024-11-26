@@ -14,3 +14,4 @@ export const EVENTS_API_URL =  API_URL + "events/";
 export const SUBSCRIBE_API_URL =  API_URL + "subscribe/";
 export const TIMELINE_EVENTS_API_URL =  API_URL + "timeline/";
 export const CAROUSEL_IMAGES_API_URL =  API_URL + "carouselimages/";
+export const GALLERY_IMAGES_API_URL =  API_URL + "galleryimages/";
