@@ -33,7 +33,7 @@ class Home extends Component {
         <div class="flex justify-center  h-[80vh] ">
           <Carousel images={this.state.carousel_images} />
         </div>
-        <div class=' font-tourney  bg-black opacity-85 hover:opacity-50 text-opacity-100 text-left text-2xl sm:text-5xl p-3 sm:px-14'>
+        <div class=' font-tourney  bg-black bg-opacity-85 hover:bg-opacity-50 text-opacity-100 text-left text-2xl sm:text-5xl p-3 sm:px-14'>
           <Link to='/getinvolved' class="no-underline text-green-900 font-bold">
             {"End the complicity. End the repression. SOAS must become an institution in service of its community >>>"}
           </Link>
