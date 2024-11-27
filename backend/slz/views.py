@@ -222,7 +222,7 @@ def send_email(request):
     message = '\n'.join([k + ':\n' + str(v) + '\n' for (k,v) in message_dict.items()])
     if message:
         try:
-            send_mail(subject, message, settings.EMAIL_HOST_USER, ["hexamadoodle@gmail.com"])
+            send_mail(subject, message, settings.EMAIL_HOST_USER, [settings.EMAIL_TO])
         except BadHeaderError:
             return HttpResponse("Invalid header found.")
         return HttpResponse("Ok`")
