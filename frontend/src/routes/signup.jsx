@@ -1,37 +1,84 @@
 import { Component } from "react";
 import { useState, useEffect } from "react";
-
+import { SEND_EMAIL_API_URL } from "../constants";
+import { SUBSCRIBE_API_URL } from "../constants";
+import { redirect } from "react-router-dom";
 
 
 function SignUp () {
 
-    const [name, setName] = useState('ad')
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const [university, setUniversity] = useState('SOAS')
-    const [affiliation, setAffiliation] = useState('Student')
+    const [university, setUniversity] = useState('')
+    const [affiliation, setAffiliation] = useState('')
     const [subscribe, setSubscribe] = useState(false)
     const [message, setMessage] = useState('')
     
+    
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        try {
+            const response = await fetch(SEND_EMAIL_API_URL, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                name: name,
+                email: email,
+                university: university,
+                affiliation: affiliation,
+                subscribe: subscribe,
+                message: message,
+              }),            });
+              
+            if (response.ok) {
+                console.log("Thank you for signing up!");
+                if (subscribe) {
 
+                    try {
+                        const response = await fetch(SUBSCRIBE_API_URL, {
+                          method: 'POST',
+                          headers: {
+                            'Content-Type': 'application/json',
+                          },
+                          body: JSON.stringify({
+                            email: email,
+                          }),
+                        });
+                  
+                        if (response.ok) {
+                            console.log("You have joined our newsletter!");
+                        } else {
+                            console.log('Failed to subscribe');
+                        }
+                      } catch (error) {
+                        console.log('Something went wrong');
+                        console.error('Error subscribing:', error);
+                      }                
+                }
+                window.location = '/thanks';
+            } else {
+                console.log("Failed to sign up");
+            }
+          } catch (error) {
+            console.error('Error signing up:', error);
+          }
+    
+        
+    
+      }
    
     return (
-        <div class="m-10">
-                <div class='flex flex-col'>
-                <div>{name}</div>
-                <div>{email}</div>
-                <div>{university}</div>
-                <div>{affiliation}</div>
-                <div>{message}</div>
-                <div>{subscribe ? 'subscribed' : 'not subscribed'}</div>
-                </div>
-
-            <div class="grid sm:grid-cols-2 items-start gap-16 p-4 mx-auto max-w-4xl bg-white font-[sans-serif]">
+        <div class="min-h-screen m-10 sm:m-26">
+            <div class="grid sm:grid-cols-2 items-start gap-4 p-4 mx-auto max-w-4xl bg-white font-[sans-serif]">
                 <div>
-                    <h1 class="text-gray-800 text-3xl font-extrabold">Let's Talk</h1>
-                    <p class="text-sm text-gray-500 mt-4">Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your project  and provide help.</p>
+                    <h1 class="text-gray-800 text-3xl font-extrabold">Join the SOAS Community Struggle</h1>
+                    <p class="text-xl text-gray-500 mt-4 mb-0">We cannot be silent as SOAS repeatedly fails the people of Palestine and its own community. Soas can be an institution for its members by its members, in service of the anticolonial education its claims to provide; but only through our collective struggle. Join the movement!</p>
 
-                    <div class="mt-12">
-                        <h2 class="text-gray-800 text-base font-bold">Email</h2>
+                    <div class="mt-0">
+                        <h2 class="text-gray-800 text-base font-bold m-0">Contact Us</h2>
                         <ul class="mt-4">
                             <li class="flex items-center">
                                 <a href="mailto:soasliberatedzone@gmail.com" class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
@@ -43,40 +90,17 @@ function SignUp () {
                                     </svg>
                                 </a>
                                 <a href="mailto:soasliberatedzone@gmail.com" class="text-[#007bff] text-sm ml-4">
-                                    <small class="block">Mail</small>
                                     <strong>soasliberatedzone@gmail.com</strong>
                                 </a>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="mt-12">
-                        <h2 class="text-gray-800 text-base font-bold">Socials</h2>
-
+                    <div class="mt-6">
                         <ul class="flex mt-4 space-x-4">
-                            {/* <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                <a href="javascript:void(0)">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.812 13.937H9.33v9.312c0 .414.335.75.75.75l4.007.001a.75.75 0 0 0 .75-.75v-9.312h2.387a.75.75 0 0 0 .744-.657l.498-4a.75.75 0 0 0-.744-.843h-2.885c.113-2.471-.435-3.202 1.172-3.202 1.088-.13 2.804.421 2.804-.75V.909a.75.75 0 0 0-.648-.743A26.926 26.926 0 0 0 15.071 0c-7.01 0-5.567 7.772-5.74 8.437H6.812a.75.75 0 0 0-.75.75v4c0 .414.336.75.75.75zm.75-3.999h2.518a.75.75 0 0 0 .75-.75V6.037c0-2.883 1.545-4.536 4.24-4.536.878 0 1.686.043 2.242.087v2.149c-.402.205-3.976-.884-3.976 2.697v2.755c0 .414.336.75.75.75h2.786l-.312 2.5h-2.474a.75.75 0 0 0-.75.75V22.5h-2.505v-9.312a.75.75 0 0 0-.75-.75H7.562z"
-                                            data-original="#000000" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                            <a href="javascript:void(0)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
-                                        viewBox="0 0 511 512">
-                                        <path
-                                            d="M111.898 160.664H15.5c-8.285 0-15 6.719-15 15V497c0 8.285 6.715 15 15 15h96.398c8.286 0 15-6.715 15-15V175.664c0-8.281-6.714-15-15-15zM96.898 482H30.5V190.664h66.398zM63.703 0C28.852 0 .5 28.352.5 63.195c0 34.852 28.352 63.2 63.203 63.2 34.848 0 63.195-28.352 63.195-63.2C126.898 28.352 98.551 0 63.703 0zm0 96.395c-18.308 0-33.203-14.891-33.203-33.2C30.5 44.891 45.395 30 63.703 30c18.305 0 33.195 14.89 33.195 33.195 0 18.309-14.89 33.2-33.195 33.2zm289.207 62.148c-22.8 0-45.273 5.496-65.398 15.777-.684-7.652-7.11-13.656-14.942-13.656h-96.406c-8.281 0-15 6.719-15 15V497c0 8.285 6.719 15 15 15h96.406c8.285 0 15-6.715 15-15V320.266c0-22.735 18.5-41.23 41.235-41.23 22.734 0 41.226 18.495 41.226 41.23V497c0 8.285 6.719 15 15 15h96.403c8.285 0 15-6.715 15-15V302.066c0-79.14-64.383-143.523-143.524-143.523zM466.434 482h-66.399V320.266c0-39.278-31.953-71.23-71.226-71.23-39.282 0-71.239 31.952-71.239 71.23V482h-66.402V190.664h66.402v11.082c0 5.77 3.309 11.027 8.512 13.524a15.01 15.01 0 0 0 15.875-1.82c20.313-16.294 44.852-24.907 70.953-24.907 62.598 0 113.524 50.926 113.524 113.523zm0 0"
-                                            data-original="#000000" />
-                                    </svg>
-                                </a>
-                            </li> */}
                             <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                 <a href="https://www.instagram.com/soasliberatedzone/" target="_blank">
-
+                                    
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
                                         viewBox="0 0 24 24">
                                         <path
@@ -84,12 +108,16 @@ function SignUp () {
                                         </path>
                                     </svg>
                                 </a>
+                                
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <form class="ml-auto space-y-4">
+                <form 
+                    class="ml-auto space-y-4"
+                    onSubmit={handleSubmit}
+                    >
                     <input 
                         class="w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-blue-500 focus:bg-transparent" 
                         type='text' 
@@ -131,6 +159,7 @@ function SignUp () {
                         class="w-full rounded-md px-4 bg-gray-100 text-gray-800 text-sm pt-3 outline-blue-500 focus:bg-transparent"
                         placeholder='How do you want to get involved? Anything else?' 
                         name='message'
+                        value={message}
                         onChange={(e) => {setMessage(e.target.value)}}
                         rows="6"
                     />
@@ -147,8 +176,9 @@ function SignUp () {
 
 
 
-                    <button type='submit'
-                        class="text-white bg-blue-500 hover:bg-blue-600 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6">Send</button>
+                    <button 
+                        type='submit'
+                        class="bg-red-800 border-red-900 hover:bg-red-700 text-white py-2 px-4 rounded-lg w-full !mt-6">Send</button>
                 </form>
             </div>
         </div>

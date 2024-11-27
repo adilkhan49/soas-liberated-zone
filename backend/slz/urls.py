@@ -13,4 +13,5 @@ urlpatterns = [
     re_path(r'timeline/$', views.timeline_event_list),
     re_path(r'carouselimages/$', views.carousel_image_list),
     re_path(r'galleryimages/$', views.gallery_image_list),
+    re_path(r'sendmail/$', views.send_email),
 ]
