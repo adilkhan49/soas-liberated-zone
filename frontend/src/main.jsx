@@ -28,6 +28,7 @@ import EditStatement from "./routes/editStatement";
 import CreateEvent from "./routes/createEvent";
 import DemocratiseEducation from "./routes/democratiseeducation";
 import Gallery from "./routes/gallery";
+import SignUp from "./routes/signup";
 
 const router = createBrowserRouter([
   {
@@ -103,6 +104,10 @@ const router = createBrowserRouter([
       {
         path: "gallery",
         element: <Gallery />,
+      },
+      {
+        path: "signup",
+        element: <SignUp />,
       },
       {
         path: "resources",
