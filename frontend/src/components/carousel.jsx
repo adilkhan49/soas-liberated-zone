@@ -30,7 +30,7 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
     // relative w-full max-w-xl mx-auto
     // overflow-hidden relative h-64
   return (
-    <div className=" relative object-scale-down w-full  h-full overflow-hidden sm:border-60 border-black border-opacity-85">
+    <div className=" relative object-scale-down w-full  h-full overflow-hidden md:border-10 lg:border-60 border-black border-opacity-85">
 
       <div className="z-10">
         {images.map((image, index) => (
@@ -101,7 +101,7 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
         ))}
       </div>
 
-      <div class = "absolute right-2 sm:right-10 bottom-16 sm:bottom-40 z-45">
+      <div class = "absolute right-2 md:right-10 bottom-16 md:bottom-40 z-45">
           <FlipCountdown
             number={slz_days}
             caption={'days of encampment'}
