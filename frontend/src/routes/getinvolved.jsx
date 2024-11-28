@@ -212,12 +212,12 @@ const GetInvolved = props => {
           </div>
 
 
-          <div class="relative h-[90vh] container items-end min-w-full my-12">
+          <div class="flex flex-col sm:block relative sm:h-[90vh] container items-end min-w-full my-12">
             <img 
-              class="absolute w-2/3 h-[80vh] bottom-0 right-0 object-cover object-bottom" 
+              class="order-last flex sm:absolute sm:w-2/3 sm:h-[80vh] bottom-0 right-0 object-cover object-bottom" 
               src={"https://i.postimg.cc/q79FMn1j/marching.jpg"} />
-            <div class="absolute w-1/2 translate-x-0 translate-y-0  text-black border-10 bg-amber-50 border-red-800 text-center py-4 px-4 sm:px-16 m-auto align-middle mx-20 ">
-              <p class='sm:text-4xl mb-0   tracking-wide '>
+            <div class="sm:absolute sm:w-1/2 m-auto  text-black border-10 bg-amber-50 border-red-800 text-center py-4 px-4 sm:px-16 m-auto align-middle sm:mx-20 ">
+              <p class='sm:text-4xl mb-0 tracking-wide '>
               SOAS can be an institution <span class="text-red-700">for its members by its members</span>, in service of the <span class="text-red-700">anticolonial education</span> its claims to provide; but only through our <span class="text-red-700">collective struggle</span>! We cannot be silent as SOAS repeatedly fails the people of Palestine and its own community. 
               </p>
             </div>
