@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       {
         index: true,
         path: "/",
-        element: <Home />,
+        element: <PrivateRoute><Home />,</PrivateRoute>
       },
       {
         path: "login",
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       },
       {
         path: "calendar",
-        element: <Events />,
+        element:  <PrivateRoute><Events /></PrivateRoute>,
       },
       {
         path: "calendar/create",
@@ -56,19 +56,19 @@ const router = createBrowserRouter([
       },
       {
         path: "fundraiser",
-        element: <Fundraiser />,
+        element: <PrivateRoute><Fundraiser /></PrivateRoute>,
       },
       {
         path: "getinvolved",
-        element: <GetInvolved />,
+        element: <PrivateRoute><GetInvolved /></PrivateRoute>,
       },
       {
         path: "journal",
-        element: <Journal />,
+        element: <PrivateRoute><Journal /></PrivateRoute>,
       },
       {
         path: "journal/:id",
-        element: <Post />,
+        element: <PrivateRoute><Post /></PrivateRoute>,
       },
       {
         path: "journal/:id/edit",
@@ -76,15 +76,15 @@ const router = createBrowserRouter([
       },
       {
         path: "journal/create",
-        element: <CreatePost />
+        element: <PrivateRoute><CreatePost /></PrivateRoute>,
       },
       {
         path: "statements",
-        element: <Statements />,
+        element: <PrivateRoute><Statements /></PrivateRoute>,
       },
       {
         path: "statements/:id",
-        element: <Statement />,
+        element: <PrivateRoute><Statement /></PrivateRoute>,
       },
       {
         path: "statements/:id/edit",
@@ -96,33 +96,23 @@ const router = createBrowserRouter([
       },
       {
         path: "about",
-        element: <About />,
+        element: <PrivateRoute><About /></PrivateRoute>,
       },
       {
         path: "democratiseeducation",
-        element: <DemocratiseEducation />,
+        element: <PrivateRoute><DemocratiseEducation /></PrivateRoute>,
       },
       {
         path: "gallery",
-        element: <Gallery />,
+        element: <PrivateRoute><Gallery /></PrivateRoute>,
       },
       {
         path: "signup",
-        element: <SignUp />,
+        element: <PrivateRoute><SignUp /></PrivateRoute>,
       },
       {
         path: "thanks",
-        element: <Thanks />,
-      },
-      {
-        path: "resources",
-        element: <Resources />,
-        children: [
-          {
-            path: "literature",
-            element: <Resources />,
-          },
-        ]
+        element: <PrivateRoute><Thanks /></PrivateRoute>,
       },
     ]
   },
