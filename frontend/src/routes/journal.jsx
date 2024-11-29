@@ -69,7 +69,7 @@ class Journal extends Component {
         <div class='flex justify-center h-[50vh] object-scale-down min-w-full '>
           <img
               class = "w-full  h-full"
-              src={"https://i.postimg.cc/vTsH9NkQ/slz-cover.jpg"}
+              src={"https://images2.imgbox.com/47/e4/ZiP6HmHN_o.jpg"}
           />
         </div>
 

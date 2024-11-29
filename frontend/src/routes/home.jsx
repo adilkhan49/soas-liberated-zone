@@ -111,7 +111,7 @@ class Home extends Component {
 
           <div class=" h-auto border-none">
             <figure>
-              <img class="" src={"https://i.postimg.cc/2S5kJHb5/jehad-cut.jpg"} />
+              <img class="" src={"https://images2.imgbox.com/88/b3/x1Q7iTLQ_o.jpg"} />
             </figure>
           </div>
 

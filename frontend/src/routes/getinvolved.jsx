@@ -119,7 +119,7 @@ const GetInvolved = props => {
 
           <figure>
             <img
-              class=" w-full object-cover " src="https://i.postimg.cc/sXJKyYn8/slz-call-to-action.jpg" 
+              class=" w-full object-cover " src="https://images2.imgbox.com/f3/43/FNCas1gB_o.jpg" 
               alt="Get Involved" />
           </figure>
 
