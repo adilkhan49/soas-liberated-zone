@@ -55,7 +55,7 @@ const router = createBrowserRouter([
       //   element: <PrivateRoute><CreateEvent /></PrivateRoute>
       // },
       {
-        path: "fundraiser",
+        path: "fundraisers",
         element: <PrivateRoute><Fundraiser /></PrivateRoute>,
       },
       {
