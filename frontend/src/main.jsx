@@ -12,7 +12,7 @@ import Root from "./routes/root";
 import LoginPage from "./routes/LoginPage";
 import ErrorPage from "./error-page";
 import Home from "./routes/home";
-import Events from "./routes/events";
+// import Events from "./routes/events";
 import Fundraiser from "./routes/fundraiser";
 import Resources from "./routes/resources";
 import GetInvolved from "./routes/getinvolved";
@@ -46,14 +46,14 @@ const router = createBrowserRouter([
         path: "login",
         element: <LoginPage />,
       },
-      {
-        path: "calendar",
-        element:  <PrivateRoute><Events /></PrivateRoute>,
-      },
-      {
-        path: "calendar/create",
-        element: <PrivateRoute><CreateEvent /></PrivateRoute>
-      },
+      // {
+      //   path: "calendar",
+      //   element:  <PrivateRoute><Events /></PrivateRoute>,
+      // },
+      // {
+      //   path: "calendar/create",
+      //   element: <PrivateRoute><CreateEvent /></PrivateRoute>
+      // },
       {
         path: "fundraiser",
         element: <PrivateRoute><Fundraiser /></PrivateRoute>,
