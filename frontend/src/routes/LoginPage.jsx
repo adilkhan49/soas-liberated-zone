@@ -6,7 +6,7 @@ const LoginPage = () => {
     let {loginUser} = useContext(AuthContext);
 
     return (
-<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+<div class="flex min-h-[80vh] flex-col justify-start px-6 py-12 lg:px-8">
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
     <form class="space-y-6" onSubmit={loginUser}>
