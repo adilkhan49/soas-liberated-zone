@@ -12,14 +12,6 @@ export default function Root() {
   
   let { user, logoutUser } = useContext(AuthContext)
   const [isNavOpen, setIsNavOpen] = useState(false);
-  // function toggleMenu() {
-  //   const menu = document.querySelector("#mobile-menu")
-  //   if (menu.classList.contains('hidden')) {
-  //       menu.classList.remove('hidden');
-  //   } else {
-  //       menu.classList.add('hidden');
-  //   }
-  // }
 
   return (
 <div class="min-h-screen relative w-full bg-amber-50">
@@ -112,12 +104,24 @@ export default function Root() {
       <Outlet />
   </div>
 
-  <div class="flex flex-row h-16 bg-red-800 z-50 bottom-0 ">
-    <div class="max-w-7xl pl-4 lg:pl-20">
-      <Subscribe />
+  <div class="flex bg-red-800 z-50 bottom-0 items-center gap-x-10">
+    <div class="">
+      <div class="flex flex-col items-start max-w-7xl pl-4 lg:pl-20 lg:py-2">
+        <div class="font-kanit text-xl text-amber-50">
+          Stay Updated! Join our newsletter:
+        </div>
+        <Subscribe />
+        <div class="font-kanit text-xl text-amber-50">
+          Contact us: <a href='mailto:soasliberatedzone@gmail.com' class='text-blue-500'>soasliberatedzone@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class='absolute hidden sm:block right-0 sm:right-10 md:right-15'>
+      <a href="/">
+        <img src={logo} class="h-16 w-auto rounded-full" ></img>
+      </a>
     </div>
   </div>
-
 </div>
 
   );
