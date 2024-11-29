@@ -9,6 +9,7 @@ export default {
         kanit: ["Kanit", "sans-serif"],
         anton: ["Anton", "sans-serif"],
         rubikvinyl: ["Rubik Vinyl", "sans-serif"],
+        rubikmono: ["Rubik Mono One", "sans-serif"]
       }
     },
     fontWeight: {
@@ -33,6 +34,7 @@ export default {
       '6': '6px',
       '7': '7px',
       '8': '8px',
+      '10': '10px',
       '20': '20px',
       '35': '35px',
       '40': '40px',

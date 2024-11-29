@@ -3,19 +3,18 @@ import { SUBSCRIBE_API_URL } from '../constants';
 
 function Subscribe() {
     const [email, setEmail] = useState("");
-    const [isValidEmail, setisValidEmail] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
     const [successMessage, setSuccessMessage] = useState("");
 
 
-  const handleEmailInput = (e) => {
-    setEmail(e.target.value);
-  }
+    const handleEmailInput = (e) => {
+      setEmail(e.target.value);
+    }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setErrorMessage("");
-    setSuccessMessage("");
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      setErrorMessage("");
+      setSuccessMessage("");
 
     try {
         const response = await fetch(SUBSCRIBE_API_URL, {
@@ -37,9 +36,6 @@ function Subscribe() {
         console.error('Error subscribing:', error);
         setErrorMessage("Failed to subscribe. Please try again later.")
       }
-
-    
-
   }
 
   return (

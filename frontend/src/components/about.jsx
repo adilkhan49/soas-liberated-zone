@@ -9,7 +9,7 @@ import Statements from "/src/routes//statements";
 class AboutComponent extends Component {
 
     state = {
-      openDemands: true,
+      openDemands: false,
       openStatements: false,
       openTimeline: false,
       timeline_events: [],
@@ -117,6 +117,21 @@ class AboutComponent extends Component {
 
           </div>
 
+          <div class="grid grid-cols-1 sm:grid-cols-2 bg-black text-center items-stretch">
+            <img class="order-first sm:order-last w-full object-cover" src={"https://i.postimg.cc/pdzq7FmB/kidz-1.jpg"} />
+            <div class="text-amber-50 bg-black text-center py-4 sm:py-10 px-4 sm:px-16 m-auto align-middle p-0
+              bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')]">
+              <p class='sm:text-3xl sm:leading-loose sm:pb-8 '>
+                Everyone from our community is needed to end the complicity that puts blood on all of our hands.
+              </p>
+              <p class='sm:text-3xl  sm:leading-loose sm:pb-8'>
+                Everyone at SOAS and beyond is needed in the process of transforming our institution.  
+              </p>
+              <p class='sm:text-3xl  sm:leading-loose'>
+              Together we can create a university of dignified working and learning conditions, which serves the anticolonial purpose it claims to support.
+              </p>
+            </div>
+          </div>
 
         </div>
       );

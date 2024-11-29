@@ -3,12 +3,17 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 
+from django.core.mail import BadHeaderError, send_mail
+from django.http import HttpResponse, HttpResponseRedirect
+from django.conf import settings
+
 from django.db.models import Value
 from django.db.models.functions import Coalesce
 from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage
 from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer, TimelineEventSerializer, CarouselImageSerializer, GalleryImageSerializer
 from .filters import EventFilter
 
+import json
 
 @api_view(['GET', 'POST'])
 def post_list(request):
@@ -197,7 +202,8 @@ def carousel_image_list(request):
 def gallery_image_list(request):
 
     if request.method == 'GET':
-        data = GalleryImage.objects.all().order_by('sequence')
+        data = GalleryImage.objects.all().annotate(sequence_null=
+    Coalesce('sequence', Value(999999))).order_by('sequence_null','-release_date')
         serializer = GalleryImageSerializer(data, context={'request': request}, many=True)
         return Response(serializer.data)
 
@@ -208,3 +214,18 @@ def gallery_image_list(request):
             return Response(status=status.HTTP_201_CREATED)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['POST'])
+def send_email(request):
+    print('sending...')
+    subject = "Website Sign Up"
+    message_dict = json.loads(request.body.decode())
+    message = '\n'.join([k + ':\n' + str(v) + '\n' for (k,v) in message_dict.items()])
+    if message:
+        try:
+            send_mail(subject, message, settings.EMAIL_HOST_USER, [settings.EMAIL_TO])
+        except BadHeaderError:
+            return HttpResponse("Invalid header found.")
+        return HttpResponse("Ok`")
+    else:
+        return HttpResponse("Make sure all fields are entered and valid.")

@@ -12,7 +12,7 @@ import Root from "./routes/root";
 import LoginPage from "./routes/LoginPage";
 import ErrorPage from "./error-page";
 import Home from "./routes/home";
-import Events from "./routes/events";
+// import Events from "./routes/events";
 import Fundraiser from "./routes/fundraiser";
 import Resources from "./routes/resources";
 import GetInvolved from "./routes/getinvolved";
@@ -28,6 +28,8 @@ import EditStatement from "./routes/editStatement";
 import CreateEvent from "./routes/createEvent";
 import DemocratiseEducation from "./routes/democratiseeducation";
 import Gallery from "./routes/gallery";
+import SignUp from "./routes/signup";
+import Thanks from "./routes/thanks";
 
 const router = createBrowserRouter([
   {
@@ -38,35 +40,35 @@ const router = createBrowserRouter([
       {
         index: true,
         path: "/",
-        element: <Home />,
+        element: <PrivateRoute><Home />,</PrivateRoute>
       },
       {
         path: "login",
         element: <LoginPage />,
       },
-      {
-        path: "calendar",
-        element: <Events />,
-      },
-      {
-        path: "calendar/create",
-        element: <PrivateRoute><CreateEvent /></PrivateRoute>
-      },
+      // {
+      //   path: "calendar",
+      //   element:  <PrivateRoute><Events /></PrivateRoute>,
+      // },
+      // {
+      //   path: "calendar/create",
+      //   element: <PrivateRoute><CreateEvent /></PrivateRoute>
+      // },
       {
         path: "fundraiser",
-        element: <Fundraiser />,
+        element: <PrivateRoute><Fundraiser /></PrivateRoute>,
       },
       {
         path: "getinvolved",
-        element: <GetInvolved />,
+        element: <PrivateRoute><GetInvolved /></PrivateRoute>,
       },
       {
         path: "journal",
-        element: <Journal />,
+        element: <PrivateRoute><Journal /></PrivateRoute>,
       },
       {
         path: "journal/:id",
-        element: <Post />,
+        element: <PrivateRoute><Post /></PrivateRoute>,
       },
       {
         path: "journal/:id/edit",
@@ -74,15 +76,15 @@ const router = createBrowserRouter([
       },
       {
         path: "journal/create",
-        element: <CreatePost />
+        element: <PrivateRoute><CreatePost /></PrivateRoute>,
       },
       {
         path: "statements",
-        element: <Statements />,
+        element: <PrivateRoute><Statements /></PrivateRoute>,
       },
       {
         path: "statements/:id",
-        element: <Statement />,
+        element: <PrivateRoute><Statement /></PrivateRoute>,
       },
       {
         path: "statements/:id/edit",
@@ -94,25 +96,23 @@ const router = createBrowserRouter([
       },
       {
         path: "about",
-        element: <About />,
+        element: <PrivateRoute><About /></PrivateRoute>,
       },
       {
         path: "democratiseeducation",
-        element: <DemocratiseEducation />,
+        element: <PrivateRoute><DemocratiseEducation /></PrivateRoute>,
       },
       {
         path: "gallery",
-        element: <Gallery />,
+        element: <PrivateRoute><Gallery /></PrivateRoute>,
       },
       {
-        path: "resources",
-        element: <Resources />,
-        children: [
-          {
-            path: "literature",
-            element: <Resources />,
-          },
-        ]
+        path: "signup",
+        element: <PrivateRoute><SignUp /></PrivateRoute>,
+      },
+      {
+        path: "thanks",
+        element: <PrivateRoute><Thanks /></PrivateRoute>,
       },
     ]
   },

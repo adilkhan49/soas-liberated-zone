@@ -37,4 +37,4 @@ class CarouselImageSerializer(serializers.ModelSerializer):
 class GalleryImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = GalleryImage
-        fields = ('pk','title','url','sequence')
+        fields = ('pk','title','url','sequence','release_date')
