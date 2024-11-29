@@ -9,7 +9,8 @@ export default {
         kanit: ["Kanit", "sans-serif"],
         anton: ["Anton", "sans-serif"],
         rubikvinyl: ["Rubik Vinyl", "sans-serif"],
-        rubikmono: ["Rubik Mono One", "sans-serif"]
+        rubikmono: ["Rubik Mono One", "sans-serif"],
+        archivoblack: ["Archivo Black", "sans-serif"],
       }
     },
     fontWeight: {
@@ -22,7 +23,7 @@ export default {
       semibold: '600',
       bold: '700',
       extrabold: '800',
-      black: '900',
+      xxlbold: '900',
     },
     borderWidth: {
       DEFAULT: '1px',
