@@ -118,7 +118,7 @@ class AboutComponent extends Component {
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 bg-black text-center items-stretch">
-            <img class="order-first sm:order-last w-full object-cover" src={"https://i.postimg.cc/pdzq7FmB/kidz-1.jpg"} />
+            <img class="order-first sm:order-last w-full object-cover" src={"https://images2.imgbox.com/b3/75/KfXgLzSz_o.jpg"} />
             <div class="text-amber-50 bg-black text-center py-4 sm:py-10 px-4 sm:px-16 m-auto align-middle p-0
               bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')]">
               {/* <p class='sm:text-3xl sm:leading-loose sm:pb-8 '>
