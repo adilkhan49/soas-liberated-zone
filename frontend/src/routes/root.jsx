@@ -43,7 +43,7 @@ export default function Root() {
         <div class="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
           <div class="hidden lg:ml-6 lg:block">
             <div class="flex space-x-4">
-              <Link to={``} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Home</Link>
+              {/* <Link to={``} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Home</Link> */}
               <Link to={`about`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">About</Link>
               <Link to={`getinvolved`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline active:bg-black">Get Involved</Link>
               {/* <Link to={`calendar`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Calendar</Link> */}
@@ -84,7 +84,7 @@ export default function Root() {
     <div class={!isNavOpen && "hidden"}>
       <div class="lg:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
-          <a href="/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Home</a>
+          {/* <a href="/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Home</a> */}
           <a href="/about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">About</a>
           <a href="/getinvolved" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Get Involved</a>
           {/* <a href="/calendar" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline">Calendar</a> */}
