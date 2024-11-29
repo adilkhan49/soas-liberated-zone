@@ -44,7 +44,7 @@ function Subscribe() {
       <form onSubmit={handleSubmit}>
 
         <div class="flex justify-center">
-            <div class="max-w-2xl px-3 rounded-2xl md:px-8 ">
+            <div class="max-w-2xl px-3 rounded-2xl md:px-0 ">
                 <div class="my-4 flex gap-2 justify-evenly">
                     <input class=" block w-full px-4 py-1 text-gray-800 placeholder-gray-500 bg-white border border-gray-300 rounded-md appearance-none sm:max-w-xs focus:outline-none focus:ring focus:ring-blue-50 focus:border-blue-300" 
                     type='email'
