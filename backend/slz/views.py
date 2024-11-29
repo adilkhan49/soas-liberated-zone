@@ -202,7 +202,8 @@ def carousel_image_list(request):
 def gallery_image_list(request):
 
     if request.method == 'GET':
-        data = GalleryImage.objects.all().order_by('sequence')
+        data = GalleryImage.objects.all().annotate(sequence_null=
+    Coalesce('sequence', Value(999999))).order_by('sequence_null','-release_date')
         serializer = GalleryImageSerializer(data, context={'request': request}, many=True)
         return Response(serializer.data)
 
