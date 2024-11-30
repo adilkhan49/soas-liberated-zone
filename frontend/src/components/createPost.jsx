@@ -1,4 +1,7 @@
-import React, {useState, Component} from 'react';
+import React, {useState, useRef} from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
+
+
 import '@mdxeditor/editor/style.css'
 import {
     MDXEditor, 
@@ -34,39 +37,45 @@ function Editor(props) {
     const [is_anonymous, setIsAnonymous] = useState(false);
     const [cover_picture_url, setCoverPictureURL] = useState('');
 
-    
+    const recaptcha = useRef(null);
+
     const handleSave = async () => {
         event.preventDefault(); // Prevent form default submission
-
-        try {
-          const response = await fetch(POSTS_API_URL, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              title: title,
-              author: author,
-              body: markdown,
-              is_anonymous: is_anonymous,
-              release_date: release_date,
-              cover_picture_url: cover_picture_url
-            }),
-          });
-    
-          if (response.ok) {
-            alert("Successully created! Your contribution will be published once approved")
-            window.location = '/journal';
-          } else {
-            alert('Failed to save markdown.');
+        if(!recaptcha.current.getValue()){
+          alert('Please Submit Captcha')
+        }
+        else {
+          try {
+            const response = await fetch(POSTS_API_URL, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                title: title,
+                author: author,
+                body: markdown,
+                is_anonymous: is_anonymous,
+                release_date: release_date,
+                cover_picture_url: cover_picture_url
+              }),
+            });
+      
+            if (response.ok) {
+              alert("Successully created! Your contribution will be published once approved")
+              window.location = '/journal';
+            } else {
+              alert('Failed to save markdown.');
+            }
+          } catch (error) {
+            console.error('Error saving markdown:', error);
+            alert('An error occurred while saving.');
           }
-        } catch (error) {
-          console.error('Error saving markdown:', error);
-          alert('An error occurred while saving.');
         }
       };
 
-    return <div class="m-4 pb-20">
+    return (
+      <div class="m-4 pb-20">
         <form class = "bg-amber-50">
             <div class="flex flex-row gap gap-10 my-2">
               <label class="w-36">Title</label>
@@ -142,12 +151,18 @@ function Editor(props) {
         </div>
 
 
-
-    <button 
-        class="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
-        onClick={handleSave}
-                    >Save </button> 
-    </div>
+        <ReCAPTCHA
+          sitekey={import.meta.env.VITE_REACT_APP_SITE_KEY}
+          ref={recaptcha}
+        />
+        <button 
+            class="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
+            onClick={handleSave}
+          >Save 
+        </button> 
+      </div>
+    
+  )
     
 }
 
