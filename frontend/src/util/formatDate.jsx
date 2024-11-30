@@ -1,13 +1,13 @@
 export default function formatDate(date_string,exclude_date=false,exclude_month=false) {
     const date = new Date(date_string);
     var options = {
-        year: 'numeric',
+        // year: 'numeric',
         month: 'long',
         day: 'numeric'
       };
     if (exclude_date) {
         options = {
-            year: 'numeric',
+            // year: 'numeric',
             month: 'long',
           }
     };
@@ -18,3 +18,4 @@ export default function formatDate(date_string,exclude_date=false,exclude_month=
     };
     return date.toLocaleString('en-GB', options)
     }
+

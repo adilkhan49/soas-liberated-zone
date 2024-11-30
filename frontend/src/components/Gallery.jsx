@@ -33,7 +33,7 @@ const useKeyPress = (targetKey) => {
   };
 
 
-function GalleryComponent ({images}) {
+function GalleryListing ({images}) {
 
     const [carouselOpen, setCarouselOpen] = useState(false)
     const [selectedImage, setSelectedImage] = useState(0)
@@ -84,42 +84,47 @@ function GalleryComponent ({images}) {
         <div>
             {
                 carouselOpen &&
-                <div id="dialog" class="bg-amber-50 h-full w-full sm:h-3/4 sm:w-3/4 fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md drop-shadow-lg">
-                    <div class="absolute right-0 -translate-x-4">
-                        <button 
-                            id="close" 
-                            onClick={() => setCarouselOpen(false)}
-                            class="absolute right-0 top-0 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] hover:bg-gray-300 bg-gray-200 active:bg-white/30 z-45">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L19 19M5 19L19 5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </button>
+
+                    <div id="dialog" class="bg-amber-50 h-full w-full sm:h-3/4 sm:w-3/4 fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md drop-shadow-lg">
+                        <div class="absolute right-0 -translate-x-4">
+                            <button 
+                                id="close" 
+                                onClick={() => setCarouselOpen(false)}
+                                class="absolute right-0 top-0 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] hover:bg-gray-300 bg-gray-200 active:bg-white/30 z-45">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L19 19M5 19L19 5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                        <div class="h-full w-full  border-gray-300">
+                            <img
+                                class='h-full w-full object-contain'
+                                src = {images[selectedImage].url}
+                            />
+                        </div>
+
+
+
+                        {(selectedImage  > 0) && 
+                            <button
+                                id='left-btn'
+                                // class="absolute  top-1/2 left-0 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] hover:bg-gray-200 bg-gray-200 active:bg-white/30 z-45"
+                                class="absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-1 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] text-white hover:bg-gray-300 active:bg-gray/30 grid place-items-center z-45 sm:bg-gray-200"
+                                onClick={prevSlide}>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="h-6 w-6"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+                            </button>
+                        }
+                        {(selectedImage + 1 < images.length) &&
+                            <button
+                                id='right-btn'
+                                class="absolute top-1/2 right-0 transform -translate-y-1/2 -translate-x-1 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] text-white hover:bg-gray-300 active:bg-white/30 grid place-items-center z-45 sm:bg-gray-200"
+                                onClick={nextSlide}>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="h-6 w-6"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                            </button>
+                        }
+
+                        <div class="absolute w-full sm:relative bottom-0   text-lg text-center font-bold" >
+                            {images[selectedImage].release_date}
+                        </div>
                     </div>
-                    <div class="h-full w-full  border-gray-300">
-                        <img
-                            class='h-full w-full object-contain'
-                            src = {images[selectedImage].url}
-                        />
-                    </div>
-
-
-
-                    {(selectedImage  > 0) && 
-                        <button
-                            id='left-btn'
-                            // class="absolute  top-1/2 left-0 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] hover:bg-gray-200 bg-gray-200 active:bg-white/30 z-45"
-                            class="absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-1 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] text-white hover:bg-gray-300 active:bg-gray/30 grid place-items-center z-45 sm:bg-gray-200"
-                            onClick={prevSlide}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="h-6 w-6"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
-                        </button>
-                    }
-                    {(selectedImage + 1 < images.length) &&
-                        <button
-                            id='right-btn'
-                            class="absolute top-1/2 right-0 transform -translate-y-1/2 -translate-x-1 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] text-white hover:bg-gray-300 active:bg-white/30 grid place-items-center z-45 sm:bg-gray-200"
-                            onClick={nextSlide}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="h-6 w-6"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                        </button>
-                    }
-                </div>
             }
 
            
@@ -148,4 +153,4 @@ function GalleryComponent ({images}) {
 }
 
 
-export default GalleryComponent;
+export default GalleryListing;

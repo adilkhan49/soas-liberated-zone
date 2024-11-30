@@ -1,7 +1,7 @@
 import { Component } from "react";
 import axios from "axios";
 import { GALLERY_IMAGES_API_URL } from "../constants";
-import GalleryComponent from "../components/Gallery";
+import GalleryListing from "../components/Gallery";
 
 class Gallery extends Component {
 
@@ -27,7 +27,7 @@ class Gallery extends Component {
   render() {
     return (
         <div class="min-h-screen">
-          <GalleryComponent
+          <GalleryListing
             images = {this.state.images}
           />
         </div>
