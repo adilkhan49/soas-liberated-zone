@@ -50,7 +50,7 @@ export default function Root() {
               <Link to={`journal`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">SLZ Journal</Link>
               <Link to={`gallery`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Gallery</Link>
               <Link to={`democratiseeducation`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Democratise Education</Link>
-              <Link to={`fundraisers`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white no-underline">Fundraisers</Link>
+              <Link to={`fundraisers`} class="rounded-md px-3 py-2 text-lg md:text-xl font-medium text-gray-300 hover:bg-red-700 hover:text-white border-white no-underline">Fundraisers</Link>
 
             </div>
           </div>
