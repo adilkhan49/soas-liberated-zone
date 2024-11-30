@@ -34,17 +34,15 @@ class Home extends Component {
         <div class="flex justify-center  h-[80vh] ">
           <Carousel images={this.state.carousel_images} />
         </div>
-        <div class=' font-tourney  bg-black bg-opacity-85 hover:bg-opacity-50 text-left text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl p-3 sm:px-14'>
-          <Link to='/getinvolved' class="no-underline text-green-900 font-bold">
-          The SOAS liberated zone is a student led site of anti colonial struggle for Gaza against SOAS university’s complicity in the ongoing genocide. We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education.          </Link>
+        <div class='font-archivoblack bg-black bg-opacity-85 hover:bg-opacity-50 text-left text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl p-3 md:px-20'>
+          <Link to='/getinvolved' class="no-underline text-black font-outline-2-white font-xxlbold">
+          {"SOAS must end the complicity. End the repression. Become an institution in service of its community >>>"}
+          </Link>
         </div>
 
         <div class='relative flex flex-col justify-center min-w-full container py-10 px-4 md: p-4 lg:p-14 pb-0 text-red-800  text-lg sm:text-2xl md:text-4xl text-center  text-italic justify-center '>
-          <div class='z-10 relative flex justify-center min-w-full container font-kanit font-bold italic p-2 md:py-5 sm:px-12  md:px-32  bg-amber-50 text-red-800  text-lg sm:text-4xl text-center text-italic justify-center shadow-2xl border-4 border-red-800 leading-normal'>
+          <div class='order-last z-10 relative flex justify-center min-w-full container font-kanit font-bold italic p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-lg sm:text-4xl text-left text-italic justify-center  border-red-800 leading-normal sm:tracking-wide text-black'>
             The SOAS liberated zone is a student led site of anti colonial struggle for Gaza against SOAS university’s complicity in the ongoing genocide.  We cannot accept forced complicity in crimes against humanity and antidemocratic repression in our community. That is why we work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education. 
-            {/* <div class= "sm:h-96 hidden sm:block absolute w-1/4 pt-5 sm:p-10 sm:h-96 container justify-center left-0 translate-y-32 z-20">
-              <img src = {logo}/>
-            </div> */}
           </div>
 
 
@@ -71,7 +69,7 @@ class Home extends Component {
               <div class="relative h-full mr-5 md:mr-20 ml-20 ">
                 <img 
                   class="absolute h-full right-0 object-cover" 
-                  src={"https://i.postimg.cc/25nW03N0/get-involved.jpg"} 
+                  src={"https://images2.imgbox.com/47/35/6L4BFUJe_o.jpg"} 
                 />
                 <div class="absolute top-0 right-0 left-0 top-4  w-1/2 xl:w-1/3 rounded-3xl text-black border-10 bg-amber-50 border-green-800 text-center py-4 sm:py-4 lg:py-12 align-middle   sm:space-y-4 
                   bg-repeat md:bg-[url('/src/hariya-tile-lg-light.svg')]
@@ -113,7 +111,7 @@ class Home extends Component {
 
           <div class=" h-auto border-none">
             <figure>
-              <img class="" src={"https://i.postimg.cc/2S5kJHb5/jehad-cut.jpg"} />
+              <img class="" src={"https://images2.imgbox.com/88/b3/x1Q7iTLQ_o.jpg"} />
             </figure>
           </div>
 

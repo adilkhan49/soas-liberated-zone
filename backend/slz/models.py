@@ -32,9 +32,9 @@ class Event(models.Model):
     title = models.TextField()
     allDay = models.BooleanField()
     start_date = models.DateField()
-    start_time = models.TimeField(null=True)
-    end_date = models.DateField(null=True)
-    end_time = models.TimeField(null=True)
+    start_time = models.TimeField(blank=True, null=True)
+    end_date = models.DateField(blank=True, null=True)
+    end_time = models.TimeField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
 

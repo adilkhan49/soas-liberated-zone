@@ -72,7 +72,7 @@ const GetInvolvedLinks =
 
 <div class="w-full text-center text-white px-4 md:p-12">
   <ol class="list-none list-inside text-justify space-y-5">
-    <li class="flex flex-col text-2xl sm:text-3xl md:text-4xl">
+    <li class="flex flex-col text-xl sm:text-2xl md:text-3xl">
       <div class="flex items-start gap-x-4 md:gap-x-10 "><span class="text-4xl sm:text-5xl md:text-6xl font-bold text-red-600">⧨ </span> 
         Fill in the form to get involved. Help to organising media, campaigns and actions and to hold the space at the encampment. Bring any skills and time you have and become a part of the community!  
         </div>
@@ -82,7 +82,7 @@ const GetInvolvedLinks =
         <button>sign up</button>
       </form>
     </li>
-    <li class="flex flex-col text-2xl sm:text-3xl md:text-4xl">
+    <li class="flex flex-col text-xl sm:text-2xl md:text-3xl">
       <div class="flex items-start gap-x-4 md:gap-x-10 "><span class="text-4xl sm:text-5xl md:text-6xl font-bold text-red-600">⧨ </span> 
         Stay in touch and informed! 
       </div>
@@ -93,7 +93,7 @@ const GetInvolvedLinks =
         <button>join the whatsapp broadcast </button>
       </form>
     </li>
-    <li class="flex flex-col text-2xl sm:text-3xl md:text-4xl">
+    <li class="flex flex-col text-xl sm:text-2xl md:text-3xl">
       <div class="flex gap-x-4 md:gap-x-10"><span class="text-3xl sm:text-7xl font-bold text-red-600">⧨ </span> 
         Subscribe for updates
       </div>
@@ -119,7 +119,7 @@ const GetInvolved = props => {
 
           <figure>
             <img
-              class=" w-full object-cover " src="https://i.postimg.cc/sXJKyYn8/slz-call-to-action.jpg" 
+              class="h-[70vh] w-full object-cover " src="https://images2.imgbox.com/f3/43/FNCas1gB_o.jpg" 
               alt="Get Involved" />
           </figure>
 

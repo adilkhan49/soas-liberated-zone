@@ -33,28 +33,28 @@ class AboutComponent extends Component {
     };
 
     demands = (
-        <div class= "flex container px-8 sm:px-48 py-6 sm:py-14 min-w-full justify-center text-white bg-black bg-opacity-70  text-xl sm:text-2xl   ">
+        <div class= "flex container px-8 md:px-12 lg:px-48 py-6 sm:py-14 min-w-full justify-center text-white bg-black bg-opacity-70  text-xl sm:text-2xl lg:text-3xl xl:text-4xl   ">
           <ol class="list-none list-inside text-justify space-y-5">
             <li>
-              <span class="text-xl sm:text-3xl font-bold text-red-600"><span class='text-3xl sm:text-5xl'>⧨ </span>Disclose</span> details of all University investments immediately and continue to do so on an annual basis.
+              <span class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>⧨ </span>Disclose</span> details of all University investments immediately and continue to do so on an annual basis.
             </li>
             <li>
-            <span class="text-xl sm:text-3xl font-bold text-red-600"><span class='text-3xl sm:text-5xl'>⧨ </span>Divest</span> from companies complicit in Israel’s occupation and denial of Palestinian rights, including Accenture, Albemarle, Alphabet, Barclays, Microsoft, Newton Investment Management, RELX, and Sony, and commit to not reinvesting.
+             <span class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>⧨ </span>Divest</span> from companies complicit in Israel’s occupation and denial of Palestinian rights, including Accenture, Albemarle, Alphabet, Barclays, Microsoft, Newton Investment Management, RELX, and Sony, and commit to not reinvesting.
             </li>
             <li>
-              <span class="text-xl sm:text-3xl font-bold text-red-600"><span class='text-3xl sm:text-5xl'>⧨ </span>Terminate</span> the university’s banking and lending arrangement with Barclays.
+              <span class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>⧨ </span>Terminate</span> the university’s banking and lending arrangement with Barclays.
             </li>
             <li>
-            <span class="text-xl sm:text-3xl font-bold text-red-600"><span class='text-3xl sm:text-5xl'>⧨ </span>Cut ties</span> with University of Haifa and boycott all Israeli academic institutions, which are complicit in the genocidal campaign on Gaza and in widespread violation of Palestinian rights.
+              <span class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>⧨ </span>Cut ties</span> with University of Haifa and boycott all Israeli academic institutions, which are complicit in the genocidal campaign on Gaza and in widespread violation of Palestinian rights.
             </li>
             <li>
-              <span class="text-xl sm:text-3xl font-bold text-red-600"><span class='text-3xl sm:text-5xl'>⧨ </span>Commit</span> to supporting Palestinian education and the rebuilding of Gaza’s destroyed schools, hospitals, and universities.  Establish partnerships and exchanges with Palestinian institutions and academics, increase scholarships for Palestinian students, and advocate for the removal of restrictions on Palestinian expression and movement.
+              <span class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl  font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>⧨ </span>Commit</span> to supporting Palestinian education and the rebuilding of Gaza’s destroyed schools, hospitals, and universities.  Establish partnerships and exchanges with Palestinian institutions and academics, increase scholarships for Palestinian students, and advocate for the removal of restrictions on Palestinian expression and movement.
             </li>
             <li>
-              <span class="text-xl sm:text-3xl font-bold text-red-600"><span class='text-3xl sm:text-5xl'>⧨ </span>Guarantee</span> the rights of students and staff to free expression and end the targeted repression of Palestine solidarity activism on campus.  Revoke the new SOAS protest policy.
+              <span class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl  font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>⧨ </span>Guarantee</span> the rights of students and staff to free expression and end the targeted repression of Palestine solidarity activism on campus.  Revoke the new SOAS protest policy.
             </li>
             <li>
-              <span class="text-xl sm:text-3xl font-bold text-red-600"><span class='text-3xl sm:text-5xl'>⧨ </span>Advocate</span> for the UK government to implement an immediate arms embargo on Israel and to use all leverage to effect an immediate, unconditional, and permanent ceasefire
+              <span class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl  font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>⧨ </span>Advocate</span> for the UK government to implement an immediate arms embargo on Israel and to use all leverage to effect an immediate, unconditional, and permanent ceasefire
             </li>      
           </ol>
         </div>     
@@ -118,17 +118,17 @@ class AboutComponent extends Component {
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 bg-black text-center items-stretch">
-            <img class="order-first sm:order-last w-full object-cover" src={"https://i.postimg.cc/pdzq7FmB/kidz-1.jpg"} />
+            <img class="order-first sm:order-last w-full object-cover" src={"https://images2.imgbox.com/b3/75/KfXgLzSz_o.jpg"} />
             <div class="text-amber-50 bg-black text-center py-4 sm:py-10 px-4 sm:px-16 m-auto align-middle p-0
               bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')]">
-              <p class='sm:text-3xl sm:leading-loose sm:pb-8 '>
+              {/* <p class='sm:text-3xl sm:leading-loose sm:pb-8 '>
                 Everyone from our community is needed to end the complicity that puts blood on all of our hands.
               </p>
               <p class='sm:text-3xl  sm:leading-loose sm:pb-8'>
                 Everyone at SOAS and beyond is needed in the process of transforming our institution.  
-              </p>
-              <p class='sm:text-3xl  sm:leading-loose'>
-              Together we can create a university of dignified working and learning conditions, which serves the anticolonial purpose it claims to support.
+              </p> */}
+              <p class='sm:text-2xl text-justify'>
+              SOAS claims to be a decolonial university, yet it repeatedly fails both its students and staff, as well as the communities around the world that it claims to represent. This has been made abundantly clear by the devastating role and response of global institutions to the ongoing genocide in Gaza. SOAS fails to provide dignity to its students, investing our fees into the hands of war criminals and colluders, against our wishes whilst eroding our means for advocacy. SOAS fails to provide dignity to its staff, who work in precarious conditions, where advocacy is met with harsh repression and refusal. SOAS fails to provide an education in service of the communities it claims to represent. Its inadequate curriculum is at best, decolonisation as metaphor, and therefore not decolonisation at all.  We demand anticolonial institutions in action, not in metaphor, and not as farce. They must be for the community by the community, with an immediate end to all  COLONIAL and GENOCIDAL COMPLICITY.  The tide is turning, and we are working alongside it to transform our institutions.   
               </p>
             </div>
           </div>
