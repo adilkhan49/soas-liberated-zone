@@ -55,7 +55,7 @@ return (
                   onChange={handleEmailInput}
                   required
                   />
-                  <button class="bg-black rounded-full hover:bg-red-800  hover:text-black  block w-full py-1  font-bold tracking-wide rounded shadow sm:ml-3 md:w-52 text-white focus"
+                  <button class="bg-black rounded-3xl hover:bg-red-800  hover:text-black  block w-full py-1  font-bold tracking-wide rounded shadow sm:ml-3 md:w-52 text-white focus"
                   type='submit'>subscribe</button>
               </div>
               {errorMessage && <p>{errorMessage}</p>}
@@ -77,7 +77,7 @@ const GetInvolvedLinks =
       Get in touch to find out how you can help organising media, campaigns and actions aswell as holding the space at the encampment. Bring any skills and time you have and become a part of the community        </div>
     <form 
       action="/signup" 
-      class="container text-black sm:text-3xl font-anton p-2 m-2 mx-auto w-1/2 tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-full border-10 items-center text-center">
+      class="container text-black sm:text-3xl font-anton p-2 m-2 mx-auto w-2/3 sm:w-1/2 tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-3xl border-10 items-center text-center">
       <button>find pathways to action </button>
     </form>
   </li>
@@ -95,7 +95,7 @@ const GetInvolvedLinks =
       <form
         action="https://signal.group/#CjQKIM5LoPsS4lKVkHR08Nr686ZxJRWhm_hImbG3bNpJbJglEhCuU5LbAmsdAiz-oQgKH6lp"
         target="_blank"
-        class="container text-black sm:text-3xl font-anton w-1/2 p-2 m-2 mx-auto   tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-full border-10 items-center text-center">
+        class="container text-black sm:text-3xl font-anton w-2/3 sm:w-1/2 p-2 m-2 mx-auto   tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-3xl border-10 items-center text-center">
         <button>join the whatsapp broadcast </button>
       </form>
     </li>
@@ -103,7 +103,7 @@ const GetInvolvedLinks =
       <div class=" flex gap-x-4 md:gap-x-10 "><span class="invisible text-3xl sm:text-7xl font-bold text-red-600">⧨ </span> 
         Or get email updates
       </div>
-      <div class="container text-black  font-anton rounded-full p-2 m-2 mx-auto w-2/3 bg-amber-50  tracking-widest border-10 border-red-800 items-center text-center">
+      <div class="container text-black  font-anton rounded-3xl p-2 m-2 mx-auto  bg-amber-50  tracking-widest border-10 border-red-800 items-center text-center">
         <Subscribe />
       </div>
     </li>
