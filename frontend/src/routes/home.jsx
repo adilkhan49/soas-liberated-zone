@@ -42,7 +42,7 @@ class Home extends Component {
         <div class="flex justify-center  h-[80vh] ">
           <Carousel images={this.state.carousel_images} />
         </div>
-        <div class='font-leaguespartan bg-black bg-opacity-90 hover:bg-opacity-50 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl px-3 py-8'>
+        <div class='font-leaguespartan bg-black bg-opacity-90 hover:bg-opacity-50 text-center text-2xl sm:text-3xl lg:text-4xl xl:text-4xl px-3 py-8'>
           <Link to='/getinvolved' class="font-outline-1-black no-underline text-red-800  tracking-widest font-xxlbold">
           End SOAS's crimes to build a truly anticolonial university
           </Link>
@@ -77,9 +77,9 @@ class Home extends Component {
 
 
 
-        <div class="mb-10 mx-2 mx-10 font-leaguespartan">
+        <div class="my-10 mx-2 mx-10 font-leaguespartan">
           <div class="flex justify-start">
-            <div class="p-10 text-red-800 font-outline-2-green-800 text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
+          <div class="mb-10 px-2 sm:px-10 text-red-800 font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
             • Join the movement!</div>
           </div>
 
@@ -104,17 +104,17 @@ class Home extends Component {
           <Subscribe />
         </div>
 
-        <div class="relative h-36 my-10 mx-2 mx-10 font-leaguespartan">
+        <div class="my-10 mx-2 mx-10 font-leaguespartan">
           <div class=" flex justify-start">
-            <div class="p-10 text-red-800 font-outline-2-green-800 text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
-            • Come to upcoming events</div>
+            <div class="px-2 sm:px-10 text-red-800 font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
+          • Come to upcoming events</div>
           </div>
         </div>
 
 
 
         <div class="grid grid-cols-1 sm:grid-cols-2  text-center items-stretch">
-            <img class="h-full w-full object-cover" 
+            <img class="hidden sm:block h-full w-full object-cover" 
               src={"https://images2.imgbox.com/47/35/6L4BFUJe_o.jpg"} 
              />
             <div class="h-full bg-green-800 bg-opacity-85 bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')] overflow-x-auto overflow-y-auto">
