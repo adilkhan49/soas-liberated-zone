@@ -121,12 +121,6 @@ class AboutComponent extends Component {
             <img class="order-first sm:order-last w-full object-cover" src={"https://images2.imgbox.com/b3/75/KfXgLzSz_o.jpg"} />
             <div class="text-amber-50 bg-black text-center py-4 sm:py-10 px-4 sm:px-16 m-auto align-middle p-0
               bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')]">
-              {/* <p class='sm:text-3xl sm:leading-loose sm:pb-8 '>
-                Everyone from our community is needed to end the complicity that puts blood on all of our hands.
-              </p>
-              <p class='sm:text-3xl  sm:leading-loose sm:pb-8'>
-                Everyone at SOAS and beyond is needed in the process of transforming our institution.  
-              </p> */}
               <p class='sm:text-2xl text-justify'>
               SOAS claims to be a decolonial university, yet it repeatedly fails both its students and staff, as well as the communities around the world that it claims to represent. This has been made abundantly clear by the devastating role and response of global institutions to the ongoing genocide in Gaza. SOAS fails to provide dignity to its students, investing our fees into the hands of war criminals and colluders, against our wishes whilst eroding our means for advocacy. SOAS fails to provide dignity to its staff, who work in precarious conditions, where advocacy is met with harsh repression and refusal. SOAS fails to provide an education in service of the communities it claims to represent. Its inadequate curriculum is at best, decolonisation as metaphor, and therefore not decolonisation at all.  We demand anticolonial institutions in action, not in metaphor, and not as farce. They must be for the community by the community, with an immediate end to all  COLONIAL and GENOCIDAL COMPLICITY.  The tide is turning, and we are working alongside it to transform our institutions.   
               </p>

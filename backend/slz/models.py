@@ -30,6 +30,7 @@ class Statement(models.Model):
 
 class Event(models.Model):
     title = models.TextField()
+    description = models.TextField(blank=True, null=True)
     allDay = models.BooleanField()
     start_date = models.DateField()
     start_time = models.TimeField(blank=True, null=True)

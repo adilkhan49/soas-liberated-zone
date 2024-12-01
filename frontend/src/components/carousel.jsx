@@ -30,9 +30,10 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
     // relative w-full max-w-xl mx-auto
     // overflow-hidden relative h-64
   return (
-    <div className=" relative object-scale-down w-full  h-full overflow-hidden md:border-10 lg:border-60 border-black border-opacity-85">
+    <div className=" relative object-scale-down w-full  h-full overflow-hidden md:border-0 lg:border-60 border-black border-opacity-85">
 
-      <div className="z-10">
+
+      <div className="">
         {images.map((image, index) => (
           <div
             key={index}
@@ -46,9 +47,10 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
       </div>
 
       {/* Left Button */}
+      <div class="absolute z-30 h-full w-full bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')]">
 
-      {/* <button
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] text-white hover:bg-white/10 active:bg-white/30 grid place-items-center z-45"
+      <button
+        className="absolute z-45 top-1/2 left-0 transform -translate-y-1/2 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] text-white hover:bg-white/10 active:bg-white/30 grid place-items-center "
         onClick={prevSlide}
       >
                   <svg
@@ -65,12 +67,12 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
               d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
             />
           </svg>
-      </button> */}
+      </button>
 
       {/* Right Button */}
 
-      {/* <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] text-white hover:bg-white/10 active:bg-white/30 grid place-items-center z-45"
+      <button
+        className="absolute z-45 top-1/2 right-0 transform -translate-y-1/2 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] text-white hover:bg-white/10 active:bg-white/30 grid place-items-center "
         onClick={nextSlide}
       >
          <svg
@@ -87,11 +89,11 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
               d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
             />
           </svg>
-      </button> */}
+      </button>
 
       {/* Slide Position */}
 
-      <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-4 z-45">
+      <div className="absolute z-45 bottom-0 left-0 right-0 flex justify-center mb-4">
         {images.map((_, index) => (
           <div
             key={index}
@@ -101,10 +103,10 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
         ))}
       </div>
 
-      <div class = "absolute right-2 md:right-10 bottom-16 md:bottom-40 z-45">
+      <div class = "absolute z-45 right-2 md:right-10 bottom-16 md:bottom-40">
           <FlipCountdown
             number={slz_days}
-            caption={'days of encampment'}
+            caption={'Days of encampment'}
             top_color={'bg-black'}
             bottom_color={'bg-black'} 
             border_color={'border-green-900'} 
@@ -113,10 +115,10 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
             />
       </div>
 
-      <div class = "absolute right-2 sm:right-10 -bottom-10 sm:bottom-0 z-45">
+      <div class = "absolute z-45 right-2 sm:right-10 -bottom-10 sm:bottom-0">
           <FlipCountdown
             number={gaza_days}
-            caption={'days of genocide'}
+            caption={'Days of genocide'}
             top_color={'bg-red-700'}
             bottom_color={'bg-red-600'} 
             border_color={'border-gray-500'} 
@@ -124,10 +126,6 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 10000 }) => {
             opacity={'opacity-90'}
             />
       </div>
-
-      <div class="absolute h-full w-full z-30
-      bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')] sm:bg-[url('/src/hariya-tile-lg-light.svg')]
-      ">
 
       </div>
 
