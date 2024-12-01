@@ -120,6 +120,25 @@ def event_list(request):
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
+@api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticatedOrReadOnly])
+def upcoming_event_list(request):
+
+    if request.method == 'GET':    
+        data = Event.objects.all().order_by('start_date','start_time')
+        filtered_data = EventFilter(request.GET, queryset=data)
+        filtered_qs = filtered_data.qs
+        serializer = EventSerializer(filtered_qs, context={'request': request}, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = EventSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
 
 @api_view(['GET','PUT', 'DELETE'])
 @permission_classes([IsAuthenticatedOrReadOnly])
