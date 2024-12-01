@@ -19,9 +19,8 @@ function UpcomingEvents({events}) {
     return (
     
 
-        <div class="container h-full flex flex-col items-center px-8 mx-auto sm:px-0 " >
-                <ul class="h-full m-4 flex flex-col gap-y-4 justify-center ">
-
+        <div class="container h-full flex flex-col items-center m-1 sm:m-2 lg:m-3 xl:m-4 mx-auto sm:px-0 " >
+                <ul class="h-full m-2 sm:m-2 lg:m-3 xl:m-4 flex flex-col gap-y-4 justify-center">
                     {events.map(e => (
                         
                         <li class="list-none p-4 bg-amber-50 border-4 border-red-800 rounded-lg shadow-lg">
