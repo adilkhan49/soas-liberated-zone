@@ -11,6 +11,7 @@ export default {
         rubikvinyl: ["Rubik Vinyl", "sans-serif"],
         rubikmono: ["Rubik Mono One", "sans-serif"],
         archivoblack: ["Archivo Black", "sans-serif"],
+        leaguespartan: ["League Spartan", "sans-serif"],
       }
     },
     fontWeight: {

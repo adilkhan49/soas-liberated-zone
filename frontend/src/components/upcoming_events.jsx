@@ -19,12 +19,12 @@ function UpcomingEvents({events}) {
     return (
     
 
-        <div class="container w-4/5 m-4 flex flex-col items-center px-8 mx-auto sm:px-0 justify-start" >
-                <ul class="flex flex-col space-y-4 ">
+        <div class="container h-full flex flex-col items-center px-8 mx-auto sm:px-0 " >
+                <ul class="h-full m-4 flex flex-col gap-y-4 justify-center ">
 
                     {events.map(e => (
                         
-                        <li class="list-none p-4 bg-amber-50 border-2 border-red-800 rounded-lg shadow-lg">
+                        <li class="list-none p-4 bg-amber-50 border-4 border-red-800 rounded-lg shadow-lg">
                             <div class="flex items-center flex-1 mb-4 select-none sm:mb-0">
                                 <div class="bg-red-800 rounded-xl p-4 text-center mr-4">
                                     <div class="text-xs font-medium">{formatDate(e.start_date,{day: 'numeric', month:'short'}).toLocaleUpperCase()}
