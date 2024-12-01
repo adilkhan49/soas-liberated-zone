@@ -69,8 +69,8 @@ class Home extends Component {
 
           <div class='flex flex-col justify-center min-w-full container font-leaguespartan font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-left justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-2-red-800'>
 
-          <div class="mb-10">The Soas Liberated Zone (SLZ) is a student led site of anti colonial struggle against the university’s complicity in the ongoing genocide.</div>
-          <div >We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education. We work to enable the community we know SOAS to be to step out of the shadow of its institutional violence.</div>  
+          <div class="mb-10">The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against the university’s complicity in the ongoing genocide.</div>
+          <div >We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education. We work to enable the community we know SOAS to be, beyond the shadow of its institutional violence.</div>  
           </div>
 
         </div>
@@ -86,7 +86,7 @@ class Home extends Component {
           <form
               action="https://signal.group/#CjQKIM5LoPsS4lKVkHR08Nr686ZxJRWhm_hImbG3bNpJbJglEhCuU5LbAmsdAiz-oQgKH6lp"
               target="_blank"
-              class="container w-40 font-bold md:text-xl lg:text-3xl  p-2 m-2 m-auto tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-full border-10 text-center align-middle">
+              class="container w-52 font-bold md:text-xl lg:text-3xl xl:text-4xl  p-2 m-4 m-auto tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-full border-10 text-center align-middle">
               <button>sign up</button>
           </form>
           <form
@@ -117,7 +117,7 @@ class Home extends Component {
             <img class="h-full w-full object-cover" 
               src={"https://images2.imgbox.com/47/35/6L4BFUJe_o.jpg"} 
              />
-            <div class='h-full bg-green-800 overflow-x-auto overflow-y-auto '>
+            <div class="h-full bg-green-800 bg-opacity-85 bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')] overflow-x-auto overflow-y-auto">
                 <UpcomingEvents
                   events={this.state.upcoming_events}
                 ></UpcomingEvents>
@@ -126,7 +126,7 @@ class Home extends Component {
 
         <div class="my-10 font-leaguespartan">
           <div class="flex justify-start">
-            <div class="p-10 text-red-800 font-outline-2-green-800 text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center">
+            <div class="py-10 text-red-800 font-outline-2-green-800 text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center">
             We will not let our education be used against our brothers and sisters in Gaza </div>
           </div>
         </div>
@@ -142,7 +142,7 @@ class Home extends Component {
           </div>
 
           <div class="bg-none">
-            <div class="font-kanit text-red-800 font-semibold  sm:pt-10 px-4 sm:px-20 m-auto align-middle text-center sm:text-xl  sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+            <div class="font-kanit text-red-800 font-semibold  px-4 sm:px-20 m-auto align-middle text-center sm:text-xl  sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
               <div class='mb-10'>
                 "The reality of life in Gaza is often misrepresented and overlooked. It is a place where daily survival is a challenge, yet it is filled with stories of incredible human strength and perseverance. Children go to school amid ruins; families gather even in the darkest times - hope is not a luxury but a necessity. Your support and solidarity matter more than words can express."
               </div>

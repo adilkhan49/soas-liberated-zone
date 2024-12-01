@@ -71,41 +71,41 @@ return (
 const GetInvolvedLinks =
 
 <div class="w-full text-center text-white px-4 md:p-12">
-  <ol class="list-none list-inside text-justify space-y-5">
-    <li class="flex flex-col text-xl sm:text-2xl md:text-3xl">
-      <div class="flex items-start gap-x-4 md:gap-x-10 "><span class="text-4xl sm:text-5xl md:text-6xl font-bold text-red-600">⧨ </span> 
-        Fill in the form to get involved. Help to organising media, campaigns and actions and to hold the space at the encampment. Bring any skills and time you have and become a part of the community!  
-        </div>
-      <form 
-        action="/signup" 
-        class="container text-black md:text-3xl font-anton rounded-full p-2 m-2 mx-auto my-8 w-60 bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 tracking-widest border-10 items-center text-center">
-        <button>sign up</button>
-      </form>
+  <ol class="list-none list-inside text-justify space-y-10 ">
+  <li class="flex flex-col gap-y-5 text-2xl sm:text-3xl md:text-4xl ">
+    <div class="flex items-start gap-x-4 md:gap-x-10 "><span class="text-4xl sm:text-5xl md:text-6xl font-bold text-red-600">▼ </span> 
+      Get in touch to find out how you can help organising media, campaigns and actions aswell as holding the space at the encampment. Bring any skills and time you have and become a part of the community        </div>
+    <form 
+      action="/signup" 
+      class="container text-black sm:text-3xl font-anton p-2 m-2 mx-auto w-1/2 tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-full border-10 items-center text-center">
+      <button>find pathways to action </button>
+    </form>
+  </li>
+
+    <li class="flex flex-col  gap-y-5 text-2xl sm:text-3xl md:text-4xl ">
+      <div class="flex items-start gap-x-4 md:gap-x-10 ">
+        <span class="text-4xl sm:text-5xl md:text-6xl font-bold text-red-600">▼ </span> 
+        <span>Come down to <a class="text-red-600" href="https://maps.app.goo.gl/3Su9dXtar73z7mG67" target="_blank">Byng Place,  WC1E 7LE</a>, visit the encampment and get connected on the ground</span>
+      </div>
     </li>
-    <li class="flex flex-col text-xl sm:text-2xl md:text-3xl">
-      <div class="flex items-start gap-x-4 md:gap-x-10 "><span class="text-4xl sm:text-5xl md:text-6xl font-bold text-red-600">⧨ </span> 
-        Stay in touch and informed! 
+    <li class="flex flex-col text-2xl sm:text-3xl md:text-4xl ">
+      <div class="flex items-start gap-x-4 md:gap-x-10 "><span class="text-4xl sm:text-5xl md:text-6xl font-bold text-red-600">▼ </span> 
+        Stay informed on the struggle at soas and upcoming events.
       </div>
       <form
         action="https://signal.group/#CjQKIM5LoPsS4lKVkHR08Nr686ZxJRWhm_hImbG3bNpJbJglEhCuU5LbAmsdAiz-oQgKH6lp"
         target="_blank"
-        class="container text-black sm:text-3xl font-anton p-2 m-2 mx-auto w-full  tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-full border-10 items-center text-center">
+        class="container text-black sm:text-3xl font-anton w-1/2 p-2 m-2 mx-auto   tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-full border-10 items-center text-center">
         <button>join the whatsapp broadcast </button>
       </form>
     </li>
-    <li class="flex flex-col text-xl sm:text-2xl md:text-3xl">
-      <div class="flex gap-x-4 md:gap-x-10"><span class="text-3xl sm:text-7xl font-bold text-red-600">⧨ </span> 
-        Subscribe for updates
+    <li class="flex flex-col  gap-y-5 text-2xl sm:text-3xl md:text-4xl text-center">
+      <div class=" flex gap-x-4 md:gap-x-10 "><span class="invisible text-3xl sm:text-7xl font-bold text-red-600">⧨ </span> 
+        Or get email updates
       </div>
       <div class="container text-black  font-anton rounded-full p-2 m-2 mx-auto w-2/3 bg-amber-50  tracking-widest border-10 border-red-800 items-center text-center">
         <Subscribe />
       </div>
-    </li>
-    <li class="flex flex-col text-2xl sm:text-3xl md:text-4xl">
-      <div class="flex items-start gap-x-4 md:gap-x-10 ">
-        <span class="text-4xl sm:text-5xl md:text-6xl font-bold text-red-600">⧨ </span> 
-        <span>Come down to <a class="text-red-600" href="https://maps.app.goo.gl/3Su9dXtar73z7mG67" target="_blank">Byng Place,  WC1E 7LE</a>, visit the encampment and get connected on the ground</span>
-    </div>
     </li>
   </ol>
 </div>
@@ -119,7 +119,8 @@ const GetInvolved = props => {
 
           <figure>
             <img
-              class="h-[70vh] w-full object-cover " src="https://images2.imgbox.com/f3/43/FNCas1gB_o.jpg" 
+              class="h-[60vh] w-full object-cover " 
+              src="https://images2.imgbox.com/bf/e3/Cjyn2MXq_o.jpg" 
               alt="Get Involved" />
           </figure>
 
@@ -131,7 +132,7 @@ const GetInvolved = props => {
             <div class="absolute z-1 right-0 h-full w-full lg:w-4/5">
               <img 
                     class="h-full w-full object-cover " 
-                    src={"https://i.postimg.cc/q79FMn1j/marching.jpg"}>
+                    src={"https://images2.imgbox.com/f1/9b/VMZXyfBV_o.jpeg"}>
               </img>
             </div>
             <div class="absolute z-2 h-full bg-black bg-opacity-75 w-5/6 lg:w-4/5 xl:3/4">
@@ -224,14 +225,14 @@ const GetInvolved = props => {
           </div> */}
 
 
-          <div class="relative container items-end min-w-full my-12 items-center">
+          {/* <div class="relative container items-end min-w-full my-12 items-center">
 
             <div class="w-1/2 m-auto text-black border-10 bg-amber-50 border-red-800 text-center py-4 px-4 sm:px-16 m-auto align-middle ">
               <p class='sm:text-4xl mb-0 tracking-wide '>
               SOAS can be an institution <span class="text-red-700">for its members by its members</span>, in service of the <span class="text-red-700">anticolonial education</span> its claims to provide; but only through our <span class="text-red-700">collective struggle</span>! We cannot be silent as SOAS repeatedly fails the people of Palestine and its own community. 
               </p>
             </div>
-          </div>
+          </div> */}
 
 
           
