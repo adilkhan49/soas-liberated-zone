@@ -66,7 +66,15 @@ class Journal extends Component {
     return (
       <div class=''>
 
-        <div class='flex justify-center h-[50vh] object-scale-down min-w-full '>
+
+        <div class='block sm:hidden flex justify-center h-[30vh] object-scale-down min-w-full '>
+          <img
+              class = "w-full  h-full"
+              src={"https://images2.imgbox.com/cf/b7/iBo2qTKh_o.jpg"}
+          />
+        </div>
+
+        <div class='hidden sm:block flex justify-center h-[80vh] object-scale-down min-w-full '>
           <img
               class = "w-full  h-full"
               src={"https://images2.imgbox.com/47/e4/ZiP6HmHN_o.jpg"}

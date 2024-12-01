@@ -117,12 +117,21 @@ const GetInvolved = props => {
       <div class = "flex min-w-full min-h-screen">
         <div class="w-full">
 
-          <figure>
+          <figure class="hidden sm:block">
             <img
-              class="h-[60vh] w-full object-cover " 
-              src="https://images2.imgbox.com/bf/e3/Cjyn2MXq_o.jpg" 
+              class=" h-[60vh] w-full object-cover " 
+              src="https://images2.imgbox.com/65/df/JJIGrn2j_o.jpg" 
               alt="Get Involved" />
           </figure>
+
+          <figure class="block sm:hidden">
+            <img
+              class=" h-[30vh] w-full object-cover " 
+              src="https://images2.imgbox.com/b4/81/ViuQaQXP_o.jpg" 
+              alt="Get Involved" />
+          </figure>
+
+
 
           <div class=' relative'>
             <div class="absolute z-10 w-full font-rubikmono text-red-600 tracking-widest text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center py-20  ">
