@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import AuthContext from '../context/AuthContext';
+
 import '@mdxeditor/editor/style.css';
 import {
     MDXEditor,
@@ -23,6 +25,9 @@ import {
 import { STATEMENTS_API_URL } from "../constants";
 
 class Editor extends Component {
+
+    static contextType = AuthContext
+
     constructor(props) {
         super(props);
         this.state = {
@@ -65,12 +70,13 @@ class Editor extends Component {
 
         const { title, release_date, markdown } = this.state;
         // const { postId: statement_id } = this.props; // Access postId from props
-
+        console.log("saving edited statement")
         try {
             const response = await fetch(STATEMENTS_API_URL+this.props.id, { // Use postId in the request
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + this.context.authTokens.access,
                 },
                 body: JSON.stringify({
                     id: this.props.id,
