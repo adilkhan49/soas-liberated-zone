@@ -3,15 +3,17 @@ import { InstagramEmbed } from 'react-social-media-embed';
 import Carousel from '../components/carousel';
 import axios from "axios";
 import { CAROUSEL_IMAGES_API_URL } from "../constants";
-import FlipCountdown from "../components/flipcountdown";
 import logo from "/src/slz-logo.png";
 import { Link } from "react-router-dom";
 import Subscribe from "../components/SubscribeForm";
+import UpcomingEvents from "../components/upcoming_events";
+import { UPCOMING_EVENTS_API_URL } from "../constants";
 
 class Home extends Component {
 
   state = {
-    carousel_images: []
+    carousel_images: [],
+    upcoming_events : []
   };
 
   componentDidMount() {
@@ -22,8 +24,14 @@ class Home extends Component {
     axios.get(CAROUSEL_IMAGES_API_URL).then(res => this.setState({ carousel_images: res.data }));
   };
 
+  getUpcomingEvents = () => {
+    axios.get(UPCOMING_EVENTS_API_URL).then(res => this.setState({ upcoming_events: res.data }));
+  };
+
+
   resetState = () => {
     this.getCarouselImages();
+    this.getUpcomingEvents();
   };
 
 
@@ -64,7 +72,21 @@ class Home extends Component {
           </div>
         </div>
 
-        <div class='relative h-[80vh] my-5 '>
+        <div class="grid grid-cols-1 sm:grid-cols-2  text-center items-stretch">
+            <img class="order-first w-full object-cover" 
+              src={"https://images2.imgbox.com/47/35/6L4BFUJe_o.jpg"} 
+             />
+            <div 
+            // class=" text-center py-4 sm:py-10 px-4 sm:px-16 m-auto align-start p-0"
+            >
+                <UpcomingEvents
+                  events={this.state.upcoming_events}
+                ></UpcomingEvents>
+            </div>
+          </div>
+
+
+        {/* <div class='relative h-[80vh] my-5 '>
           <div class="relative h-full m-5 rounded-3xl bg-lime-900 bg-opacity-75">
               <div class="relative h-full mr-5 md:mr-20 ml-20 ">
                 <img 
@@ -87,7 +109,7 @@ class Home extends Component {
                 </div>
               </div>
           </div>
-        </div>
+        </div> */}
 
         <div class="my-10 mx-2 mx-10 sm:mx-20 md:mx-20 lg:mx-40">
           <div class="text-red-800 font-kanit text-5xl font-bold">

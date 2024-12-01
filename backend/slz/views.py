@@ -15,6 +15,9 @@ from .filters import EventFilter
 
 import json
 
+from datetime import date
+
+
 @api_view(['GET', 'POST'])
 def post_list(request):
 
@@ -125,7 +128,7 @@ def event_list(request):
 def upcoming_event_list(request):
 
     if request.method == 'GET':    
-        data = Event.objects.all().order_by('start_date','start_time')
+        data = Event.objects.filter(start_date__gt=date.today()).order_by('start_date','start_time')
         filtered_data = EventFilter(request.GET, queryset=data)
         filtered_qs = filtered_data.qs
         serializer = EventSerializer(filtered_qs, context={'request': request}, many=True)
