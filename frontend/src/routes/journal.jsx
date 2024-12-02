@@ -60,26 +60,40 @@ class Journal extends Component {
           />
         </div>
 
-        <div class='container bg-amber-50  min-w-full text-bold p-10 text-3xl mb-5'>
-          <div class="sm:w-3/5">
-            <p class='font-bold sm:text-4xl'>
-              We invite anyone and everyone from the SLZ community and the growing global solidarity movement for Palestine to write for the SLZ journal or to share existing writings.
-            </p>
-            <p class="sm:text-3xl">
-              The Palestinian people have long shown the strength of resistance through writing and culture. Our true enduring power is rooted in the collective knowledge and spirit that we amplify between us; that is why we seek true forms of education beyond the university, for the community by the community
-            </p>
+        <div class='flex  flex-col  container bg-amber-50  min-w-full text-bold p-10 text-3xl mb-5'>
+          <div class="flex flex-row w-full h-full">
+
+            <div class='lg:w-3/5'>
+              <div
+               class=""
+              >
+                <p class='font-bold sm:text-4xl'>
+                The Palestinian people have long shown the strength of resistance through writing and culture. Our true enduring power is rooted in the collective knowledge and spirit that we amplify between us; that is why we seek true forms of education beyond the university, for the community by the community.
+                </p>
+                <p class="sm:text-3xl">
+                  We invite anyone and everyone from the SLZ community and the growing global movement to contribute to the SLZ journal.
+                </p>
+              </div>
+            </div>
+
+            <div class="hidden lg:block">
+              <img
+                class="object-cover"
+                src="https://images2.imgbox.com/3e/e7/wsZw0VxE_o.png">
+              </img>
+            </div>
           </div>
 
-          <LinkButton 
-            linkText={"Contribute"} 
-            linkUrl={"/journal/create"}
-            target = ""
-          ></LinkButton>
 
-          <hr class="border-black border-2 border-dashed mt-4"/>
+          <LinkButton 
+              linkText={"Contribute"} 
+              linkUrl={"/journal/create"}
+              target = ""
+            ></LinkButton>
+
+            <hr class="border-black border-2 border-dashed mt-4"/>
 
         </div>
-
 
         <PostList
           posts={this.state.posts}
