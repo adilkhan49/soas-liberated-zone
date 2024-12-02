@@ -44,16 +44,16 @@ function Subscribe() {
       <form onSubmit={handleSubmit}>
 
         <div class="flex justify-center">
-            <div class="max-w-2xl px-3 rounded-2xl md:px-0 ">
+            <div class="w-full  px-3 rounded-2xl md:px-0 ">
                 <div class="my-4 flex gap-2 justify-evenly">
-                    <input class=" block w-full px-4 py-1 text-gray-800 placeholder-gray-500 bg-amber-50 border border-gray-300 rounded-md appearance-none sm:max-w-xs focus:outline-none focus:ring focus:ring-blue-50 focus:border-blue-300" 
+                    <input class=" block w-full px-4 py-1 text-gray-800 placeholder-gray-500 bg-amber-50 border border-gray-300 rounded-md appearance-none  focus:outline-none focus:ring focus:ring-blue-50 focus:border-blue-300" 
                     type='email'
                     value={email}
                     placeholder='Email...'
                     onChange={handleEmailInput}
                     required
                     />
-                    <button class="bg-black hover:bg-gray-700 block w-full py-1  font-bold tracking-wide rounded shadow sm:ml-3 md:w-52 text-white focus"
+                    <button class="bg-black hover:bg-gray-700 block w-full py-1  font-bold tracking-wide rounded shadow sm:ml-3 w-1/3 text-white focus"
                     type='submit'>Subscribe</button>
                 </div>
                 {errorMessage && <p>{errorMessage}</p>}
