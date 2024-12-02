@@ -55,34 +55,34 @@ class Home extends Component {
               <img src = {logo}/>
             </div>
             <div class=' grid grid-cols-1 gap-y-1  p-6 font-kanit font-bold italic   text-lg sm:text-4xl text-center items-center justify-evenly'>
-                <Link to='/about#demands' state={{ demands: true, statements: false, timeline: false }}class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline lg:-translate-x-10 xl:-translate-x-10">
+                <Link to='/about#demands' state={{ demands: true, statements: false, timeline: false }}class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-red-800 hover:text-amber-50 no-underline lg:-translate-x-10 xl:-translate-x-10">
                   {"Our Demands >>>"}
                 </Link>
-                <Link to='/about#statements' state={{ demands: false, statements: true, timeline: false }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline lg:translate-x-20 xl:translate-x-40 ">
+                <Link to='/about#statements' state={{ demands: false, statements: true, timeline: false }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-red-800 hover:text-amber-50 no-underline lg:translate-x-20 xl:translate-x-40 ">
                   {"Our Statements >>>"}
                 </Link>
-                <Link to='/about#timeline' state={{ demands: false, statements: false, timeline: true }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-amber-50 no-underline hover:underline lg:translate-x-40 xl:translate-x-80">
+                <Link to='/about#timeline' state={{ demands: false, statements: false, timeline: true }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-red-800 hover:text-amber-50 no-underline lg:translate-x-40 xl:translate-x-80">
                 {"Our Story >>>"}
                 </Link>
             </div>
           </div>
 
-          <div class='flex flex-col justify-center min-w-full container font-leaguespartan font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-left justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-1-black sm:font-outline-1-red-800 md:font-outline-2-red-800'>
+          <div class='flex flex-col justify-center min-w-full container font-leaguespartan font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-center justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-1-black sm:font-outline-1-red-800 md:font-outline-2-red-800'>
 
-          <div class="mb-10">The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against the university’s complicity in the ongoing genocide.</div>
-          <div >We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education. We work to enable the community we know SOAS to be, beyond the shadow of its institutional violence.</div>  
+          <div class="mt-10">The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against the university’s complicity in the ongoing genocide. We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education. We work to enable the community we know SOAS to be, beyond the shadow of its institutional violence.</div>  
           </div>
 
         </div>
 
 
 
-        <div class="my-10 mx-2 mx-10 font-leaguespartan">
-          <div class="flex justify-start">
-          <div class="mb-10 px-2 sm:px-10 text-red-800 font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
-            ▼ Join the movement!</div>
+        <div class="w-full h-full py-20 border-t-10 border-t-black bg-[url('https://images2.imgbox.com/76/e2/O6zRK6Jd_o.jpg')] bg-top bg-cover">
+          
+          <div class="flex justify-start ">
+            <div class="font-archivoblack mb-10 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">
+              ▼ Join the movement!
+            </div>
           </div>
-
           <form
               action="/signup"
               target="_blank"
@@ -106,20 +106,19 @@ class Home extends Component {
             />
         </div>
 
-        <div class="my-10 mx-2 mx-10 font-leaguespartan">
-          <div class=" flex justify-start">
-            <div class="px-2 sm:px-10 text-red-800 font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
-            ▼ Come to upcoming events</div>
-          </div>
-        </div>
+
 
 
 
         <div class="text-center items-stretch">
-            {/* <img class="hidden sm:block h-full w-full object-cover" 
-              src={"https://images2.imgbox.com/47/35/6L4BFUJe_o.jpg"} 
-             /> */}
             <div class="h-full bg-green-800 bg-opacity-85 bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')] overflow-x-auto overflow-y-auto">
+
+            <div class="mt-10 mx-2 mx-10 font-leaguespartan">
+          <div class=" flex justify-start">
+            <div class="text-left font-archivoblack mb-10 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">
+            ▼ Come to upcoming events</div>
+          </div>
+        </div>
                 <UpcomingEvents
                   events={this.state.upcoming_events}
                 ></UpcomingEvents>
@@ -134,10 +133,11 @@ class Home extends Component {
         </div>
 
 
-        <div class="flex  w-full ">
+        <div class="flex flex-col md:flex-row  w-full ">
 
 
-          <div class=" flex border-none">
+ 
+          <div class="hidden md:block flex border-none">
             <figure>
               <img class="h-full object-contain" width='1800px' src={"https://images2.imgbox.com/ed/13/5MMUDd9e_o.png"} />
             </figure>
@@ -151,6 +151,14 @@ class Home extends Component {
               <div>- Jehad the voice of Gaza at SOAS. @jehadkmiri</div>
             </div>
           </div>
+
+          <div class="md:hidden  border-none">
+            <figure>
+              <img class="h-full object-contain"
+               src={"https://images2.imgbox.com/88/b3/x1Q7iTLQ_o.jpg"} />
+            </figure>
+          </div>        
+
 
         </div>
 
