@@ -62,17 +62,17 @@ class Home extends Component {
                   {"Our Statements >>>"}
                 </Link>
                 <Link to='/about#timeline' state={{ demands: false, statements: false, timeline: true }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-red-800 hover:text-amber-50 no-underline lg:translate-x-40 xl:translate-x-80">
-                {"Our Story >>>"}
+                  {"Our Story >>>"}
                 </Link>
             </div>
           </div>
 
           <div class='flex flex-col justify-center min-w-full container font-leaguespartan font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-center justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-1-black sm:font-outline-1-red-800 md:font-outline-2-red-800'>
 
-          <div class="mt-10">The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against the university’s complicity in the ongoing genocide. We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education. We work to enable the community we know SOAS to be, beyond the shadow of its institutional violence.</div>  
-          </div>
+            <div class="mt-10">The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against the university’s complicity in the ongoing genocide. We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education. We work to enable the community we know SOAS to be, beyond the shadow of its institutional violence.</div>  
+            </div>
 
-        </div>
+          </div>
 
 
 
@@ -127,7 +127,7 @@ class Home extends Component {
 
         <div class="my-10 font-leaguespartan">
           <div class="flex justify-start">
-            <div class="py-10 text-red-800 font-outline-2-green-800 text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center">
+            <div class="py-0 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center">
             We will not let our education be used against our brothers and sisters in Gaza </div>
           </div>
         </div>
@@ -143,21 +143,32 @@ class Home extends Component {
             </figure>
           </div>
 
-          <div class="bg-none">
+          <div class="bg-none hidden md:block">
             <div class="font-kanit text-red-800 font-semibold  px-4 sm:px-20 m-auto align-middle text-center sm:text-xl  sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
               <div class='mb-10'>
                 "The reality of life in Gaza is often misrepresented and overlooked. It is a place where daily survival is a challenge, yet it is filled with stories of incredible human strength and perseverance. Children go to school amid ruins; families gather even in the darkest times - hope is not a luxury but a necessity. Your support and solidarity matter more than words can express."
               </div>
-              <div>- Jehad the voice of Gaza at SOAS. @jehadkmiri</div>
+              <div>- Jehad the voice of Gaza at SOAS. <a href="https://www.instagram.com/jehadkmiri/">@jehadkmiri</a></div>
             </div>
           </div>
 
+          <div class='md:hidden flex flex-col justify-center min-w-full container font-leaguespartan font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-center justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-1-black sm:font-outline-1-red-800 md:font-outline-2-red-800'>
+            <div class="">
+            "The reality of life in Gaza is often misrepresented and overlooked. It is a place where daily survival is a challenge, yet it is filled with stories of incredible human strength and perseverance. Children go to school amid ruins; families gather even in the darkest times - hope is not a luxury but a necessity. Your support and solidarity matter more than words can express."
+              </div>  
+              <div class='mt-4'>- Jehad the voice of Gaza at SOAS. <a href="https://www.instagram.com/jehadkmiri/">@jehadkmiri</a></div>
+
+          </div>
+
+
+
+        {/* 
           <div class="md:hidden  border-none">
             <figure>
               <img class="h-full object-contain"
                src={"https://images2.imgbox.com/88/b3/x1Q7iTLQ_o.jpg"} />
             </figure>
-          </div>        
+          </div>         */}
 
 
         </div>

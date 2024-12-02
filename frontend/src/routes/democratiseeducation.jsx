@@ -41,15 +41,15 @@ function DemocratiseEducation () {
       </div>
 
       <div class="flex flex-col gap-2 sm:gap-5 font-leaguespartan font-bold text-white text-xl sm:text-3xl lg:text-4xl xl:text-5xl p-8 lg:p-10 xl:px-20">
-        <a href='#state-of-repression' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-0">The state of repression at SOAS <span class="text-3xl sm:text-4xl text-red-800">&#x25ba;</span></a>
-        <a href='#initial-demands' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-8 xl:indent-40">Initial demands of the campaign <span class="text-3xl sm:text-4xl text-red-800">&#x25ba;</span></a>
-        <a href='#work-to-democratise-education' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-16 xl:indent-80">Work to Democratise Education <span class="text-3xl sm:text-4xl text-red-800">&#x25ba;</span></a>
+        <a href='#state-of-repression' class="hover:text-red-800 font-outline-1-black sm:font-outline-2-black text-white no-underline sm:indent-0">The state of repression at SOAS <span class="text-3xl sm:text-4xl text-red-800">&#x25ba;</span></a>
+        <a href='#initial-demands' class="hover:text-red-800 font-outline-1-black sm:font-outline-2-black text-white no-underline sm:indent-8 xl:indent-40">Initial demands of the campaign <span class="text-3xl sm:text-4xl text-red-800">&#x25ba;</span></a>
+        <a href='#work-to-democratise-education' class="hover:text-red-800 font-outline-1-black sm:font-outline-2-black text-white no-underline sm:indent-16 xl:indent-80">Work to Democratise Education <span class="text-3xl sm:text-4xl text-red-800">&#x25ba;</span></a>
       </div>
       
       <div
         id='state-of-repression' 
         class='flex flex-col font-kanit bg-black text-white bg-opacity-75 p-4 lg:p-24 text-xl sm:text-3xl sm:m-8 rounded-3xl m-4 lg:mx-48 lg:mx-64 text-center'>
-        <div class='text-3xl sm:text-5xl lg:text-7xl font-outline-4-black font-bold pb-10'>
+        <div class='text-3xl sm:text-5xl lg:text-7xl font-outline-1-black sm:font-outline-4-black font-bold pb-10'>
           The state of repression at SOAS
         </div>
         <div class="pb-10">
@@ -89,31 +89,29 @@ function DemocratiseEducation () {
         </div>
       </div>
 
-      <div id='initial-demands' class='flex flex-col font-anton  bg-black text-white bg-opacity-65 gap-y-10 font-leaguespartanfont-bold text-black text-3xl sm:text-5xl lg:text-6xl xl:text-8xl pb-10 text-left align-middle justify-evenly'>
-          <div class="mt-4 indent-20 text-red-500 font-outline-4-black ">Initial Demands</div>
-          <div class='text-red-500 font-leaguespartan flex flex-col  font-bold   px-4 lg:px-24 text-xl sm:text-3xl lg:text-5xl sm:mx-8 rounded-3xl  text-left'>
+      <div id='initial-demands' class='flex flex-col font-anton  bg-black text-white bg-opacity-65 gap-y-10 font-leaguespartanfont-bold text-black  pb-10 text-center align-middle justify-evenly'>
+          <div class="mt-4 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-red-500 font-outline-1-black sm:font-outline-2-black xl:font-outline-4-black ">Initial Demands</div>
+          <div class='text-red-500  px-4 font-leaguespartan flex flex-col  font-bold    text-xl sm:text-3xl lg:text-5xl  rounded-3xl  text-left'>
           The campaign has these few initial demands, the bare minimum to ensure basic democracy within SOAS. 
         </div>
           
-
-        {/* <div class='flex flex-col font-kanit text-white bg-opacity-75 px-4 lg:px-24 text-xl sm:text-3xl sm:mx-8 rounded-3xl m-4 lg:mx-48 lg:mx-64 text-center' */}
       <div class='flex flex-col font-kanit font-bold  text-black bg-opacity-75 px-4 lg:px-24 text-xl sm:text-3xl sm:mx-8 rounded-3xl  text-center'>
 
 
-        <div class="flex flex-col gap-y-4 m-4 lg:mx-24 lg:mx-64 sm:gap-5  text-xl sm:text-3xl md:text-4xl lg:text-4xl p-8 text-white ">
-        <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-3-red-800">
+        <div class="flex flex-col gap-y-4 m-4 lg:mx-24 xl:mx-48 sm:gap-5  text-xl sm:text-3xl md:text-4xl lg:text-4xl px-8 text-white ">
+        <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-1-red-800 sm:font-outline-2-red-800 lg:font-outline-3-red-800">
           Reinstate our SU co-Presidents Abel and Alex
           </span> 
           </div>
-          <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-3-red-800">
+          <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-1-red-800 sm:font-outline-2-red-800 lg:font-outline-3-red-800">
             Drop the ongoing suspensions six month suspensions against Haya and Tara
             </span>
           </div>
-          <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-3-red-800">
+          <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-1-red-800 sm:font-outline-2-red-800 lg:font-outline-3-red-800">
             Drop the final warnings against four students for participating in peaceful protest 
             </span>
           </div>
-          <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-3-red-800">
+          <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-1-red-800 sm:font-outline-2-red-800 lg:font-outline-3-red-800">
             Scrap the authoritarian ‘Protest events at SOAS - guidelines for students’
             </span>
           </div>
@@ -126,7 +124,7 @@ function DemocratiseEducation () {
         id='work-to-democratise-education' 
         class='flex flex-col font-kanit bg-black text-white bg-opacity-65 p-4 lg:p-24 text-xl sm:text-3xl sm:m-8 rounded-3xl m-4 lg:mx-48 lg:mx-64 text-center'
       >
-        <div class='text-3xl sm:text-5xl lg:text-7xl font-outline-4-black  font-bold pb-10'>
+        <div class='text-3xl sm:text-5xl lg:text-7xl sm:font-outline-2-black xl:font-outline-4-black  font-bold pb-10'>
           Work to Democratise Education
           </div>
           <div>
