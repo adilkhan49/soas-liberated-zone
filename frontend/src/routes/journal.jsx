@@ -53,10 +53,10 @@ class Journal extends Component {
           />
         </div>
 
-        <div class='hidden sm:block flex justify-center h-[80vh] object-scale-down min-w-full '>
+        <div class='hidden sm:block flex justify-center h-[60vh] object-scale-down min-w-full '>
           <img
               class = "w-full  h-full"
-              src={"https://images2.imgbox.com/47/e4/ZiP6HmHN_o.jpg"}
+              src={"https://images2.imgbox.com/5c/be/jgWssuPa_o.jpg"}
           />
         </div>
 
