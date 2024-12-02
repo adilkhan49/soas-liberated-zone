@@ -56,5 +56,5 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(GalleryImage)
 class GalleryImageAdmin(admin.ModelAdmin):
-    list_display = ['pk','title','sequence','release_date']
+    list_display = ['pk','title','sequence','credit_to','release_date','exclude_date','exclude_month']
     ordering = [F('sequence').asc(nulls_last=True),'-release_date']

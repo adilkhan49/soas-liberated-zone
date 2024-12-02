@@ -1,6 +1,26 @@
 import { Component } from "react";
 import { useState, useEffect } from "react";
 
+function formatDate(image) {
+    const date = new Date(image.release_date);
+    var options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      };
+    if (image.exclude_date) {
+        options = {
+            year: 'numeric',
+            month: 'long',
+          }
+    };
+    if (image.exclude_month) {
+        options = {
+            year: 'numeric',
+          }
+    };
+    return date.toLocaleString('en-GB', options)
+    }
 
 
 const useKeyPress = (targetKey) => {
@@ -88,7 +108,7 @@ function GalleryListing ({images}) {
             {
                 carouselOpen &&
 
-                    <div id="dialog" class="bg-amber-50 h-full w-full sm:h-3/4 sm:w-3/4 fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md drop-shadow-lg">
+                    <div id="dialog" class="bg-black h-full w-full sm:h-3/4 sm:w-3/4 fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md drop-shadow-lg">
                         <div class="absolute right-0 -translate-x-4">
                             <button 
                                 id="close" 
@@ -125,7 +145,10 @@ function GalleryListing ({images}) {
                         }
 
                         <div class="absolute w-full sm:relative bottom-0   text-lg text-center font-bold" >
-                            {images[selectedImage].release_date}
+                        <div>{formatDate(images[selectedImage])}</div>
+                        {images[selectedImage].credit_to &&
+                            <div>Credit - {images[selectedImage].credit_to}</div>
+                        }
                         </div>
                     </div>
             }

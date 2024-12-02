@@ -61,6 +61,9 @@ class GalleryImage(models.Model):
     url = models.TextField()
     sequence = models.IntegerField(unique=True,blank=True,null=True)
     release_date = models.DateField()
+    exclude_date = models.BooleanField(default=False)
+    exclude_month = models.BooleanField(default=False)
+    credit_to = models.TextField(blank=True,null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
 
