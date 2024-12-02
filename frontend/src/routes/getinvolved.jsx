@@ -55,12 +55,15 @@ const GetInvolved = props => {
       <div class = "flex min-w-full min-h-screen">
         <div class="w-full">
 
-          <figure class="hidden sm:block border-l-10 border-l-black">
-            <img
-              class=" h-[60vh] w-full object-cover " 
-              src="https://images2.imgbox.com/65/df/JJIGrn2j_o.jpg" 
-              alt="Get Involved" />
-          </figure>
+
+          <div class="hidden sm:block sm:relative h-[60vh] bg-[url('https://images2.imgbox.com/d7/b2/niZ4O6jj_o.jpg')] bg-top bg-cover">
+            <div class="absolute p-4 text-center transform -translate-y-1/2 top-2/3 left-1/2">
+              <div class="font-rubikvinyl text-amber-50  text-3xl lg:text-4xl xl:text-5xl">
+                Calling all students, staff, and members of the community
+              </div>
+            </div>
+
+          </div>
 
           <figure class="block sm:hidden border-l-10 border-l-black">
             <img
