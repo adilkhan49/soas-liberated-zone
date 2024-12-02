@@ -67,7 +67,7 @@ class Home extends Component {
             </div>
           </div>
 
-          <div class='flex flex-col justify-center min-w-full container font-leaguespartan font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-left justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-2-red-800'>
+          <div class='flex flex-col justify-center min-w-full container font-leaguespartan font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-left justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-1-red-800 md:font-outline-2-red-800'>
 
           <div class="mb-10">The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against the university’s complicity in the ongoing genocide.</div>
           <div >We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education. We work to enable the community we know SOAS to be, beyond the shadow of its institutional violence.</div>  
@@ -80,7 +80,7 @@ class Home extends Component {
         <div class="my-10 mx-2 mx-10 font-leaguespartan">
           <div class="flex justify-start">
           <div class="mb-10 px-2 sm:px-10 text-red-800 font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
-            • Join the movement!</div>
+            ▼ Join the movement!</div>
           </div>
 
           <form
@@ -99,24 +99,26 @@ class Home extends Component {
         </div>
 
         <div 
-          class="flex-row md:flex  border-y-10 border-green-800 gap-x-10 font-leaguespartan bg-red-800 w-full text-amber-50 font-bold md:text-xl lg:text-3xl  py-4 px-20  min-w-full tracking-widest items-center text-center justify-evenly ">
-          <div>Get email updates:</div>
-          <Subscribe />
+          class="flex-row   border-y-10 border-green-800 font-leaguespartan bg-red-800 w-full text-amber-50 font-bold md:text-xl lg:text-3xl xl:text-4xl  py-4 px-4 md:px-20  min-w-full tracking-widest items-center text-center justify-evenly ">
+          <div class='text-left'>Get email updates:</div>
+          <Subscribe 
+            class='w-full bg-blue-300'
+            />
         </div>
 
         <div class="my-10 mx-2 mx-10 font-leaguespartan">
           <div class=" flex justify-start">
             <div class="px-2 sm:px-10 text-red-800 font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
-          • Come to upcoming events</div>
+            ▼ Come to upcoming events</div>
           </div>
         </div>
 
 
 
-        <div class="grid grid-cols-1 sm:grid-cols-2  text-center items-stretch">
-            <img class="hidden sm:block h-full w-full object-cover" 
+        <div class="text-center items-stretch">
+            {/* <img class="hidden sm:block h-full w-full object-cover" 
               src={"https://images2.imgbox.com/47/35/6L4BFUJe_o.jpg"} 
-             />
+             /> */}
             <div class="h-full bg-green-800 bg-opacity-85 bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')] overflow-x-auto overflow-y-auto">
                 <UpcomingEvents
                   events={this.state.upcoming_events}

@@ -33,6 +33,9 @@
   .font-outline-2-green-800 {
     -webkit-text-stroke: 2px #166534;
   }
+  .font-outline-1-red-800 {
+    -webkit-text-stroke: 1px #991b1b;
+  }
   .font-outline-2-red-800 {
     -webkit-text-stroke: 2px #991b1b;
   }
