@@ -27,9 +27,10 @@ import AuthContext from '../context/AuthContext';
 function Editor(props) {
 
 
-    const [markdown, setMarkdown] = useState('Statement Content');
-    const [title, setTitle] = useState('Statement Title');
+    const [markdown, setMarkdown] = useState('');
+    const [title, setTitle] = useState('');
     const [releaseDate, setReleaseDate] = useState('');
+    const [videoUrl, setVideoUrl] = useState('');
     let {authTokens}  = useContext(AuthContext)
     
     const handleSave = async () => {
@@ -45,7 +46,8 @@ function Editor(props) {
             body: JSON.stringify({
               title: title,
               body: markdown,
-              release_date: releaseDate
+              release_date: releaseDate,
+              video_url: videoUrl,
             }),
           });
     
@@ -63,17 +65,14 @@ function Editor(props) {
 
     return <div class="m-4 pb-20">
 
-        <form>
-            <button 
-              class="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
-              onClick={handleSave}>Save 
-            </button> 
+        <form class='bg-amber-50'>
             <div>
             <label class="block">Title</label>
             <input
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
+                placeholder='Title'
                 required
             />
             </div>
@@ -84,6 +83,15 @@ function Editor(props) {
                 value={releaseDate}
                 onChange={(e) => setReleaseDate(e.target.value)}
                 required
+            />
+            </div>
+            <div>
+            <label class="block">Video URL</label>
+            <input
+                type="text"
+                value={videoUrl}
+                onChange={(e) => setVideoUrl(e.target.value)}
+                placeholder='Youtube URL'
             />
             </div>
         </form>

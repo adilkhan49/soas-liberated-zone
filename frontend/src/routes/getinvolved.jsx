@@ -144,7 +144,7 @@ const GetInvolved = props => {
                     src={"https://images2.imgbox.com/f1/9b/VMZXyfBV_o.jpeg"}>
               </img>
             </div>
-            <div class="absolute z-2 h-full bg-black bg-opacity-75 w-5/6 lg:w-4/5 xl:3/4">
+            <div class="absolute z-2 h-full bg-black bg-opacity-75 w-full lg:w-4/5 xl:3/4">
               <div class=" w-full font-rubikmono text-red-600 text-opacity-0 tracking-widest text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center py-20  ">
                 JOIN
               </div>
