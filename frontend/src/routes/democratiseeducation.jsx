@@ -41,9 +41,9 @@ function DemocratiseEducation () {
       </div>
 
       <div class="flex flex-col gap-2 sm:gap-5 font-leaguespartan font-bold text-white text-xl sm:text-3xl lg:text-4xl xl:text-5xl p-8 lg:p-10 xl:px-20">
-        <a href='#state-of-repression' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-0">The state of repression at SOAS <span class="text-3xl sm:text-4xl text-red-800">▶</span></a>
-        <a href='#initial-demands' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-8 xl:indent-40">Initial demands of the campaign <span class="text-3xl sm:text-4xl text-red-800">▶</span></a>
-        <a href='#work-to-democratise-education' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-16 xl:indent-80">Work to Democratise Education <span class="text-3xl sm:text-4xl text-red-800">▶</span></a>
+        <a href='#state-of-repression' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-0">The state of repression at SOAS <span class="text-3xl sm:text-4xl text-red-800">&#x25ba;</span></a>
+        <a href='#initial-demands' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-8 xl:indent-40">Initial demands of the campaign <span class="text-3xl sm:text-4xl text-red-800">&#x25ba;</span></a>
+        <a href='#work-to-democratise-education' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-16 xl:indent-80">Work to Democratise Education <span class="text-3xl sm:text-4xl text-red-800">&#x25ba;</span></a>
       </div>
       
       <div
