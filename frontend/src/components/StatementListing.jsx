@@ -16,18 +16,17 @@ class StatementList extends Component {
 
               
                     <form class="py-3" action={"/statements/"+statement.pk} method="get" >
-
-                    <button class="container mx-auto p-4 bg-amber-50 rounded-lg shadow text-left">
-                        <div class="">
-                            <div class="flex pb-0">
-                                <div>
-                                    <div class="font-semibold">{statement.release_date}</div>
+                        <button class="container mx-auto p-4 bg-amber-50 hover:bg-white border-1 border-black hover:border-green-800 rounded-lg shadow text-left">
+                            <div class="">
+                                <div class="flex pb-0">
+                                    <div>
+                                        <div class="font-semibold">{statement.release_date}</div>
+                                    </div>
                                 </div>
+                                <div class="text-gray-700 text-lg bold line-clamp-2">{statement.title}</div>
                             </div>
-                            <div class="text-gray-700 text-lg bold line-clamp-2">{statement.title}</div>
-                        </div>
-                    </button>
-                </form>
+                        </button>
+                    </form>
 
                 ))
             )}
