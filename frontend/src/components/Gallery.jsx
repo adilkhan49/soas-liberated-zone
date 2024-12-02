@@ -40,18 +40,21 @@ function GalleryListing ({images}) {
 
     const openImg = (id) => {
         setSelectedImage(id);
-        setCarouselOpen(!carouselOpen);
+        console.log('Gallery Image: ' + images[selectedImage].pk + ' - ' + images[selectedImage].title )
+        setCarouselOpen(true);
     }
 
     const prevSlide = (id) => {
         if (selectedImage  > 0) {
             setSelectedImage(selectedImage-1)
+            console.log('Gallery Image: ' + images[selectedImage].pk + ' - ' + images[selectedImage].title )
         }
     }
 
     const nextSlide = (id) => {
         if (selectedImage + 1 < images.length) {
             setSelectedImage(selectedImage+1)
+            console.log('Gallery Image: ' + images[selectedImage].pk + ' - ' + images[selectedImage].title )
         }
     }
 
@@ -130,15 +133,15 @@ function GalleryListing ({images}) {
            
             <div class={carouselOpen && "blur-3xl"}>
                 <div className="grid grid-cols-1 gap-4 sm:gap-10 sm:grid-cols-3 md:grid-cols-3 m-4 sm:m-10 items-stretch">
-                    {images.map(({ pk, url }, index) => (
+                    {images.map(({ pk, title, url }, index) => (
                         <div key={index} class="h-30 w-45 sm:h-80 sm:w-120"> 
                             <button  class="h-full w-full"
                                 onClick={ () => openImg(index)} 
                             >
                                 <img
                                     class="h-full w-full object-cover "
-                                    src={url}
-                                    alt="gallery-photo"
+                                    src={'hi'}
+                                    alt={pk}
                                 >
                                 </img>
                             </button>
