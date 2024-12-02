@@ -140,7 +140,7 @@ function GalleryListing ({images}) {
                             >
                                 <img
                                     class="h-full w-full object-cover "
-                                    src={'hi'}
+                                    src={url}
                                     alt={pk}
                                 >
                                 </img>
