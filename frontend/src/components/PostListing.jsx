@@ -31,7 +31,7 @@ class PostList extends Component {
                 <div
                     class = 'h-88'
                     key={post.pk}>
-                    <a class="py-3" href={"/journal/"+post.pk} >
+                    <a class="py-3" href={post.is_pdf ? post.body : "/journal/"+post.pk} target={post.is_pdf ? "_blank" : ""} >
                         <button class="container h-full mx-auto px-2 space-y-4 py-2" 
                         >
                             <div class="h-full">
@@ -59,6 +59,7 @@ class PostList extends Component {
                                                 {post.author}
                                             </div>
                                         }
+                                        <div>{post.is_pdf}</div>
 
                                         <div class=''>
                                             {this.context.user && <Checkbox post={post} />}
