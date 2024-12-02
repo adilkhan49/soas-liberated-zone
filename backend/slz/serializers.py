@@ -12,7 +12,7 @@ class StatementSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Statement 
-        fields = ('pk', 'title','body','release_date','created_on','last_modified')
+        fields = ('pk', 'title','body','release_date','video_url','created_on','last_modified')
 
 class EventSerializer(serializers.ModelSerializer):
     class Meta:

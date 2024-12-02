@@ -69,11 +69,31 @@ class StatementDetail extends Component {
                 {this.state.statement.title}
             </h1>
 
-            <p class="text-2xl sm:mx-48 text-bold italic">
+            <p class="text-3xl mx-2 sm:mx-4 md:mx-12 lg:mx-24 xl:mx-48 text-bold italic">
                 Statement released on {formatDate(this.state.statement.release_date)}
             </p>
 
-            <div class="text-3xl sm:mx-48 ">
+            {/* <iframe src="https://www.youtube.com/embed/r9jwGansp1E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+
+
+            {this.state.statement.video_url && 
+              <div class="m-2 sm:m-4 aspect-video bg-black place-items-center ">
+                    <iframe
+                        class='h-full w-full'
+                        src={this.state.statement.video_url.replace('/watch?v=', '/embed/')}
+                        frameborder='0'
+                        allow='autoplay; encrypted-media'
+                        allowfullscreen="allowfullscreen"
+                        mozallowfullscreen="mozallowfullscreen" 
+                        msallowfullscreen="msallowfullscreen" 
+                        oallowfullscreen="oallowfullscreen" 
+                        webkitallowfullscreen="webkitallowfullscreen"
+                        />
+
+                </div>
+
+            }
+            <div class="text-3xl mx-2 sm:mx-4 md:mx-12 lg:mx-24 xl:mx-48 ">
                 <Markdown class="">{this.state.statement.body}</Markdown>
             </div>
 

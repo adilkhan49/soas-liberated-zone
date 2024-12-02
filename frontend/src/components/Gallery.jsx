@@ -66,15 +66,15 @@ function GalleryListing ({images}) {
 
     const prevSlide = (id) => {
         if (selectedImage  > 0) {
-            setSelectedImage(selectedImage-1)
-            console.log('Gallery Image: ' + images[selectedImage].pk + ' - ' + images[selectedImage].title )
+            console.log('Gallery Image: ' + images[selectedImage-1].pk + ' - ' + images[selectedImage-1].title )
+            setSelectedImage(selectedImage-1);
         }
     }
 
     const nextSlide = (id) => {
         if (selectedImage + 1 < images.length) {
-            setSelectedImage(selectedImage+1)
-            console.log('Gallery Image: ' + images[selectedImage].pk + ' - ' + images[selectedImage].title )
+            console.log('Gallery Image: ' + images[selectedImage+1].pk + ' - ' + images[selectedImage+1].title )
+            setSelectedImage(selectedImage+1);
         }
     }
 

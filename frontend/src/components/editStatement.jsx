@@ -34,6 +34,7 @@ class Editor extends Component {
             markdown: '',
             title: '',
             release_date: '',
+            video_url: '',
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -52,6 +53,7 @@ class Editor extends Component {
                 title: data.title,
                 release_date: data.release_date,
                 markdown: data.body,
+                video_url: data.video_url,
             });
         } catch (error) {
             console.error('Error fetching initial data:', error);
@@ -83,6 +85,7 @@ class Editor extends Component {
                     title: this.state.title,
                     release_date: this.state.release_date,
                     body: this.state.markdown,
+                    video_url: this.state.video_url,
                 }),
             });
 
@@ -99,7 +102,7 @@ class Editor extends Component {
     }
 
     render() {
-      const { title, release_date, markdown } = this.state;
+      const { title, release_date, markdown, video_url } = this.state;
   
       return (
           <div className="m-4 pb-20">
@@ -130,6 +133,17 @@ class Editor extends Component {
                           required
                       />
                   </div>
+
+                  <div>
+                      <label className="block">Video URL</label>
+                      <input
+                          type="text"
+                          name="video_url"
+                          value={video_url}
+                          onChange={this.handleChange}
+                      />
+                  </div>
+
               </form>
               <div className="bg-white container my-4">
                   {markdown ? ( // Render MDXEditor only when markdown is available

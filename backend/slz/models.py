@@ -26,6 +26,7 @@ class Statement(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
     release_date = models.DateField()
+    video_url = models.TextField(unique=True,blank=True,null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
 
