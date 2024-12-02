@@ -61,19 +61,15 @@ class Journal extends Component {
         </div>
 
         <div class='flex  flex-col  container bg-amber-50  min-w-full text-bold p-10 text-3xl mb-5'>
-          <div class="flex flex-row w-full h-full">
+          <div class="flex flex-row w-full h-full ">
 
-            <div class='lg:w-3/5'>
-              <div
-               class=""
-              >
+            <div class='md:w-4/5 '>
                 <p class='font-bold sm:text-4xl'>
                 The Palestinian people have long shown the strength of resistance through writing and culture. Our true enduring power is rooted in the collective knowledge and spirit that we amplify between us; that is why we seek true forms of education beyond the university, for the community by the community.
                 </p>
                 <p class="sm:text-3xl">
                   We invite anyone and everyone from the SLZ community and the growing global movement to contribute to the SLZ journal.
                 </p>
-              </div>
             </div>
 
             <div class="hidden lg:block">
