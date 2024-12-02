@@ -84,7 +84,7 @@ class Home extends Component {
           </div>
 
           <form
-              action="https://signal.group/#CjQKIM5LoPsS4lKVkHR08Nr686ZxJRWhm_hImbG3bNpJbJglEhCuU5LbAmsdAiz-oQgKH6lp"
+              action="/signup"
               target="_blank"
               class="container w-52 font-bold md:text-xl lg:text-3xl xl:text-4xl  p-2 m-4 m-auto tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-full border-10 text-center align-middle">
               <button>sign up</button>

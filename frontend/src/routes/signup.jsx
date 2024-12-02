@@ -153,7 +153,7 @@ function SignUp () {
                     >
                         <option value="Student">Student</option>
                         <option value="Staff">Staff</option>
-                        <option value="Neither">Neither</option>
+                        <option value="Other">Other</option>
                     </select>                   
                     <textarea 
                         class="w-full rounded-md px-4 bg-gray-100 text-gray-800 text-sm pt-3 outline-blue-500 focus:bg-transparent"
