@@ -23,27 +23,6 @@ const comment = (
 </div>
 );
 
-const postcomment = (
-  <section class="py-8">
-    <div class="container mx-auto px-4">
-  
-      <form class="mt-8 bg-white p-4 rounded-lg shadow">
-        <h3 class="text-lg font-semibold mb-2">Add a Comment</h3>
-        <div class="mb-4">
-          <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
-          <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required></input>
-        </div>
-        <div class="mb-4">
-          <label for="comment" class="block text-gray-700 font-medium mb-2">Comment</label>
-          <textarea id="comment" name="comment" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
-        </div>
-        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-          Post Comment
-        </button>
-      </form>
-    </div>
-  </section>
-  );
 
 class Journal extends Component {
   state = {
@@ -74,33 +53,43 @@ class Journal extends Component {
           />
         </div>
 
-        <div class='hidden sm:block flex justify-center h-[80vh] object-scale-down min-w-full '>
+        <div class='hidden sm:block flex justify-center h-[60vh] object-scale-down min-w-full '>
           <img
               class = "w-full  h-full"
-              src={"https://images2.imgbox.com/47/e4/ZiP6HmHN_o.jpg"}
+              src={"https://images2.imgbox.com/5c/be/jgWssuPa_o.jpg"}
           />
         </div>
 
-        <div class='container bg-amber-50  min-w-full text-bold p-10 text-3xl mb-5'>
-          <div class="sm:w-3/5">
-            <p class='font-bold sm:text-4xl'>
-              We invite anyone and everyone from the SLZ community and the growing global solidarity movement for Palestine to write for the SLZ journal or to share existing writings.
-            </p>
-            <p class="sm:text-3xl">
-              The Palestinian people have long shown the strength of resistance through writing and culture. Our true enduring power is rooted in the collective knowledge and spirit that we amplify between us; that is why we seek true forms of education beyond the university, for the community by the community
-            </p>
+        <div class='flex  flex-col  container bg-amber-50  min-w-full text-bold p-10 text-3xl mb-5'>
+          <div class="flex flex-row w-full h-full ">
+
+            <div class='md:w-4/5 '>
+                <p class='font-bold sm:text-4xl'>
+                The Palestinian people have long shown the strength of resistance through writing and culture. Our true enduring power is rooted in the collective knowledge and spirit that we amplify between us; that is why we seek true forms of education beyond the university, for the community by the community.
+                </p>
+                <p class="sm:text-3xl">
+                  We invite anyone and everyone from the SLZ community and the growing global movement to contribute to the SLZ journal.
+                </p>
+            </div>
+
+            <div class="hidden lg:block">
+              <img
+                class="object-cover"
+                src="https://images2.imgbox.com/3e/e7/wsZw0VxE_o.png">
+              </img>
+            </div>
           </div>
 
-          <LinkButton 
-            linkText={"Contribute"} 
-            linkUrl={"/journal/create"}
-            target = ""
-          ></LinkButton>
 
-          <hr class="border-black border-2 border-dashed mt-4"/>
+          <LinkButton 
+              linkText={"Contribute"} 
+              linkUrl={"/journal/create"}
+              target = ""
+            ></LinkButton>
+
+            <hr class="border-black border-2 border-dashed mt-4"/>
 
         </div>
-
 
         <PostList
           posts={this.state.posts}

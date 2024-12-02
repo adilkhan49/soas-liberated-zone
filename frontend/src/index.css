@@ -33,11 +33,20 @@
   .font-outline-2-green-800 {
     -webkit-text-stroke: 2px #166534;
   }
+  .font-outline-1-red-800 {
+    -webkit-text-stroke: 1px #991b1b;
+  }
   .font-outline-2-red-800 {
     -webkit-text-stroke: 2px #991b1b;
   }
+  .font-outline-3-red-800 {
+    -webkit-text-stroke: 3px #991b1b;
+  }
   .font-outline-4-red-800 {
     -webkit-text-stroke: 4px #991b1b;
+  }
+  .font-outline-2-red-600 {
+    -webkit-text-stroke: 2px #dc2626;
   }
   h1 {
     @apply text-5xl sm:text-8xl text-center font-tourney font-bold text-black;

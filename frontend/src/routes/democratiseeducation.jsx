@@ -41,16 +41,16 @@ function DemocratiseEducation () {
       </div>
 
       <div class="flex flex-col gap-2 sm:gap-5 font-leaguespartan font-bold text-white text-xl sm:text-3xl lg:text-4xl xl:text-5xl p-8 lg:p-10 xl:px-20">
-        <a href='#state-of-repression' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-0">The state of repression at SOAS <span class="text-3xl sm:text-4xl text-red-800">▶</span></a>
-        <a href='#initial-demands' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-8 xl:indent-40">Initial demands of the campaign <span class="text-3xl sm:text-4xl text-red-800">▶</span></a>
-        <a href='#work-to-democratise-education' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-16 xl:indent-80">Work to Democratise Education <span class="text-3xl sm:text-4xl text-red-800">▶</span></a>
+        <a href='#state-of-repression' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-0">The state of repression at SOAS <span class="text-3xl sm:text-4xl text-red-800">&#x25ba;</span></a>
+        <a href='#initial-demands' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-8 xl:indent-40">Initial demands of the campaign <span class="text-3xl sm:text-4xl text-red-800">&#x25ba;</span></a>
+        <a href='#work-to-democratise-education' class="hover:text-red-800 font-outline-2-black text-white no-underline sm:indent-16 xl:indent-80">Work to Democratise Education <span class="text-3xl sm:text-4xl text-red-800">&#x25ba;</span></a>
       </div>
       
       <div
         id='state-of-repression' 
         class='flex flex-col font-kanit bg-black text-white bg-opacity-75 p-4 lg:p-24 text-xl sm:text-3xl sm:m-8 rounded-3xl m-4 lg:mx-48 lg:mx-64 text-center'>
-      <div class='text-3xl sm:text-5xl pb-10'>
-        The state of repression at SOAS
+        <div class='text-3xl sm:text-5xl lg:text-7xl font-outline-4-black font-bold pb-10'>
+          The state of repression at SOAS
         </div>
         <div class="pb-10">
           In the last few years SOAS management has steadily been creating an increasingly repressive environment at the university for both students and workers. Nevertheless the academic year of 23/24 has seen new heights of authoritarian crackdown with a truly alarming response to the growing student movement Palestine. Since the academic year 2023/2024:
@@ -89,44 +89,44 @@ function DemocratiseEducation () {
         </div>
       </div>
 
-      <div id='initial-demands' class='flex flex-col font-anton  bg-black text-white bg-opacity-65 gap-y-10 font-leaguespartanfont-bold text-black text-3xl sm:text-5xl lg:text-6xl xl:text-7xl pb-10 text-left align-middle justify-evenly'>
+      <div id='initial-demands' class='flex flex-col font-anton  bg-black text-white bg-opacity-65 gap-y-10 font-leaguespartanfont-bold text-black text-3xl sm:text-5xl lg:text-6xl xl:text-8xl pb-10 text-left align-middle justify-evenly'>
           <div class="mt-4 indent-20 text-red-500 font-outline-4-black ">Initial Demands</div>
-          <div class='text-red-500 font-leaguespartan flex flex-col  font-bold   px-4 lg:px-24 text-xl sm:text-3xl sm:mx-8 rounded-3xl  text-left'>
+          <div class='text-red-500 font-leaguespartan flex flex-col  font-bold   px-4 lg:px-24 text-xl sm:text-3xl lg:text-5xl sm:mx-8 rounded-3xl  text-left'>
           The campaign has these few initial demands, the bare minimum to ensure basic democracy within SOAS. 
         </div>
           
-        </div>
 
         {/* <div class='flex flex-col font-kanit text-white bg-opacity-75 px-4 lg:px-24 text-xl sm:text-3xl sm:mx-8 rounded-3xl m-4 lg:mx-48 lg:mx-64 text-center' */}
       <div class='flex flex-col font-kanit font-bold  text-black bg-opacity-75 px-4 lg:px-24 text-xl sm:text-3xl sm:mx-8 rounded-3xl  text-center'>
 
 
-        <div class="flex flex-col gap-y-4 m-4 lg:mx-24 lg:mx-64 sm:gap-5  text-xl sm:text-3xl md:text-4xl lg:text-5xl p-8 text-black ">
-        <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-2-red-800">
+        <div class="flex flex-col gap-y-4 m-4 lg:mx-24 lg:mx-64 sm:gap-5  text-xl sm:text-3xl md:text-4xl lg:text-4xl p-8 text-white ">
+        <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-3-red-800">
           Reinstate our SU co-Presidents Abel and Alex
           </span> 
           </div>
-          <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-2-red-800">
+          <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-3-red-800">
             Drop the ongoing suspensions six month suspensions against Haya and Tara
             </span>
           </div>
-          <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-2-red-800">
+          <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-3-red-800">
             Drop the final warnings against four students for participating in peaceful protest 
             </span>
           </div>
-          <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-2-red-800">
+          <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-3-red-800">
             Scrap the authoritarian ‘Protest events at SOAS - guidelines for students’
             </span>
           </div>
         </div>
 
       </div>
+      </div>
 
       <div 
         id='work-to-democratise-education' 
         class='flex flex-col font-kanit bg-black text-white bg-opacity-65 p-4 lg:p-24 text-xl sm:text-3xl sm:m-8 rounded-3xl m-4 lg:mx-48 lg:mx-64 text-center'
       >
-        <div   class='text-3xl sm:text-5xl pb-10'>
+        <div class='text-3xl sm:text-5xl lg:text-7xl font-outline-4-black  font-bold pb-10'>
           Work to Democratise Education
           </div>
           <div>
@@ -134,8 +134,14 @@ function DemocratiseEducation () {
           </div>
           <form 
             action="/signup" 
-            class="container text-black md:text-3xl font-anton rounded-full p-2 m-2 mx-auto mt-8 w-60 bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 tracking-widest border-10 items-center text-center">
+            class="container text-black md:text-3xl font-anton rounded-3xl p-2 m-2 mx-auto mt-8 w-60 bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 tracking-widest border-10 items-center text-center">
             <button>sign up</button>
+          </form>
+          <form
+            action="https://signal.group/#CjQKIM5LoPsS4lKVkHR08Nr686ZxJRWhm_hImbG3bNpJbJglEhCuU5LbAmsdAiz-oQgKH6lp"
+            target="_blank"
+            class="container text-black sm:text-3xl font-anton w-2/3 sm:w-1/2 p-2 m-2 mx-auto   tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-3xl border-10 items-center text-center">
+            <button>join the whatsapp broadcast </button>
           </form>
       </div>
 
