@@ -9,8 +9,8 @@ from django.conf import settings
 
 from django.db.models import Value
 from django.db.models.functions import Coalesce
-from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage
-from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer, TimelineEventSerializer, CarouselImageSerializer, GalleryImageSerializer
+from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage, CallToAction
+from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer, TimelineEventSerializer, CarouselImageSerializer, GalleryImageSerializer, CallToActionSerializer
 from .filters import EventFilter
 
 import json
@@ -251,3 +251,47 @@ def send_email(request):
         return HttpResponse("Ok`")
     else:
         return HttpResponse("Make sure all fields are entered and valid.")
+    
+
+@api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticatedOrReadOnly])
+def call_to_action_list(request):
+
+    if request.method == 'GET':
+        data = CallToAction.objects.all().order_by('-release_date')
+        serializer = CallToActionSerializer(data, context={'request': request}, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = CallToActionSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET','PUT', 'DELETE'])
+@permission_classes([IsAuthenticatedOrReadOnly])
+def call_to_action_detail(request, pk):
+
+    try:
+        call_to_action = CallToAction.objects.get(pk=pk)
+    except CallToAction.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = CallToActionSerializer(call_to_action, context={'request': request}, many=False)
+        return Response(serializer.data)
+
+    if request.method == 'PUT':
+        serializer = CallToActionSerializer(call_to_action, data=request.data,context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    elif request.method == 'DELETE':
+        call_to_action.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+    

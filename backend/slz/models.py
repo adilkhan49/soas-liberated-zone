@@ -69,4 +69,10 @@ class GalleryImage(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
 
+class CallToAction(models.Model):
+    title = models.CharField(max_length=255)
+    body = models.TextField()
+    release_date = models.DateField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    last_modified = models.DateTimeField(auto_now=True)
 

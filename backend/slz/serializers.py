@@ -1,12 +1,11 @@
 from rest_framework import serializers
-from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage
+from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage, CallToAction
 
 class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post 
         fields = ('pk','author', 'title','body','cover_picture_url','is_approved','is_anonymous','is_pdf','sequence','release_date','created_on','last_modified',)
-
 
 class StatementSerializer(serializers.ModelSerializer):
 
@@ -38,3 +37,8 @@ class GalleryImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = GalleryImage
         fields = ('pk','title','url','sequence','credit_to', 'release_date','exclude_date','exclude_month')
+
+class CallToActionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CallToAction
+        fields = ('pk', 'title','body','release_date','created_on','last_modified')
