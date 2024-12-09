@@ -7,6 +7,7 @@ import {
     quotePlugin, 
     thematicBreakPlugin, 
     toolbarPlugin,
+    linkPlugin,
     linkDialogPlugin,
     imagePlugin,
 } from '@mdxeditor/editor'
@@ -104,6 +105,7 @@ function Editor(props) {
             listsPlugin(), 
             quotePlugin(), 
             thematicBreakPlugin(), 
+            linkPlugin(),
             linkDialogPlugin(),
             imagePlugin(),
             listsPlugin(),
