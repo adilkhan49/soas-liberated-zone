@@ -78,7 +78,7 @@ function Editor(props) {
     return (
       <div class="font-kanit min-w-full">
             <div class="bg-black bg-opacity-85 mb-10 text-amber-50 py-4 sm:py-10 text-md sm:text-lg md:text-xl text-center ">
-              Please add your contribution below or email it to <a class="text-white hover:no-underline" href="mailto:soasliberatedzone@gmail.com">soasliberatedzone@gmail.com</a>
+              Add your contribution below or email it to <a class="text-white hover:no-underline" href="mailto:soasliberatedzone@gmail.com">soasliberatedzone@gmail.com</a>
             </div>
             <div class = "mx-4">
               <form class = "bg-amber-50">

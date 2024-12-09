@@ -51,7 +51,7 @@ class CarouselImageAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['title','release_date','author','sequence','is_approved','is_anonymous','cover_picture_url']
+    list_display = ['title','release_date','author','sequence','is_approved','is_anonymous','is_link']
     ordering = [F('sequence').asc(nulls_last=True),'-release_date']
 
 @admin.register(GalleryImage)
