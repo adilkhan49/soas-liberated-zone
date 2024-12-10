@@ -24,7 +24,7 @@ function UpcomingEvents({events}) {
                     {events.map(e => (
                         
                         <li class="list-none p-4 bg-amber-50 border-4 border-red-800 rounded-lg shadow-lg">
-                            <div class="flex items-center flex-1 mb-4 select-none sm:mb-0">
+                            <div class="flex items-center flex-1 mb-4 sm:mb-0">
                                 <div class="bg-red-800 rounded-xl p-4 text-center mr-4">
                                     <div class="text-xs font-medium">{formatDate(e.start_date,{day: 'numeric', month:'short'}).toLocaleUpperCase()}
                                     </div>
