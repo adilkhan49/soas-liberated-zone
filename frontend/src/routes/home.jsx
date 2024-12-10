@@ -44,7 +44,7 @@ class Home extends Component {
         </div>
         <div class='font-leaguespartan bg-black bg-opacity-90 hover:bg-opacity-50 text-center text-2xl sm:text-3xl lg:text-4xl xl:text-4xl px-3 py-8'>
           <Link to='/getinvolved' class="font-outline-1-black no-underline text-red-800  tracking-widest font-xxlbold">
-          End SOAS's crimes to build a truly anticolonial university
+          End SOAS's crimes to build a truly anticolonial education
           </Link>
         </div>
 
@@ -69,7 +69,12 @@ class Home extends Component {
 
           <div class='flex flex-col justify-center min-w-full container font-leaguespartan font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-center justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-1-black sm:font-outline-1-red-800 md:font-outline-2-red-800'>
 
-            <div class="mt-10">The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against the university’s complicity in the ongoing genocide. We work to end SOAS’s living colonial legacy to become an institution in service of people’s liberation and a truly decolonial education. We work to enable the community we know SOAS to be, beyond the shadow of its institutional violence.</div>  
+            <div class="mt-10">
+            The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against SOAS university’s complicity in the ongoing genocide in Gaza and the colonisation of the Palestinian people. We work to end SOAS’s living colonial legacy and build solidarity organising in service of people’s liberation and a truly decolonial education.
+              </div>  
+              <div class="text-red-800 font-outline-1-black sm:font-outline-1-green-800 md:font-outline-2-green-800 mt-10">
+             We work to enable the community we know SOAS to be beyond the shadow of its institutional violence.
+              </div>  
             </div>
 
           </div>
@@ -90,7 +95,7 @@ class Home extends Component {
               <button>sign up</button>
           </form>
           <form
-            action="https://signal.group/#CjQKIM5LoPsS4lKVkHR08Nr686ZxJRWhm_hImbG3bNpJbJglEhCuU5LbAmsdAiz-oQgKH6lp"
+            action="https://chat.whatsapp.com/Ku0wIdsGLIhADMAIwSgBcO"
             target="_blank"
             class="container  font-bold md:text-xl lg:text-3xl  p-2 m-2 mx-auto w-2/3 tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-full border-10 items-center text-center">
             <button>join the whatsapp broadcast </button>

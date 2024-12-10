@@ -128,7 +128,7 @@ function DemocratiseEducation () {
           Work to Democratise Education
           </div>
           <div>
-          Sign up here to get connected with other students/ staff and find pathways to action or send us an email directly <a href='mailto:soasliberatedzone@gmail.com' class='text-blue-400'>soasliberatedzone@gmail.com</a>
+          Sign up here to get connected with other students/staff and find pathways to action or send us an email directly <a href='mailto:soasliberatedzone@gmail.com' class='text-blue-400'>soasliberatedzone@gmail.com</a>
           </div>
           <form 
             action="/signup" 
@@ -136,7 +136,7 @@ function DemocratiseEducation () {
             <button>sign up</button>
           </form>
           <form
-            action="https://signal.group/#CjQKIM5LoPsS4lKVkHR08Nr686ZxJRWhm_hImbG3bNpJbJglEhCuU5LbAmsdAiz-oQgKH6lp"
+            action="https://chat.whatsapp.com/Ku0wIdsGLIhADMAIwSgBcO"
             target="_blank"
             class="container text-black sm:text-3xl font-anton w-2/3 sm:w-1/2 p-2 m-2 mx-auto   tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-3xl border-10 items-center text-center">
             <button>join the whatsapp broadcast </button>

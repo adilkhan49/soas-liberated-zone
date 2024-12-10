@@ -22,7 +22,7 @@ const GetInvolvedLinks =
         Stay informed on the struggle at soas and upcoming events.
       </div>
       <form
-        action="https://signal.group/#CjQKIM5LoPsS4lKVkHR08Nr686ZxJRWhm_hImbG3bNpJbJglEhCuU5LbAmsdAiz-oQgKH6lp"
+        action="https://chat.whatsapp.com/Ku0wIdsGLIhADMAIwSgBcO"
         target="_blank"
         class="container text-black sm:text-3xl font-anton w-2/3 sm:w-1/2 p-2 m-2 mx-auto   tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-3xl border-10 items-center text-center">
         <button>join the whatsapp broadcast </button>
