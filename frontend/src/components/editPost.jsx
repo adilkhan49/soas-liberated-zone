@@ -9,6 +9,7 @@ import {
     quotePlugin,
     thematicBreakPlugin,
     toolbarPlugin,
+    linkPlugin,
     linkDialogPlugin,
     imagePlugin,
 } from '@mdxeditor/editor';
@@ -153,6 +154,7 @@ class Editor extends Component {
                               listsPlugin(),
                               quotePlugin(),
                               thematicBreakPlugin(),
+                              linkPlugin(),
                               linkDialogPlugin(),
                               imagePlugin(),
                               listsPlugin(),

@@ -9,6 +9,7 @@ import {
     quotePlugin,
     thematicBreakPlugin,
     toolbarPlugin,
+    linkPlugin,
     linkDialogPlugin,
     imagePlugin,
 } from '@mdxeditor/editor';
@@ -72,7 +73,6 @@ class Editor extends Component {
 
         const { title, release_date, markdown } = this.state;
         // const { postId: statement_id } = this.props; // Access postId from props
-        console.log("saving edited statement")
         try {
             const response = await fetch(STATEMENTS_API_URL+this.props.id, { // Use postId in the request
                 method: 'PUT',
@@ -155,6 +155,7 @@ class Editor extends Component {
                               listsPlugin(),
                               quotePlugin(),
                               thematicBreakPlugin(),
+                              linkPlugin(),
                               linkDialogPlugin(),
                               listsPlugin(),
                               imagePlugin(),

@@ -10,6 +10,7 @@ import {
     quotePlugin, 
     thematicBreakPlugin, 
     toolbarPlugin,
+    linkPlugin,
     linkDialogPlugin,
     imagePlugin,
 } from '@mdxeditor/editor'
@@ -35,6 +36,8 @@ function Editor(props) {
     const [author, setAuthor] = useState('');
     const [release_date, setRealeseDate] = useState(null);
     const [is_anonymous, setIsAnonymous] = useState(false);
+    const [is_link, setIsLink] = useState(false);
+    const [link, setLink] = useState('');
     const [cover_picture_url, setCoverPictureURL] = useState('');
 
     const recaptcha = useRef(null);
@@ -55,7 +58,9 @@ function Editor(props) {
                 title: title,
                 author: author,
                 body: markdown,
+                link: link,
                 is_anonymous: is_anonymous,
+                is_link: is_link,
                 release_date: release_date,
                 cover_picture_url: cover_picture_url
               }),
@@ -77,7 +82,7 @@ function Editor(props) {
     return (
       <div class="font-kanit min-w-full">
             <div class="bg-black bg-opacity-85 mb-10 text-amber-50 py-4 sm:py-10 text-md sm:text-lg md:text-xl text-center ">
-              Please add your contribution below or email it to <a class="text-white hover:no-underline" href="mailto:soasliberatedzone@gmail.com">soasliberatedzone@gmail.com</a>
+              Add your contribution below or email it to <a class="text-white hover:no-underline" href="mailto:soasliberatedzone@gmail.com">soasliberatedzone@gmail.com</a>
             </div>
             <div class = "mx-4">
               <form class = "bg-amber-50">
@@ -98,7 +103,7 @@ function Editor(props) {
                         type="text"
                         value={author}
                         onChange={(e) => setAuthor(e.target.value)}
-                        placeholder='Enter your name'
+                        placeholder='Your name'
                         required
                     />
                   </div>
@@ -114,6 +119,30 @@ function Editor(props) {
                   />
                 </div>
                 
+                <div class="flex flex-row gap gap-10 my-2">
+                <label class="w-36">Post as Link</label>
+                  <input
+                      type="checkbox"
+                      value={is_link}
+                      onChange={(e) => {setIsLink(!is_link);}}
+                      required
+                  />
+                </div>
+
+                {is_link &&
+                  <div class="flex flex-row gap gap-10 my-2">
+                    <label class="w-36">Link</label>
+                    <input
+                        type="text"
+                        value={link}
+                        onChange={(e) => setLink(e.target.value)}
+                        placeholder='External URL'
+                        required
+                    />
+                  </div>
+                
+                }
+
                 <div class="flex flex-row gap gap-10 my-2 ">
                   <label class="w-36">Cover Picture</label>
                   <input
@@ -121,38 +150,40 @@ function Editor(props) {
                       type="text"
                       value={release_date}
                       onChange={(e) => setRealeseDate(e.target.value)}
-                      placeholder='Enter URL of Cover Picture'
+                      placeholder='URL of Cover Picture'
                       required
                   />
                 </div>
 
             </form>
-          
-            <div class="bg-white container my-4 min-h-48">
-              <MDXEditor 
-                markdown={markdown}
-                onChange={(newMarkdown) => setMarkdown(newMarkdown)}
-                plugins={[
-                    headingsPlugin(), 
-                    listsPlugin(), 
-                    quotePlugin(), 
-                    thematicBreakPlugin(), 
-                    linkDialogPlugin(),
-                    imagePlugin(),
-                    listsPlugin(),
-                    toolbarPlugin({         
-                        toolbarContents: () => (
-                        <>
-                        {' '}
-                        <BoldItalicUnderlineToggles />
-                        <BlockTypeSelect />
-                        <CreateLink />
-                        <UndoRedo />
-                        <ListsToggle />
-                        <InsertImage />
-                        </>
-                    )})]} />
-            </div>
+            {!is_link &&
+              <div class="bg-white container my-4 min-h-48">
+                <MDXEditor 
+                  markdown={markdown}
+                  onChange={(newMarkdown) => setMarkdown(newMarkdown)}
+                  plugins={[
+                      headingsPlugin(), 
+                      listsPlugin(), 
+                      quotePlugin(), 
+                      thematicBreakPlugin(), 
+                      linkPlugin(),
+                      linkDialogPlugin(),
+                      imagePlugin(),
+                      listsPlugin(),
+                      toolbarPlugin({         
+                          toolbarContents: () => (
+                          <>
+                          {' '}
+                          <BoldItalicUnderlineToggles />
+                          <BlockTypeSelect />
+                          <CreateLink />
+                          <UndoRedo />
+                          <ListsToggle />
+                          <InsertImage />
+                          </>
+                      )})]} />
+              </div>
+            }
 
 
             <ReCAPTCHA
