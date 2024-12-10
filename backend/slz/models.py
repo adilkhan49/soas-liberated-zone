@@ -11,8 +11,9 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    body = models.TextField()
+    body = models.TextField(blank=True,null=True)
     author = models.TextField(max_length=255,blank=True,null=True)
+    link = models.TextField(blank=True,null=True)
     is_approved = models.BooleanField(default=False)
     is_anonymous = models.BooleanField(default=False)
     is_link = models.BooleanField(default=False)

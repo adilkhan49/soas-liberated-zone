@@ -3,7 +3,7 @@ import Editor from '../components/createPost';
 
 function CreatePost () {
     return (
-        <div class='h-screen'>
+        <div class='min-h-screen'>
             <Editor />
         </div>
     )
