@@ -95,7 +95,7 @@ class Home extends Component {
               <button>sign up</button>
           </form>
           <form
-            action="https://signal.group/#CjQKIM5LoPsS4lKVkHR08Nr686ZxJRWhm_hImbG3bNpJbJglEhCuU5LbAmsdAiz-oQgKH6lp"
+            action="https://chat.whatsapp.com/Ku0wIdsGLIhADMAIwSgBcO"
             target="_blank"
             class="container  font-bold md:text-xl lg:text-3xl  p-2 m-2 mx-auto w-2/3 tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-full border-10 items-center text-center">
             <button>join the whatsapp broadcast </button>
