@@ -56,16 +56,16 @@ function DemocratiseEducation () {
           In the last few years SOAS management has steadily been creating an increasingly repressive environment at the university for both students and workers. Nevertheless the academic year of 23/24 has seen new heights of authoritarian crackdown with a truly alarming response to the growing student movement Palestine. Since the academic year 2023/2024:
         </div>
         <div class="pb-10 text-red-500">
-          - 11 students have been suspended;
+          - 11 students have been suspended (2 students under ongoing six month suspensions);
         </div>
         <div class="pb-10 text-red-500">
           - One has been excluded;
         </div>
         <div class="pb-10 text-red-500">
-          - At least 6 students received final warnings for protestsl;
+          - At least 6 students received final warnings for protest;
         </div>
         <div class="pb-10 text-red-500">
-          - 2 out of 4 of the student union representatives have been dismissed for reasons relating to protest. 
+          - 2 out of 4 of the elected Students Union co-Presidents have been dismissed for reasons relating to protest. 
         </div>
         <div class="pb-10 text-red-500">
           - Most recently University of London has taken out a high court injunction to ban all pro-Palestine activism on campus. An unprecedented attack on advocacy within the university.
@@ -104,7 +104,7 @@ function DemocratiseEducation () {
           </span> 
           </div>
           <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-1-red-800 sm:font-outline-2-red-800 lg:font-outline-3-red-800">
-            Drop the ongoing suspensions six month suspensions against Haya and Tara
+            Drop the ongoing six month suspensions against Haya and Tara
             </span>
           </div>
           <div><span class=" text-3xl sm:text-5xl text-red-800">▼ </span><span class="font-outline-1-red-800 sm:font-outline-2-red-800 lg:font-outline-3-red-800">
