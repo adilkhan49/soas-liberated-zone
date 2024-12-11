@@ -3,11 +3,12 @@ import { Component, useState } from 'react'
 import { CALLS_TO_ACTION_API_URL } from "../constants";
 import Subscribe from "../components/SubscribeForm";
 import axios from "axios";
-import Markdown from 'markdown-to-jsx'
+import AuthContext from "../context/AuthContext";
 
 
 
-const GetInvolvedLinks = (callstoaction) => {
+
+const GetInvolvedLinks = () => {
   return (
 
   <div class="w-full text-center text-amber-50 px-4 md:p-12">
@@ -63,6 +64,9 @@ const GetInvolvedLinks = (callstoaction) => {
 }
 
 class GetInvolved extends Component {
+  
+  static contextType = AuthContext;
+
   state = {
     callstoaction: []
   };
@@ -150,12 +154,14 @@ class GetInvolved extends Component {
             ))}
 
 
-          <form
-            action="/callstoaction/create"
-            target="_blank"
-            class="container text-black sm:text-3xl font-anton w-2/3 sm:w-1/2 p-2 m-2 mx-auto   tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-3xl border-10 items-center text-center">
-            <button>add a call to action </button>
-          </form>
+          { this.context.user && 
+            <form
+              action="/callstoaction/create"
+              target="_blank"
+              class="container text-black sm:text-3xl font-anton w-2/3 sm:w-1/2 p-2 m-2 mx-auto   tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-3xl border-10 items-center text-center">
+              <button>add a call to action </button>
+            </form>
+          }
       </div>
 
           <div class=''>

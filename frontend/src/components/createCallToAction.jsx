@@ -83,7 +83,7 @@ function Editor(props) {
                       type="text"
                       value={title}
                       onChange={(e) => setTitle(e.target.value)}
-                      placeholder='Title of post'
+                      placeholder='Call to Action'
                       required
                   />
                 </div>
