@@ -30,6 +30,7 @@ import DemocratiseEducation from "./routes/democratiseeducation";
 import Gallery from "./routes/gallery";
 import SignUp from "./routes/signup";
 import Thanks from "./routes/thanks";
+import CreateCallToAction from "./routes/createCallToAction";
 
 const router = createBrowserRouter([
   {
@@ -113,6 +114,10 @@ const router = createBrowserRouter([
       {
         path: "thanks",
         element: <PrivateRoute><Thanks /></PrivateRoute>,
+      },
+      {
+        path: "callstoaction/create",
+        element: <PrivateRoute><CreateCallToAction /></PrivateRoute>,
       },
     ]
   },
