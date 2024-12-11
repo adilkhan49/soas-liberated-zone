@@ -41,4 +41,4 @@ class GalleryImageSerializer(serializers.ModelSerializer):
 class CallToActionSerializer(serializers.ModelSerializer):
     class Meta:
         model = CallToAction
-        fields = ('pk', 'title','body','release_date','created_on','last_modified')
+        fields = ('pk', 'title','body','link','is_link','release_date','created_on','last_modified')

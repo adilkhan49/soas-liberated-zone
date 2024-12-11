@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Event, Statement, Subscriber, TimelineEvent, CarouselImage, Post, GalleryImage
+from .models import Event, Statement, Subscriber, TimelineEvent, CarouselImage, Post, GalleryImage, CallToAction
 import csv
 from django.http import HttpResponse
 from datetime import datetime
@@ -59,3 +59,8 @@ class GalleryImageAdmin(admin.ModelAdmin):
     list_display = ['pk','title','sequence','credit_to','release_date','exclude_date','exclude_month']
     list_editable = ['sequence','release_date','exclude_date','exclude_month']
     ordering = [F('sequence').asc(nulls_last=True),'-release_date']
+
+@admin.register(CallToAction)
+class CallToActionAdmin(admin.ModelAdmin):
+    list_display = ['title','release_date','is_link']
+    ordering = ['-release_date']
