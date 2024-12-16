@@ -124,3 +124,7 @@ staticfiles
 *.sql
 
 .DS_Store
+
+slz-docker/etc/
+
+slz-docker/certbot
