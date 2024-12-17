@@ -33,17 +33,18 @@ export const AuthProvider = ({children}) => {
         let data = await response.json();
 
         if(data){
-            if (data.refresh) {
+            console.log(response)
+            if (response.status==200) {
                 localStorage.setItem('authTokens', JSON.stringify(data));
                 setAuthTokens(data)
                 setUser(jwtDecode(data.access))
-                // alert('Logged in!')
                 navigate("../", {
                     replace: true,
                 });
             }
             else {
-                if (response.status==401) {                
+                if (response.status==401) {  
+                    console.log(data)              
                     alert(data.detail)
                 }
             }
