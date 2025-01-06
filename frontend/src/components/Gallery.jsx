@@ -58,7 +58,7 @@ function GalleryListing ({images}) {
 
     const [carouselOpen, setCarouselOpen] = useState(false)
     const [selectedImage, setSelectedImage] = useState(0)
-    const [currentPage, setCurrentPage] = useState(2);
+    const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(21);
 
     const openImg = (id) => {
@@ -169,7 +169,7 @@ function GalleryListing ({images}) {
                     {currentPosts.map(({ pk, title, url }, index) => (
                         <div key={index} class="h-30 w-45 sm:h-80 sm:w-120"> 
                             <button  class="h-full w-full"
-                                onClick={ () => openImg(index)} 
+                                onClick={ () => openImg(index+(currentPage-1)*postsPerPage)} 
                             >
                                 <img
                                     class="h-full w-full object-cover "
