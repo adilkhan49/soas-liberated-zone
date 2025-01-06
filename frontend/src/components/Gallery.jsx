@@ -1,5 +1,6 @@
-import { Component } from "react";
+// import { Component } from "react";
 import { useState, useEffect } from "react";
+import Pagination from "./Pagination";
 
 function formatDate(image) {
     const date = new Date(image.release_date);
@@ -57,6 +58,8 @@ function GalleryListing ({images}) {
 
     const [carouselOpen, setCarouselOpen] = useState(false)
     const [selectedImage, setSelectedImage] = useState(0)
+    const [currentPage, setCurrentPage] = useState(2);
+    const [postsPerPage] = useState(9);
 
     const openImg = (id) => {
         setSelectedImage(id);
@@ -102,6 +105,11 @@ function GalleryListing ({images}) {
           nextSlide(selectedImage)
         }
       }, [arrowRightPressed]);
+
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = images.slice(indexOfFirstPost, indexOfLastPost);
+    
 
     return (
         <div>
@@ -150,13 +158,15 @@ function GalleryListing ({images}) {
                             <div>Credit - {images[selectedImage].credit_to}</div>
                         }
                         </div>
+
+
                     </div>
             }
 
            
             <div class={carouselOpen && "blur-3xl"}>
                 <div className="grid grid-cols-1 gap-4 sm:gap-10 sm:grid-cols-3 md:grid-cols-3 m-4 sm:m-10 items-stretch">
-                    {images.map(({ pk, title, url }, index) => (
+                    {currentPosts.map(({ pk, title, url }, index) => (
                         <div key={index} class="h-30 w-45 sm:h-80 sm:w-120"> 
                             <button  class="h-full w-full"
                                 onClick={ () => openImg(index)} 
@@ -171,6 +181,13 @@ function GalleryListing ({images}) {
                         </div>
                     ))}
                 </div>
+
+                <Pagination
+                            postsPerPage={postsPerPage}
+                            totalPosts={images.length}
+                            setCurrentPage={setCurrentPage}
+                            currentPage={currentPage}
+                />
             </div>
 
 
