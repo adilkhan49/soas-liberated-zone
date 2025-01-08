@@ -72,9 +72,9 @@ class Home extends Component {
             <div class="mt-10">
             The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against SOAS university’s complicity in the ongoing genocide in Gaza and the colonisation of the Palestinian people. We work to end SOAS’s living colonial legacy and build solidarity organising in service of people’s liberation and a truly decolonial education.
               </div>  
-              <div class="text-red-800 font-outline-1-black sm:font-outline-1-green-800 md:font-outline-2-green-800 mt-10">
+              {/* <div class="text-red-800 font-outline-1-black sm:font-outline-1-green-800 md:font-outline-2-green-800 mt-10">
              We work to enable the community we know SOAS to be beyond the shadow of its institutional violence.
-              </div>  
+              </div>   */}
             </div>
 
           </div>
