@@ -48,7 +48,7 @@ const GetInvolvedLinks = () => {
 
       <li>
         <div 
-            class="flex-row   border-y-10 border-green-800 font-leaguespartan bg-red-800 w-full text-amber-50 font-bold md:text-xl lg:text-3xl xl:text-4xl  py-4 px-4 md:px-20  min-w-full tracking-widest items-center text-center justify-evenly ">
+            class="flex-row  border-y-10 border-green-800 font-leaguespartan bg-red-800 w-full text-amber-50 font-bold md:text-xl lg:text-3xl xl:text-4xl  py-4 px-4 md:px-20  min-w-full tracking-widest items-center text-center justify-evenly ">
             <div class='text-left'>Get email updates:</div>
             <Subscribe 
               class='w-full bg-blue-300'
@@ -119,7 +119,7 @@ class GetInvolved extends Component {
               </img>
             </div>
             <div class="absolute z-2 h-full bg-black bg-opacity-75 border-t-10 border-t-black w-full lg:w-4/5 xl:3/4">
-              <div class="invisible w-full font-rubikmono text-red-600 font-outline-2-red-600 text-opacity-0 tracking-widest text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center py-20  ">
+              <div class="invisible w-full font-rubikmono text-red-800 font-outline-2-green-800 tracking-widest text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center py-20 ">
                 JOIN
               </div>
               {GetInvolvedLinks(this.state.callstoaction)}
@@ -135,9 +135,18 @@ class GetInvolved extends Component {
           <div 
         class='relative flex flex-col font-kanit bg-black border-10 border-red-800 bg-opacity-65 p-4 lg:p-24 text-xl sm:text-3xl sm:m-8 rounded-3xl m-4 lg:mx-48 lg:mx-64 text-center'
       >
-        <div class='text-3xl font-rubikmono text-red-800 font-outline-2-red-600 tracking-widest text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center pb-10'>
+        <div class='text-3xl font-rubikmono text-red-800 font-outline-2-green-800 tracking-widest text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center pb-10'>
         CALLS TO ACTION
           </div>
+
+          { this.context.user && 
+            <form
+              action="/callstoaction/create"
+              target="_blank"
+              class="container text-black sm:text-3xl font-anton w-2/3 sm:w-1/2 p-2 m-2 mx-auto   tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-3xl border-10 items-center text-center">
+              <button>Add a call to action </button>
+            </form>
+          }
 
           {this.state.callstoaction.map(c => ( 
 
@@ -145,27 +154,17 @@ class GetInvolved extends Component {
             <form
               action={c.link}
               target="_blank"
-              class="container text-black sm:text-3xl font-anton p-2 m-2 mx-auto   tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-3xl border-10 items-center text-center">
+              class="container text-black sm:text-3xl font-anton p-2 m-2 mx-auto   tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-3xl border-10 items-center text-center">
               <button>{c.title}</button>
             </form>
 
             ))}
 
 
-          { this.context.user && 
-            <form
-              action="/callstoaction/create"
-              target="_blank"
-              class="container text-black sm:text-3xl font-anton w-2/3 sm:w-1/2 p-2 m-2 mx-auto   tracking-widest bg-amber-50 border-red-800 hover:bg-red-800 hover:border-black hover:text-amber-50 rounded-3xl border-10 items-center text-center">
-              <button>add a call to action </button>
-            </form>
-          }
+
       </div>
 
-          <div class=''>
-
-
-        </div>          
+       
         </div>
 
 
