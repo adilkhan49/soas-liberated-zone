@@ -21,7 +21,7 @@ const GetInvolvedLinks = () => {
           class="container font-bold md:text-xl lg:text-3xl  p-2 m-2 mx-auto w-2/3 tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-full border-10 items-center text-center"
           >
 
-          <button>find pathways to action </button>
+          <button>get in touch</button>
         </form>
       </li>
 
@@ -35,7 +35,7 @@ const GetInvolvedLinks = () => {
 
       <li class="flex flex-col text-2xl sm:text-3xl md:text-4xl px-4 md:px-12">
         <div class="flex items-start gap-x-4 md:gap-x-10 "><span class="text-4xl sm:text-5xl md:text-6xl font-bold text-red-800">▼ </span> 
-          Stay informed on the struggle at soas and upcoming events.
+          Stay informed and come to upcoming events and actions.
         </div>
         <form
           action="https://chat.whatsapp.com/Ku0wIdsGLIhADMAIwSgBcO"
@@ -133,7 +133,7 @@ class GetInvolved extends Component {
           </div>
 
           <div 
-        class='relative flex flex-col font-kanit bg-black border-10 border-red-800 bg-opacity-65 p-4 lg:p-24 text-xl sm:text-3xl sm:m-8 rounded-3xl m-4 lg:mx-48 lg:mx-64 text-center'
+        class='relative flex flex-col font-kanit bg-black border-10 border-black bg-opacity-65 p-4 lg:p-24 text-xl sm:text-3xl sm:m-8 rounded-3xl m-4 lg:mx-48 lg:mx-64 text-center'
       >
         <div class='text-3xl font-rubikmono text-red-800 font-outline-2-green-800 tracking-widest text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center pb-10'>
         CALLS TO ACTION
