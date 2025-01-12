@@ -89,8 +89,8 @@ function DemocratiseEducation () {
         </div>
       </div>
 
-      <div id='initial-demands' class='flex flex-col font-anton  bg-black text-white bg-opacity-65 gap-y-10 font-leaguespartanfont-bold text-black  pb-10 text-center align-middle justify-evenly'>
-          <div class="mt-4 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-red-500 font-outline-1-black sm:font-outline-2-black xl:font-outline-4-black ">Initial Demands</div>
+      <div id='initial-demands' class='flex flex-col font-kanit  bg-black text-white bg-opacity-65 gap-y-10 font-leaguespartanfont-bold text-black  pb-10 text-center align-middle justify-evenly'>
+          <div class="mt-4 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-3xl sm:text-5xl lg:text-7xl font-outline-1-black sm:font-outline-4-black font-bold ">Initial Demands</div>
           <div class='text-red-500  px-4 font-leaguespartan flex flex-col  font-bold    text-xl sm:text-3xl lg:text-5xl  rounded-3xl  text-left'>
           The campaign has these few initial demands, the bare minimum to ensure basic democracy within SOAS. 
         </div>
