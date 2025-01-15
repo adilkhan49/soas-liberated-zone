@@ -21,7 +21,12 @@ function UpcomingEvents({events}) {
 
         <div class="container h-full flex flex-col items-center m-1 sm:m-2 lg:m-3 xl:m-4 mx-auto sm:px-0 " >
                 <ul class="h-full m-2 sm:m-2 lg:m-3 xl:m-4 flex flex-col gap-y-4 justify-center">
-                    {events.map(e => (
+                    {!events || events.length <= 0 ? 
+                                        <div class="container font-bold md:text-xl lg:text-3xl xl:text-4xl  p-2 m-4 m-auto tracking-widest text-black border-green-800 bg-amber-50 rounded-full text-center align-middle p-4">
+                                            No upcoming events
+                                        </div>
+                        :
+                    events.map(e => (
                         
                         <li class="list-none p-4 bg-amber-50 border-4 border-red-800 rounded-lg shadow-lg">
                             <div class="flex items-center flex-1 mb-4 sm:mb-0">
