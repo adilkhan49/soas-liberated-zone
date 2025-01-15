@@ -78,3 +78,18 @@ class CallToAction(models.Model):
     release_date = models.DateField()
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
+
+class SignUp(models.Model):
+
+    class Affiliation(models.TextChoices):
+        Student = 'Student', 'Student'
+        Staff = 'Staff', 'Staff'
+        Other = 'Other', 'Other'
+
+    email = models.TextField(unique=True)
+    name = models.CharField(max_length=255)
+    university = models.CharField(max_length=255,blank=True,null=True)
+    affiliation = models.CharField(max_length=10,choices=Affiliation,blank=True,null=True)
+    message = models.TextField(blank=True,null=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    last_modified = models.DateTimeField(auto_now=True)

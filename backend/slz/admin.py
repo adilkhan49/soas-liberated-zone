@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Event, Statement, Subscriber, TimelineEvent, CarouselImage, Post, GalleryImage, CallToAction
+from .models import Event, Statement, Subscriber, TimelineEvent, CarouselImage, Post, GalleryImage, CallToAction, SignUp
 import csv
 from django.http import HttpResponse
 from datetime import datetime
@@ -64,3 +64,8 @@ class GalleryImageAdmin(admin.ModelAdmin):
 class CallToActionAdmin(admin.ModelAdmin):
     list_display = ['title','release_date','is_link']
     ordering = ['-release_date']
+
+@admin.register(SignUp)
+class SignUpAdmin(admin.ModelAdmin):
+    list_display = ['name','email','affiliation','university']
+    ordering = ['-created_on']

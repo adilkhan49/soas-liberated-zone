@@ -9,8 +9,8 @@ from django.conf import settings
 
 from django.db.models import Value
 from django.db.models.functions import Coalesce
-from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage, CallToAction
-from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer, TimelineEventSerializer, CarouselImageSerializer, GalleryImageSerializer, CallToActionSerializer
+from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage, CallToAction, SignUp
+from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer, TimelineEventSerializer, CarouselImageSerializer, GalleryImageSerializer, CallToActionSerializer, SignUpSerializer
 from .filters import EventFilter
 
 import json
@@ -294,4 +294,40 @@ def call_to_action_detail(request, pk):
     elif request.method == 'DELETE':
         call_to_action.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-    
+
+
+@api_view(['GET'])
+def signup_list(request):
+
+    if request.method == 'GET':
+        data = SignUp.objects.all().annotate(sequence_null=
+    Coalesce('sequence', Value(999999))).order_by('sequence_null','-release_date')
+        serializer = PostSerializer(data, context={'request': request}, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = PostSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def signup_list(request):
+
+    if request.method == 'GET':
+        data = SignUp.objects.all().order_by('-last_modified')
+        serializer = PostSerializer(data, context={'request': request}, many=True)
+        return Response(serializer.data)
+
+@api_view(['POST'])
+def signup(request):
+
+    if request.method == 'POST':
+        serializer = SignUpSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
