@@ -18,3 +18,4 @@ export const CAROUSEL_IMAGES_API_URL =  API_URL + "carouselimages/";
 export const GALLERY_IMAGES_API_URL =  API_URL + "galleryimages/";
 export const SEND_EMAIL_API_URL =  API_URL + "sendmail/";
 export const CALLS_TO_ACTION_API_URL =  API_URL + "callstoaction/";
+export const SIGNUP_API_URL =  API_URL + "signup/";

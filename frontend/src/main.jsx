@@ -14,7 +14,6 @@ import ErrorPage from "./error-page";
 import Home from "./routes/home";
 import Events from "./routes/events";
 import Fundraiser from "./routes/fundraiser";
-import Resources from "./routes/resources";
 import GetInvolved from "./routes/getinvolved";
 import Journal from "./routes/journal";
 import About from "./routes/about";
@@ -41,7 +40,7 @@ const router = createBrowserRouter([
       {
         index: true,
         path: "/",
-        element: <PrivateRoute><Home />,</PrivateRoute>
+        element: <Home />,
       },
       {
         path: "login",
@@ -49,27 +48,27 @@ const router = createBrowserRouter([
       },
       {
         path: "calendar",
-        element:  <PrivateRoute><Events /></PrivateRoute>,
+        element: <Events />,
       },
       {
         path: "calendar/create",
-        element: <PrivateRoute><CreateEvent /></PrivateRoute>
+        element: <PrivateRoute><CreateEvent /></PrivateRoute>,
       },
       {
         path: "fundraisers",
-        element: <PrivateRoute><Fundraiser /></PrivateRoute>,
+        element: <Fundraiser />,
       },
       {
         path: "getinvolved",
-        element: <PrivateRoute><GetInvolved /></PrivateRoute>,
+        element: <GetInvolved />,
       },
       {
         path: "journal",
-        element: <PrivateRoute><Journal /></PrivateRoute>,
+        element: <Journal />,
       },
       {
         path: "journal/:id",
-        element: <PrivateRoute><Post /></PrivateRoute>,
+        element: <Post />,
       },
       {
         path: "journal/:id/edit",
@@ -77,15 +76,15 @@ const router = createBrowserRouter([
       },
       {
         path: "journal/create",
-        element: <PrivateRoute><CreatePost /></PrivateRoute>,
+        element: <CreatePost />,
       },
       {
         path: "statements",
-        element: <PrivateRoute><Statements /></PrivateRoute>,
+        element: <Statements />,
       },
       {
         path: "statements/:id",
-        element: <PrivateRoute><Statement /></PrivateRoute>,
+        element: <Statement />,
       },
       {
         path: "statements/:id/edit",
@@ -97,23 +96,23 @@ const router = createBrowserRouter([
       },
       {
         path: "about",
-        element: <PrivateRoute><About /></PrivateRoute>,
+        element: <About />,
       },
       {
         path: "democratiseeducation",
-        element: <PrivateRoute><DemocratiseEducation /></PrivateRoute>,
+        element: <DemocratiseEducation />,
       },
       {
         path: "gallery",
-        element: <PrivateRoute><Gallery /></PrivateRoute>,
+        element: <Gallery />,
       },
       {
         path: "signup",
-        element: <PrivateRoute><SignUp /></PrivateRoute>,
+        element: <SignUp />,
       },
       {
         path: "thanks",
-        element: <PrivateRoute><Thanks /></PrivateRoute>,
+        element: <Thanks />,
       },
       {
         path: "callstoaction/create",
