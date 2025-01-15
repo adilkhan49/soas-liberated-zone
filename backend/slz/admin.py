@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Event, Statement, Subscriber, TimelineEvent, CarouselImage, Post, GalleryImage, CallToAction
+from .models import Event, Statement, Subscriber, TimelineEvent, CarouselImage, Post, GalleryImage, CallToAction, SignUp
 import csv
 from django.http import HttpResponse
 from datetime import datetime
@@ -64,3 +64,26 @@ class GalleryImageAdmin(admin.ModelAdmin):
 class CallToActionAdmin(admin.ModelAdmin):
     list_display = ['title','release_date','is_link']
     ordering = ['-release_date']
+
+@admin.register(SignUp)
+class SignUpAdmin(admin.ModelAdmin):
+    list_display = ['name','email','affiliation','university']
+    ordering = ['-created_on']
+    actions = ["export_as_csv"]
+    def export_as_csv(self, request, queryset):
+
+        field_names = ['name','email','affiliation','university','message']
+
+        response = HttpResponse(content_type='text/csv')
+        ts = get_timestamp()
+        response['Content-Disposition'] = f'attachment; filename=Sign Up List {ts}.csv'
+        writer = csv.writer(response)
+
+        writer.writerow(field_names)
+        for obj in queryset:
+            row = writer.writerow([getattr(obj, field) for field in field_names])
+
+        return response
+    
+    export_as_csv.short_description = "Export Selected"
+

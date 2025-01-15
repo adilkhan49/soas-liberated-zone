@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { useState, useEffect } from "react";
 import { SEND_EMAIL_API_URL } from "../constants";
+import { SIGNUP_API_URL } from "../constants";
 import { SUBSCRIBE_API_URL } from "../constants";
 import { redirect } from "react-router-dom";
 
@@ -19,7 +20,21 @@ function SignUp () {
         e.preventDefault();
     
         try {
-            const response = await fetch(SEND_EMAIL_API_URL, {
+            // const email_response = await fetch(SEND_EMAIL_API_URL, {
+            //   method: 'POST',
+            //   headers: {
+            //     'Content-Type': 'application/json',
+            //   },
+            //   body: JSON.stringify({
+            //     name: name,
+            //     email: email,
+            //     university: university,
+            //     affiliation: affiliation,
+            //     subscribe: subscribe,
+            //     message: message,
+            //   }),            });
+
+            const signup_response = await fetch(SIGNUP_API_URL, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -32,8 +47,8 @@ function SignUp () {
                 subscribe: subscribe,
                 message: message,
               }),            });
-              
-            if (response.ok) {
+
+            if ( signup_response.ok ) {
                 console.log("Thank you for signing up!");
                 if (subscribe) {
 
@@ -52,6 +67,8 @@ function SignUp () {
                             console.log("You have joined our newsletter!");
                         } else {
                             console.log('Failed to subscribe');
+                            console.log(response.error);
+                            
                         }
                       } catch (error) {
                         console.log('Something went wrong');

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage, CallToAction
+from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage, CallToAction, SignUp
 
 class PostSerializer(serializers.ModelSerializer):
 
@@ -42,3 +42,10 @@ class CallToActionSerializer(serializers.ModelSerializer):
     class Meta:
         model = CallToAction
         fields = ('pk', 'title','body','link','is_link','release_date','created_on','last_modified')
+
+class SignUpSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SignUp
+        fields = ('pk', 'email','name','university','affiliation','message','created_on','last_modified')
+
+
