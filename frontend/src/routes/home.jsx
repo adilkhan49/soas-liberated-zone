@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import { InstagramEmbed } from 'react-social-media-embed';
 import Carousel from '../components/carousel';
 import axios from "axios";
@@ -8,8 +8,12 @@ import { Link } from "react-router-dom";
 import Subscribe from "../components/SubscribeForm";
 import UpcomingEvents from "../components/upcoming_events";
 import { UPCOMING_EVENTS_API_URL } from "../constants";
+import LinkButton from "../components/linkbutton";
+import AuthContext from "../context/AuthContext";
 
 class Home extends Component {
+
+  static contextType = AuthContext
 
   state = {
     carousel_images: [],
@@ -117,16 +121,22 @@ class Home extends Component {
 
         <div class="text-center items-stretch">
             <div class="h-full bg-green-800 bg-opacity-85 bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')] overflow-x-auto overflow-y-auto">
-
-            <div class="mt-10 mx-2 mx-10 font-leaguespartan">
-          <div class=" flex justify-start">
-            <div class="text-left font-archivoblack mb-10 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">
-            ▼ Come to upcoming events</div>
-          </div>
-        </div>
-                <UpcomingEvents
-                  events={this.state.upcoming_events}
-                ></UpcomingEvents>
+              <div class="mt-10 mx-2 mx-10 font-leaguespartan">
+                <div class=" flex justify-start">
+                  <div class="text-left font-archivoblack mb-10 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">
+                    ▼ Come to upcoming events
+                  </div>
+                </div>
+              </div>
+              { this.context.user && 
+                <LinkButton
+                  linkText={'Update Calendar'}
+                  linkUrl={'/calendar'}
+                />
+              }
+              <UpcomingEvents
+                events={this.state.upcoming_events}
+              ></UpcomingEvents>
             </div>
           </div>
 
