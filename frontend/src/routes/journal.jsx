@@ -68,7 +68,7 @@ class Journal extends Component {
                 The Palestinian people have long shown the strength of resistance through writing and culture. Our true enduring power is rooted in the collective knowledge and spirit that we amplify between us; that is why we seek true forms of education beyond the university, for the community by the community.
                 </p>
                 <p class="sm:text-3xl">
-                  We invite anyone and everyone from the SLZ community and the growing global movement to contribute to the SLZ journal.
+                  We invite anyone and everyone from the SLZ community and other anticolonial movements to contribute to the SLZ journal.
                 </p>
             </div>
 
