@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import { InstagramEmbed } from 'react-social-media-embed';
 import Carousel from '../components/carousel';
 import axios from "axios";
@@ -8,8 +8,12 @@ import { Link } from "react-router-dom";
 import Subscribe from "../components/SubscribeForm";
 import UpcomingEvents from "../components/upcoming_events";
 import { UPCOMING_EVENTS_API_URL } from "../constants";
+import LinkButton from "../components/linkbutton";
+import AuthContext from "../context/AuthContext";
 
 class Home extends Component {
+
+  static contextType = AuthContext
 
   state = {
     carousel_images: [],
@@ -67,7 +71,7 @@ class Home extends Component {
             </div>
           </div>
 
-          <div class='flex flex-col justify-center min-w-full container font-kanit font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-center justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-1-black sm:font-outline-1-red-800 md:font-outline-2-red-800'>
+          <div class='flex flex-col justify-center min-w-full container font-kanit font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none  text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl text-center justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-1-black sm:font-outline-1-red-800 md:font-outline-2-red-800'>
 
             <div class="mt-10">
             The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against SOAS university’s complicity in the ongoing genocide in Gaza and the colonisation of the Palestinian people. We work to end SOAS’s living colonial legacy and build solidarity organising in service of people’s liberation and a truly decolonial education.
@@ -117,16 +121,22 @@ class Home extends Component {
 
         <div class="text-center items-stretch">
             <div class="h-full bg-green-800 bg-opacity-85 bg-repeat bg-[url('/src/hariya-tile-lg-light.svg')] overflow-x-auto overflow-y-auto">
-
-            <div class="mt-10 mx-2 mx-10 font-leaguespartan">
-          <div class=" flex justify-start">
-            <div class="text-left font-archivoblack mb-10 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">
-            ▼ Come to upcoming events</div>
-          </div>
-        </div>
-                <UpcomingEvents
-                  events={this.state.upcoming_events}
-                ></UpcomingEvents>
+              <div class="mt-10 mx-2 mx-10 font-leaguespartan">
+                <div class=" flex justify-start">
+                  <div class="text-left font-archivoblack mb-10 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">
+                    ▼ Come to upcoming events
+                  </div>
+                </div>
+              </div>
+              { this.context.user && 
+                <LinkButton
+                  linkText={'Update Calendar'}
+                  linkUrl={'/calendar'}
+                />
+              }
+              <UpcomingEvents
+                events={this.state.upcoming_events}
+              ></UpcomingEvents>
             </div>
           </div>
 

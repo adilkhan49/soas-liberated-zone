@@ -99,11 +99,20 @@ function Editor(props) {
             }
         </form>
 
-
-    <button 
-        class="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
-        onClick={handleSave}
-                    >Save </button> 
+      <div class='flex gap-x-4'>
+        <button 
+            class="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
+            onClick={handleSave}
+                        >Save 
+        </button> 
+        <a
+          href="/calendar">
+          <button 
+            class="bg-black hover:bg-gray-700 text-white font-bold my-4 py-2 px-4 rounded"
+                        >Cancel 
+          </button> 
+        </a>
+      </div>
     </div>
     
 }
