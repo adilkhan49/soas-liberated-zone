@@ -53,7 +53,7 @@ function DemocratiseEducation () {
           The state of repression at SOAS
         </div>
         <div class="pb-10">
-          In the last few years SOAS management has steadily been creating an increasingly repressive environment at the university for both students and workers. Nevertheless the academic year of 23/24 has seen new heights of authoritarian crackdown with a truly alarming response to the growing student movement Palestine. Since the academic year 2023/2024:
+          In the last few years SOAS management has steadily been creating an increasingly repressive environment at the university for both students and workers. Nevertheless the academic year of 23/24 has seen new heights of authoritarian crackdown with a truly alarming response to the growing student movement for Palestine. Since the academic year 2023/2024:
         </div>
         <div class="pb-10 text-red-500">
           - 11 students have been suspended (2 students under ongoing six month suspensions);

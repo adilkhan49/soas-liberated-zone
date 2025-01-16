@@ -13,6 +13,7 @@ const Pagination = ({
     const paginate = (pageNumber, e) => {
       e.preventDefault();
       setCurrentPage(pageNumber);
+      window.scrollTo(0, 0)
     };
   
     return (
