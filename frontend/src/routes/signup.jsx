@@ -19,73 +19,88 @@ function SignUp () {
     const handleSubmit = async (e) => {
         e.preventDefault();
     
-        try {
-            // const email_response = await fetch(SEND_EMAIL_API_URL, {
-            //   method: 'POST',
-            //   headers: {
-            //     'Content-Type': 'application/json',
-            //   },
-            //   body: JSON.stringify({
-            //     name: name,
-            //     email: email,
-            //     university: university,
-            //     affiliation: affiliation,
-            //     subscribe: subscribe,
-            //     message: message,
-            //   }),            });
 
+        try { 
             const signup_response = await fetch(SIGNUP_API_URL, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
                 name: name,
                 email: email,
                 university: university,
                 affiliation: affiliation,
                 subscribe: subscribe,
                 message: message,
-              }),            });
+                }),            });
 
             if ( signup_response.ok ) {
-                console.log("Thank you for signing up!");
-                if (subscribe) {
-
-                    try {
-                        const response = await fetch(SUBSCRIBE_API_URL, {
-                          method: 'POST',
-                          headers: {
-                            'Content-Type': 'application/json',
-                          },
-                          body: JSON.stringify({
-                            email: email,
-                          }),
-                        });
-                  
-                        if (response.ok) {
-                            console.log("You have joined our newsletter!");
-                        } else {
-                            console.log('Failed to subscribe');
-                            console.log(response.error);
-                            
-                        }
-                      } catch (error) {
-                        console.log('Something went wrong');
-                        console.error('Error subscribing:', error);
-                      }                
-                }
-                window.location = '/thanks';
+                console.log('Signup details succesfully saved to database');
             } else {
-                console.log("Failed to sign up");
+                console.log('Failed to save details to databse');
+                console.log(signup_response.error);
             }
-          } catch (error) {
-            console.error('Error signing up:', error);
-          }
-    
+        } catch (error) {
+            console.log('Failed to save details to databse');
+            console.error(error);
+        }  
+                 
+        if (subscribe) {
+            try {
+                const subscribe_response = await fetch(SUBSCRIBE_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                    }),}
+                );
         
+                if (subscribe_response.ok) {
+                    console.log("Successfully subscribed to newsletter!");
+                } else {
+                    console.log('Failed to subscribe to newsletter');
+                    console.log(subscribe_response.error);
+                }
+            } catch (error) {
+                console.log('Failed to subscribe to newsletter');
+                console.error(error);
+            }  
+        }              
+
+
+        try {
+            const email_response = await fetch(SEND_EMAIL_API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                name: name,
+                email: email,
+                university: university,
+                affiliation: affiliation,
+                subscribe: subscribe,
+                message: message,
+                }), }
+            );
+            if ( email_response.ok ) {
+                console.log("Successfully sent sign up by email");
+            } else {
+                console.log("Failed to send sign up by email");
+            }
+        } catch (error) {
+            console.log("Failed to send sign up by email");
+            console.error(error);
+        }
     
-      }
+        window.location = '/thanks';
+        return false
+    
+      
+    }
    
     return (
         <div class="min-h-screen m-10 sm:m-26">
@@ -186,7 +201,7 @@ function SignUp () {
                         <input 
                             type="checkbox" 
                             name="newsletter"
-                            value={subscribe}
+                            value={!subscribe}
                             onChange={() => setSubscribe(!subscribe)}
                         /><span> </span>Sign up to newsletter
                     </label>
