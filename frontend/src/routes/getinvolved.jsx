@@ -21,7 +21,7 @@ const GetInvolvedLinks = () => {
           class="container font-bold md:text-xl lg:text-3xl  p-2 m-2 mx-auto w-2/3 tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-full border-10 items-center text-center"
           >
 
-          <button>get in touch</button>
+          <button>sign up</button>
         </form>
       </li>
 
