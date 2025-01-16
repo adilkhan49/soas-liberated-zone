@@ -132,8 +132,9 @@ class Home extends Component {
 
         <div class="my-10 font-leaguespartan">
           <div class="flex justify-start">
-            <div class="py-0 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center">
-            We will not let our education be used against our brothers and sisters in Gaza </div>
+            {/* <div class="py-0 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center">
+              We will not let our education be used against our brothers and sisters in Gaza 
+            </div> */}
           </div>
         </div>
 
