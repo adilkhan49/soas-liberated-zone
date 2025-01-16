@@ -42,7 +42,7 @@ class Home extends Component {
         <div class="flex justify-center  h-[80vh] ">
           <Carousel images={this.state.carousel_images} />
         </div>
-        <div class='font-leaguespartan bg-black bg-opacity-90 hover:bg-opacity-50 text-center text-2xl sm:text-3xl lg:text-4xl xl:text-4xl px-3 py-8'>
+        <div class='font-kanit bg-black bg-opacity-90 hover:bg-opacity-50 text-center text-2xl sm:text-3xl lg:text-4xl xl:text-4xl px-3 py-8'>
           <Link to='/getinvolved' class="font-outline-1-black no-underline text-red-800  tracking-widest font-xxlbold">
           End SOAS's crimes to build a truly anticolonial education
           </Link>
