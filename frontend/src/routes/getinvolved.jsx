@@ -15,7 +15,7 @@ const GetInvolvedLinks = () => {
     <ol class="list-none list-inside text-justify space-y-10 ">
       <li class="flex flex-col gap-y-5 text-2xl sm:text-3xl md:text-4xl px-4 md:px-12">
         <div class="flex items-start gap-x-4 md:gap-x-10 "><span class="text-4xl sm:text-5xl md:text-6xl font-bold text-red-800">▼ </span> 
-          Get in touch to find out how you can help organising media, campaigns and actions as well as holding the space at the encampment.</div>
+          Find out how you can help organising media, campaigns and actions as well as holding the space at the encampment.</div>
         <form 
           action="/signup" 
           class="container font-bold md:text-xl lg:text-3xl  p-2 m-2 mx-auto w-2/3 tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-full border-10 items-center text-center"
