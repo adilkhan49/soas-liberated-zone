@@ -67,7 +67,7 @@ class Home extends Component {
             </div>
           </div>
 
-          <div class='flex flex-col justify-center min-w-full container font-leaguespartan font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-center justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-1-black sm:font-outline-1-red-800 md:font-outline-2-red-800'>
+          <div class='flex flex-col justify-center min-w-full container font-kanit font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-center justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-1-black sm:font-outline-1-red-800 md:font-outline-2-red-800'>
 
             <div class="mt-10">
             The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against SOAS university’s complicity in the ongoing genocide in Gaza and the colonisation of the Palestinian people. We work to end SOAS’s living colonial legacy and build solidarity organising in service of people’s liberation and a truly decolonial education.
