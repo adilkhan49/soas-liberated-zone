@@ -17,11 +17,9 @@ function Checkbox({post}) {
             'Authorization': 'Bearer ' + authTokens.access,
           },
           body: JSON.stringify({
+            pk: post.pk,
             title: post.title,
-            author: post.author,
-            body: post.body,
-            release_date: post.release_date,
-            is_approved: !post.checked
+            is_approved: !checked
           }),
         });
   
