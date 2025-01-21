@@ -53,7 +53,7 @@ def post_detail(request, pk):
         serializer = PostSerializer(post, data=request.data,context={'request': request})
         if serializer.is_valid():
             serializer.save()
-            return Response(status=status.HTTP_204_NO_CONTENT)
+            return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     elif request.method == 'DELETE':
