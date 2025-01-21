@@ -3,7 +3,16 @@ import { STATEMENTS_API_URL } from "../constants";
 import axios from "axios";
 import Markdown from 'markdown-to-jsx'
 import AuthContext from "../context/AuthContext";
-import formatDate from "../util/formatDate";
+
+function formatDate(date_string) {
+    const date = new Date(date_string);
+    var options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      };
+    return date.toLocaleString('en-GB', options)
+    };
 
 class StatementDetail extends Component {
 
@@ -69,9 +78,11 @@ class StatementDetail extends Component {
                 {this.state.statement.title}
             </h1>
 
-            <p class="text-3xl mx-2 sm:mx-4 md:mx-12 lg:mx-24 xl:mx-48 text-bold italic">
-                Statement released on {formatDate(this.state.statement.release_date)}
-            </p>
+            {this.state.statement.release_date &&
+                <p class="text-3xl mx-2 sm:mx-4 md:mx-12 lg:mx-24 xl:mx-48 text-bold italic">
+                    Statement released on {formatDate(this.state.statement.release_date)}
+                </p>
+            }
 
             {/* <iframe src="https://www.youtube.com/embed/r9jwGansp1E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
 
