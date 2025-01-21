@@ -148,8 +148,8 @@ function Editor(props) {
                   <input
                       class="w-52"
                       type="text"
-                      value={release_date}
-                      onChange={(e) => setRealeseDate(e.target.value)}
+                      value={cover_picture_url}
+                      onChange={(e) => setCoverPictureURL(e.target.value)}
                       placeholder='URL of Cover Picture'
                       required
                   />
