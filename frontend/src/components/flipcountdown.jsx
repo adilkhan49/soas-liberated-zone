@@ -23,7 +23,7 @@ function FlipCountdown({number=0,caption='',top_color='bg-black',bottom_color='b
         }
 
         </div>
-        <div class={`$ h-20 font-kanit text-center text-2xl sm:text-3xl md:text-4xl font-bold text-green-800 font-outline-2-black )]`}>
+        <div class={`$ h-20 font-kanit italic text-center text-2xl sm:text-3xl md:text-4xl font-bold text-green-800 font-outline-2-black )]`}>
             {caption}
         </div>
     </div>
