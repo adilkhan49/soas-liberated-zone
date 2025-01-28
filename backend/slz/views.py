@@ -39,6 +39,7 @@ def post_list(request):
                 subject = 'Approve New Post'
                 message = f"""A journal entry entitled "{serializer.data['title']}" has just been created and requires approval\n\n{request.META['HTTP_REFERER']}journal/{serializer.data['pk']}"""
                 send_mail(subject, message, settings.EMAIL_HOST_USER, settings.EMAIL_TO)
+                logging.info('this is a test log info')
             except Exception as e:
                 logger.error("Error sending notification",e)
                 Response(e, status=status.HTTP_400_BAD_REQUEST)
