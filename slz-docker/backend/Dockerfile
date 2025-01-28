@@ -13,6 +13,8 @@ ENV PYTHONUNBUFFERED 1
 
 # CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "backend.wsgi"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "backend.wsgi", "--error-logfile","/var/log/gunicorn/error.log","--access-logfile", "/var/log/gunicorn/access.log", "--capture-output --log-level debug"]
+
+
 
 
