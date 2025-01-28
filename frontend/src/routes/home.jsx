@@ -52,30 +52,28 @@ class Home extends Component {
           </Link>
         </div>
 
-        <div class='flex flex-col justify-center min-w-full container py-10 px-4 md: p-4 lg:p-14 pb-0 text-red-800  text-lg sm:text-2xl md:text-4xl text-center  text-italic justify-center '>
-         
+        <div class='flex flex-col justify-center min-w-full container py-10 px-4 md:p-4 lg:p-14 pb-0 text-red-800  text-lg sm:text-2xl md:text-4xl text-center  text-italic justify-center '>
           <div className="lg:flex lg:flex-row gap-28 ">
             <div class= "hidden lg:block w-1/4 pt-5 container justify-center ">
               <img src = {logo}/>
             </div>
             <div class=' grid grid-cols-1 gap-y-1  p-6 font-kanit font-bold italic   text-lg sm:text-4xl text-center items-center justify-evenly'>
-                <Link to='/about#demands' state={{ demands: true, statements: false, timeline: false }}class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-red-800 hover:text-amber-50 no-underline lg:-translate-x-10 xl:-translate-x-10">
+                <Link to='/about#demands' state={{ demands: true, statements: false, timeline: false }} class="w-60 sm:w-96 p-4 border border-red-800 bg-amber-50 text-black shadow-xl rounded-3xl m-auto hover:bg-red-800 hover:text-amber-50 no-underline lg:-translate-x-10 xl:-translate-x-10">
                   {"Our Demands >>>"}
                 </Link>
-                <Link to='/about#statements' state={{ demands: false, statements: true, timeline: false }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-red-800 hover:text-amber-50 no-underline lg:translate-x-20 xl:translate-x-40 ">
+                <Link to='/about#statements' state={{ demands: false, statements: true, timeline: false }} class="w-60 sm:w-96 p-4 border border-red-800 bg-amber-50 text-black shadow-xl rounded-3xl m-auto hover:bg-red-800 hover:text-amber-50 no-underline lg:translate-x-20 xl:translate-x-40 ">
                   {"Our Statements >>>"}
                 </Link>
-                <Link to='/about#timeline' state={{ demands: false, statements: false, timeline: true }} class="w-60 sm:w-96 p-4 border border-green-800 bg-white text-green-800 shadow-2xl rounded-3xl m-auto hover:bg-red-800 hover:text-amber-50 no-underline lg:translate-x-40 xl:translate-x-80">
+                <Link to='/about#timeline' state={{ demands: false, statements: false, timeline: true }} class="w-60 sm:w-96 p-4 border border-red-800 bg-amber-50 text-black shadow-xl rounded-3xl m-auto hover:bg-red-800 hover:text-amber-50 no-underline lg:translate-x-40 xl:translate-x-80">
                   {"Our Story >>>"}
                 </Link>
             </div>
           </div>
 
-          <div class='flex flex-col justify-center min-w-full container font-kanit font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none  text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl text-center justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-1-black sm:font-outline-1-red-800 md:font-outline-2-red-800'>
-
-            <div class="mt-10">
-            The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against SOAS university’s complicity in the ongoing genocide in Gaza and the colonisation of the Palestinian people. We work to end SOAS’s living colonial legacy and build solidarity organising in service of people’s liberation and a truly decolonial education.
-              </div>  
+          <div class='flex flex-col justify-center min-w-full container font-kanit italic font-bold  px-6 py-4 md:py-5  bg-amber-50  text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl text-center justify-center border-2 border-red-800  rounded-3xl m-auto leading-normal sm:leading-loose sm:tracking-wide text-black drop-shadow-xl tracking-wide mt-10'>
+            <div class="mt-0">
+              The SOAS Liberated Zone (SLZ) is a student led site of anti colonial struggle against SOAS university’s complicity in the ongoing colonisation of the Palestinian people. We work to end SOAS’s living colonial legacy and build solidarity organising in service of people’s liberation and a truly decolonial education.
+            </div>  
               {/* <div class="text-red-800 font-outline-1-black sm:font-outline-1-green-800 md:font-outline-2-green-800 mt-10">
              We work to enable the community we know SOAS to be beyond the shadow of its institutional violence.
               </div>   */}
@@ -85,7 +83,7 @@ class Home extends Component {
 
 
 
-        <div class="w-full h-full py-20 border-t-10 border-t-black bg-[url('https://images2.imgbox.com/76/e2/O6zRK6Jd_o.jpg')] bg-top bg-cover">
+        <div class="mt-10 w-full h-full py-20 border-t-10 border-t-black bg-[url('https://images2.imgbox.com/76/e2/O6zRK6Jd_o.jpg')] bg-top bg-cover">
           
           <div class="flex justify-start ">
             <div class="font-archivoblack mb-10 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">

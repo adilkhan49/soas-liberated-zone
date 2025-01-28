@@ -31,6 +31,12 @@ def post_list(request):
         serializer = PostSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
+            try:
+                subject = 'Approve New Post'
+                message = f"""A journal entry entitled "{serializer.data['title']}" has just been created and requires approval\n\n{request.META['HTTP_REFERER']}journal/{serializer.data['pk']}"""
+                send_mail(subject, message, settings.EMAIL_HOST_USER, settings.EMAIL_TO)
+            except Exception as e:
+                print('Failed to send email notification.', e)
             return Response(status=status.HTTP_201_CREATED)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -53,7 +59,7 @@ def post_detail(request, pk):
         serializer = PostSerializer(post, data=request.data,context={'request': request})
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data)
+            return Response(status=status.HTTP_204_NO_CONTENT)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     elif request.method == 'DELETE':
@@ -245,7 +251,7 @@ def send_email(request):
     message = '\n'.join([k + ':\n' + str(v) + '\n' for (k,v) in message_dict.items()])
     if message:
         try:
-            send_mail(subject, message, settings.EMAIL_HOST_USER, [settings.EMAIL_TO])
+            send_mail(subject, message, settings.EMAIL_HOST_USER, settings.EMAIL_TO)
         except BadHeaderError:
             return HttpResponse("Invalid header found.")
         return HttpResponse("Ok`")
