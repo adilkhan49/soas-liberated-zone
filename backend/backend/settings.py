@@ -197,5 +197,5 @@ EMAIL_HOST_PASSWORD = os.environ["EMAIL_HOST_PASSWORD"]
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-EMAIL_TO = os.environ["EMAIL_TO"]
+EMAIL_TO = os.environ["EMAIL_TO"].split(',')
 
