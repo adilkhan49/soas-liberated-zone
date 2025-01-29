@@ -13,10 +13,14 @@ from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselI
 from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer, TimelineEventSerializer, CarouselImageSerializer, GalleryImageSerializer, CallToActionSerializer, SignUpSerializer
 from .filters import EventFilter
 
-import json
+import json,logging
 
 from datetime import date
 
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 @api_view(['GET', 'POST'])
 def post_list(request):
@@ -36,7 +40,8 @@ def post_list(request):
                 message = f"""A journal entry entitled "{serializer.data['title']}" has just been created and requires approval\n\n{request.META['HTTP_REFERER']}journal/{serializer.data['pk']}"""
                 send_mail(subject, message, settings.EMAIL_HOST_USER, settings.EMAIL_TO)
             except Exception as e:
-                print('Failed to send email notification.', e)
+                logger.error("Error sending notification",e)
+                Response(e, status=status.HTTP_400_BAD_REQUEST)
             return Response(status=status.HTTP_201_CREATED)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
