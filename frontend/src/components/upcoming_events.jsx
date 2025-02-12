@@ -30,14 +30,25 @@ function UpcomingEvents({events}) {
                         
                         <li class="list-none p-4 bg-amber-50 border-4 border-red-800 rounded-lg shadow-lg">
                             <div class="flex items-center flex-1 mb-4 sm:mb-0">
-                                <div class="bg-red-800 rounded-xl p-4 text-center mr-4">
+                                <div class={e.start_time ? "bg-red-800 rounded-xl p-4 text-center mr-4" : "bg-red-800 rounded-xl p-4 py-6 text-center mr-4" }>
                                     <div class="text-xs font-medium">{formatDate(e.start_date,{day: 'numeric', month:'short'}).toLocaleUpperCase()}
                                     </div>
                                     <div class={e.start_time ? "text-2xl font-semibold" : "hidden"}>{formatTime(e.start_time)}</div>
                                 </div>
-                                <div class="flex-1">
+                                <div class="flex flex-col flex-1">
                                     <div class="mb-2 font-semibold">{e.title}</div>
                                     <div class="text-sm">{e.description}</div>
+
+                                    { e.location_text && 
+                                        <div class="text-sm">{e.location_text}</div>
+                                    }
+
+                                    { (e.link_text && e.link_text ) && 
+                                        <a href = {e.link_url} target = "_blank" class="text-sm">{e.link_text}</a>
+                                    }
+
+
+
                                 </div>
                             </div>
                         </li>
