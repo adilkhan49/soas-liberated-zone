@@ -9,8 +9,8 @@ from django.conf import settings
 
 from django.db.models import Value
 from django.db.models.functions import Coalesce
-from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage, CallToAction, SignUp
-from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer, TimelineEventSerializer, CarouselImageSerializer, GalleryImageSerializer, CallToActionSerializer, SignUpSerializer
+from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage, CallToAction, SignUp, Demand
+from .serializers import PostSerializer, StatementSerializer, EventSerializer, SubscriberSerializer, TimelineEventSerializer, CarouselImageSerializer, GalleryImageSerializer, CallToActionSerializer, SignUpSerializer, DemandSerializer
 from .filters import EventFilter
 
 import json,logging
@@ -342,3 +342,22 @@ def signup(request):
             serializer.save()
             return Response(status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET', 'POST'])
+# @permission_classes([IsAuthenticatedOrReadOnly])
+def demand_list(request):
+
+    if request.method == 'GET':
+        data = Demand.objects.all().order_by('sequence')
+        serializer = DemandSerializer(data, context={'request': request}, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = DemandSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
