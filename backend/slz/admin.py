@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Event, Statement, Subscriber, TimelineEvent, CarouselImage, Post, GalleryImage, CallToAction, SignUp
+from .models import Event, Statement, Subscriber, TimelineEvent, CarouselImage, Post, GalleryImage, CallToAction, SignUp, Demand
 import csv
 from django.http import HttpResponse
 from datetime import datetime
@@ -88,3 +88,8 @@ class SignUpAdmin(admin.ModelAdmin):
     
     export_as_csv.short_description = "Export Selected"
 
+@admin.register(Demand)
+class DemandsAdmin(admin.ModelAdmin):
+    list_display = ['pk','sequence','highlighted_words','rest_of_text']
+    list_editable = ['sequence']
+    ordering = ['sequence']

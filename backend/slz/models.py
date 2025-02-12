@@ -93,3 +93,11 @@ class SignUp(models.Model):
     message = models.TextField(blank=True,null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
+
+class Demand(models.Model):
+    sequence = models.IntegerField(unique=True)
+    highlighted_words = models.TextField(max_length=100)
+    rest_of_text =models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    last_modified = models.DateTimeField(auto_now=True)
+ 

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage, CallToAction, SignUp
+from .models import Post, Statement, Event, Subscriber, TimelineEvent, CarouselImage, GalleryImage, CallToAction, SignUp, Demand
 
 class PostSerializer(serializers.ModelSerializer):
 
@@ -47,5 +47,13 @@ class SignUpSerializer(serializers.ModelSerializer):
     class Meta:
         model = SignUp
         fields = ('pk', 'email','name','university','affiliation','message','created_on','last_modified')
+
+
+class DemandSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Demand
+        fields = ('pk', 'sequence','highlighted_words','rest_of_text','created_on','last_modified')
+
+
 
 

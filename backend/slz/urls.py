@@ -19,5 +19,6 @@ urlpatterns = [
     re_path(r'sendmail/$', views.send_email),
     re_path(r'callstoaction/$', views.call_to_action_list),
     re_path(r'callstoaction/([0-9]+)$', views.call_to_action_detail),    
+    re_path(r'demands/$', views.demand_list),
     
 ]
