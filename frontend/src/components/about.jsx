@@ -1,7 +1,7 @@
 import { Component, useRef } from "react";
 import { useLocation } from 'react-router-dom'
 import Timeline from "/src/components/Timeline";
-import { TIMELINE_EVENTS_API_URL } from "/src/constants";
+import { TIMELINE_EVENTS_API_URL, DEMANDS_API_URL } from "/src/constants";
 import axios from "axios";
 import logo from "/src/slz-logo.png";
 import Statements from "/src/routes//statements";
@@ -12,6 +12,7 @@ class AboutComponent extends Component {
       openDemands: false,
       openStatements: false,
       openTimeline: false,
+      demands: [],
       timeline_events: [],
     };
 
@@ -25,6 +26,7 @@ class AboutComponent extends Component {
     }
 
     getData = () => {
+      axios.get(DEMANDS_API_URL).then(res => this.setState({ demands: res.data }));
       axios.get(TIMELINE_EVENTS_API_URL).then(res => this.setState({ timeline_events: res.data }));
     };
 
@@ -32,33 +34,6 @@ class AboutComponent extends Component {
       this.getData();
     };
 
-    demands = (
-        <div class= "flex container px-8 md:px-12 lg:px-48 py-6 sm:py-14 min-w-full justify-center text-white bg-black bg-opacity-70  text-lg sm:text-xl lg:text-2xl xl:text-3xl   ">
-          <ol class="list-none list-inside text-justify space-y-5">
-            <li>
-              <span class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>▼ </span>Disclose</span> details of all University investments immediately and continue to do so on an annual basis.
-            </li>
-            <li>
-              <span class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>▼ </span>Divest</span> from companies complicit in Israel’s occupation and denial of Palestinian rights, including Accenture, Albemarle, Alphabet, Barclays, Microsoft, Newton Investment Management, RELX, and Sony, and commit to not reinvesting.
-            </li>
-            <li>
-              <span class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>▼ </span>Terminate</span> the university’s banking and lending arrangement with Barclays.
-            </li>
-            <li>
-              <span class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>▼ </span>Cut ties</span> with University of Haifa and boycott all Israeli academic institutions, which are complicit in the genocidal campaign on Gaza and in widespread violation of Palestinian rights.
-            </li>
-            <li>
-              <span class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl  font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>▼ </span>Commit</span> to supporting Palestinian education and the rebuilding of Gaza’s destroyed schools, hospitals, and universities.  Establish partnerships and exchanges with Palestinian institutions and academics, increase scholarships for Palestinian students, and advocate for the removal of restrictions on Palestinian expression and movement.
-            </li>
-            <li>
-              <span class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl  font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>▼ </span>Guarantee</span> the rights of students and staff to free expression and end the targeted repression of Palestine solidarity activism on campus.  Revoke the new SOAS protest policy.
-            </li>
-            <li>
-              <span class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl  font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>▼ </span>Advocate</span> for the UK government to implement an immediate arms embargo on Israel and to use all leverage to effect an immediate, unconditional, and permanent ceasefire
-            </li>      
-          </ol>
-        </div>     
-    )
     render() {
       return (
         <div class="w-screen min-h-screen">
@@ -80,7 +55,18 @@ class AboutComponent extends Component {
                 </summary>
                 <div class="min-w-full text-black ">
                     <div class='min-w-full'>
-                      {this.demands}
+
+                    <div class= "flex container px-8 md:px-12 lg:px-48 py-6 sm:py-14 min-w-full justify-center text-white bg-black bg-opacity-70  text-lg sm:text-xl lg:text-2xl xl:text-3xl   ">
+                      <ol class="list-none list-inside text-justify space-y-5">
+                        { this.state.demands.map( d =>
+                          <li>
+                            <span class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-red-600"><span class='text-3xl sm:text-4xl lg:text-5xl'>▼ </span>{d.highlighted_words.trim()}</span> {d.rest_of_text.trim()}
+                          </li>    
+                        )
+                        }
+                      </ol>
+                    </div>     
+
                     </div>
                 </div>
             </details>
