@@ -345,7 +345,7 @@ def signup(request):
 
 
 @api_view(['GET', 'POST'])
-# @permission_classes([IsAuthenticatedOrReadOnly])
+@permission_classes([IsAuthenticatedOrReadOnly])
 def demand_list(request):
 
     if request.method == 'GET':
