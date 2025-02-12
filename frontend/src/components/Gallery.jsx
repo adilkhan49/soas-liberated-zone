@@ -59,7 +59,7 @@ function GalleryListing ({images}) {
     const [carouselOpen, setCarouselOpen] = useState(false)
     const [selectedImage, setSelectedImage] = useState(0)
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(21);
+    const [postsPerPage] = useState(7);
 
     const openImg = (id) => {
         setSelectedImage(id);
