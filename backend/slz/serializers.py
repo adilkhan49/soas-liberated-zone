@@ -16,7 +16,7 @@ class StatementSerializer(serializers.ModelSerializer):
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = ('pk','title','description','allDay','start_date','start_time','end_date','end_time')
+        fields = ('pk','title','description','allDay','start_date','start_time','end_date','end_time','link_text','link_url','location_text')
 
 class SubscriberSerializer(serializers.ModelSerializer):
     class Meta:
