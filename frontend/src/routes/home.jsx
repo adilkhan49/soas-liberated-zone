@@ -82,6 +82,40 @@ class Home extends Component {
           </div>
 
 
+          <div class="relative grid grid-cols-1 sm:grid-cols-2 text-center items-stretch sm:border sm:border-20 border-black sm:rounded-3xl my-2 sm:m-20 ">
+            <img class="order-first sm:order-last w-full object-cover" src={"https://images2.imgbox.com/60/0e/Q9XjHsRe_o.png"} />
+            <div class="h-full text-amber-50 text-center py-4 sm:py-10 px-4 sm:px-16 m-auto align-middle p-0 bg-repeat bg-black bg-[url('/src/hariya-tile-lg-light.svg')]">
+              <div class="h-full flex flex-col justify-evenly">
+              <div class='text-2xl sm:text-4xl text-amber-50 font-bold sm:text-2xl text-center mb-0 gap-y-5 mb-5'>
+              URGENT UPDATE
+              </div>
+              <p class='text-amber-50 sm:text-2xl text-left text-justify mb-0 gap-y-5 mb-5'>
+              SOAS has chosen repression over justice, punishing students like Haya for speaking out against genocide. Her extended suspension is a clear attempt to silence dissent and intimidate others. We demand all charges against her be dropped and that she be reinstated immediately.                
+                </p>
+                <form
+                    action="/statements/10"
+                    target="_blank"
+                    class="container  font-bold md:text-xl lg:text-3xl xl:text-4xl mb-4 p-2 mx-4 mx-auto tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-full border-10 text-center">
+                    <button>{"Read the statement >>"}</button>
+                </form>
+                <form
+                    action="https://linktr.ee/DefendHaya?"
+                    target="_blank"
+                    class="container  font-bold md:text-xl lg:text-3xl xl:text-4xl  p-2 mx-4 mx-auto tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-full border-10 text-center">
+                    <button>{"Call to Action >>"}</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        
+        {/* <div>
+          <figure>
+              <img class="h-[80vh] object-contain" width='1800px' src={"https://images2.imgbox.com/60/0e/Q9XjHsRe_o.png"} />
+          </figure>
+        
+        </div> */}
+
+
 
         <div class="mt-10 w-full h-full py-20 border-t-10 border-t-black bg-[url('https://images2.imgbox.com/76/e2/O6zRK6Jd_o.jpg')] bg-top bg-cover">
           
@@ -168,7 +202,7 @@ class Home extends Component {
 
           <div class='md:hidden flex flex-col justify-center min-w-full container font-leaguespartan font-bold  p-2 md:py-5 sm:pl-0  md:pl-0  bg-none   text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-center justify-center  border-red-800 leading-normal sm:tracking-wide text-green-800 font-outline-1-black sm:font-outline-1-red-800 md:font-outline-2-red-800'>
             <div class="">
-            "The reality of life in Gaza is often misrepresented and overlooked. It is a place where daily survival is a challenge, yet it is filled with stories of incredible human strength and perseverance. Children go to school amid ruins; families gather even in the darkest times - hope is not a luxury but a necessity. Your support and solidarity matter more than words can express."
+            "The reality of life in Gaza is of ten misrepresented and overlooked. It is a place where daily survival is a challenge, yet it is filled with stories of incredible human strength and perseverance. Children go to school amid ruins; families gather even in the darkest times - hope is not a luxury but a necessity. Your support and solidarity matter more than words can express."
               </div>  
               <div class='mt-4'>- Jehad the voice of Gaza at SOAS. <a href="https://www.instagram.com/jehadkmiri/">@jehadkmiri</a></div>
 

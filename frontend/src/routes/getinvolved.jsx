@@ -154,7 +154,7 @@ class GetInvolved extends Component {
             <form
               action={c.link}
               target="_blank"
-              class="container text-black sm:text-3xl font-anton p-2 m-2 mx-auto   tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-3xl border-10 items-center text-center">
+              class="container sm:text-3xl font-anton p-2 m-2 mx-auto   tracking-widest text-amber-50 bg-red-800 border-green-800 hover:text-black hover:bg-amber-50 rounded-3xl border-10 items-center text-center">
               <button>{c.title}</button>
             </form>
 
