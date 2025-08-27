@@ -83,7 +83,10 @@ class Home extends Component {
 
 
           <div class="relative grid grid-cols-1 sm:grid-cols-2 text-center items-stretch sm:border sm:border-20 border-black sm:rounded-2xl my-2 sm:m-20 bg-repeat bg-black bg-[url('/src/hariya-tile-lg-light.svg')]">
-          <img class="order-first sm:order-last w-full object-cover" src={"https://images2.imgbox.com/60/0e/Q9XjHsRe_o.png"} />
+          <img 
+            class="order-first sm:order-last w-full object-cover" 
+            src={"https://images2.imgbox.com/0c/36/qPcEzioe_o.jpeg"}
+          />
           <div class="h-full text-amber-50 text-center py-4 sm:py-10 px-4 sm:px-16 m-auto align-middle p-0 ">
               <div class="h-full w-full flex flex-col justify-evenly">
                 <div class='hidden sm:block text-2xl sm:text-3xl lg:text-4xl  tracking-widest text-amber-50 font-bold sm:text-2xl text-center mb-0 gap-y-5 mb-5'>
