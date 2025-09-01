@@ -48,7 +48,11 @@ docker compose up --build -d
 ```
 docker exec -it slz-docker-db-1 bash
 mariadb-dump -udev -p slz > mnt/slz.sql
-scp -i "slz-aws-ec2-keypair.pem"  ubuntu@ec2-18-130-44-159.eu-west-2.compute.amazonaws.com:/home/ubuntu/soas-liberated-zone/slz-docker/db/slz.sql /Users/adil/repos/soas-liberated-zone/slz-docker/db/slz_nov13.sql
+
+# enter password and exit to local machine
+
+scp -i "slz-aws-ec2-keypair.pem"  ubuntu@ec2-18-130-44-159.eu-west-2.compute.amazonaws.com:/home/ubuntu/soas-liberated-zone/slz-docker/db/slz.sql /Users/adil/repos/soas-liberated-zone/slz-docker/db/slz_$(date +%b%d).sql
+
 ```
 ## Restore DB
 
