@@ -68,7 +68,7 @@ class CallToActionAdmin(admin.ModelAdmin):
 
 @admin.register(SignUp)
 class SignUpAdmin(admin.ModelAdmin):
-    list_display = ['name','email','affiliation','university']
+    list_display = ['name','email','affiliation','university','has_message']
     ordering = ['-created_on']
     actions = ["export_as_csv"]
     def export_as_csv(self, request, queryset):
@@ -87,6 +87,11 @@ class SignUpAdmin(admin.ModelAdmin):
         return response
     
     export_as_csv.short_description = "Export Selected"
+
+    def has_message(self, obj):
+        return bool(obj.message)  # True if message is not empty
+    has_message.boolean = True
+    has_message.short_description = "Message?"
 
 @admin.register(Demand)
 class DemandsAdmin(admin.ModelAdmin):
