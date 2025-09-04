@@ -111,9 +111,9 @@ class Home extends Component {
         <div class="mt-10 w-full h-full py-20 border-t-10 border-t-black bg-[url('https://images2.imgbox.com/76/e2/O6zRK6Jd_o.jpg')] bg-top bg-cover">
           
           <div class="flex justify-start ">
-            <div class="font-archivoblack mb-10 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">
-              ▼ Join the movement
-            </div>
+            <div class="hidden font-archivoblack mb-20 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">
+              Join the movement
+             </div>
           </div>
           <form
               action="/signup"
