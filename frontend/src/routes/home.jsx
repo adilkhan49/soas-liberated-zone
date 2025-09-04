@@ -111,9 +111,9 @@ class Home extends Component {
         <div class="mt-10 w-full h-full py-20 border-t-10 border-t-black bg-[url('https://images2.imgbox.com/76/e2/O6zRK6Jd_o.jpg')] bg-top bg-cover">
           
           <div class="flex justify-start ">
-            <div class="font-archivoblack mb-10 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">
-              ▼ Join the movement!
-            </div>
+            <div class="hidden font-archivoblack mb-20 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">
+              Join the movement
+             </div>
           </div>
           <form
               action="/signup"
@@ -147,7 +147,7 @@ class Home extends Component {
               <div class="mt-10 mx-2 mx-10 font-leaguespartan">
                 <div class=" flex justify-start">
                   <div class="text-left font-archivoblack mb-10 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">
-                    ▼ Come to upcoming events
+                    ▼ Upcoming events
                   </div>
                 </div>
               </div>
@@ -171,11 +171,9 @@ class Home extends Component {
           </div>
         </div>
 
-
+{/* 
         <div class="flex flex-col md:flex-row  w-full ">
 
-
- 
           <div class="hidden md:block flex border-none">
             <figure>
               <img class="h-full object-contain" width='1800px' src={"https://images2.imgbox.com/ed/13/5MMUDd9e_o.png"} />
@@ -196,21 +194,9 @@ class Home extends Component {
             "The reality of life in Gaza is of ten misrepresented and overlooked. It is a place where daily survival is a challenge, yet it is filled with stories of incredible human strength and perseverance. Children go to school amid ruins; families gather even in the darkest times - hope is not a luxury but a necessity. Your support and solidarity matter more than words can express."
               </div>  
               <div class='mt-4'>- Jehad the voice of Gaza at SOAS. <a href="https://www.instagram.com/jehadkmiri/">@jehadkmiri</a></div>
-
           </div>
 
-
-
-        {/* 
-          <div class="md:hidden  border-none">
-            <figure>
-              <img class="h-full object-contain"
-               src={"https://images2.imgbox.com/88/b3/x1Q7iTLQ_o.jpg"} />
-            </figure>
-          </div>         */}
-
-
-        </div>
+        </div> */}
 
   
         
