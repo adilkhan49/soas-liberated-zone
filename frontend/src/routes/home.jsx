@@ -171,11 +171,9 @@ class Home extends Component {
           </div>
         </div>
 
-
+{/* 
         <div class="flex flex-col md:flex-row  w-full ">
 
-
- 
           <div class="hidden md:block flex border-none">
             <figure>
               <img class="h-full object-contain" width='1800px' src={"https://images2.imgbox.com/ed/13/5MMUDd9e_o.png"} />
@@ -196,21 +194,9 @@ class Home extends Component {
             "The reality of life in Gaza is of ten misrepresented and overlooked. It is a place where daily survival is a challenge, yet it is filled with stories of incredible human strength and perseverance. Children go to school amid ruins; families gather even in the darkest times - hope is not a luxury but a necessity. Your support and solidarity matter more than words can express."
               </div>  
               <div class='mt-4'>- Jehad the voice of Gaza at SOAS. <a href="https://www.instagram.com/jehadkmiri/">@jehadkmiri</a></div>
-
           </div>
 
-
-
-        {/* 
-          <div class="md:hidden  border-none">
-            <figure>
-              <img class="h-full object-contain"
-               src={"https://images2.imgbox.com/88/b3/x1Q7iTLQ_o.jpg"} />
-            </figure>
-          </div>         */}
-
-
-        </div>
+        </div> */}
 
   
         
