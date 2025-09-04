@@ -112,7 +112,7 @@ class Home extends Component {
           
           <div class="flex justify-start ">
             <div class="font-archivoblack mb-10 px-2 sm:px-10 text-red-800 font-outline-1-green-800 sm:font-outline-2-green-800 text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold">
-              ▼ Join the movement!
+              ▼ Join the movement
             </div>
           </div>
           <form
